@@ -1,0 +1,304 @@
+/* Crawford Living — crawfordliving.com
+   Restrained in tone, deliberate in craft. Editorial rather than promotional:
+   strong typographic scale, an asymmetric grid, letterspaced small-caps labels,
+   rules used structurally. No urgency, no scarcity, no stock photography. */
+
+:root{
+  --navy:#0E2A57;
+  --navy-soft:#2A4877;
+  --blue:#19469C;
+  --gold:#E7C870;
+  --gold-ink:#8A6D2F;
+  --cream:#FBF1D9;
+
+  /* Three surface levels, far enough apart to read as different. No white. */
+  --paper:#F2E9D5;
+  --raised:#FCF8EC;
+  --sunk:#EADCBC;
+  --rule:#DACBA9;
+  --rule-soft:#E2D5B8;
+
+  --body:#3C3A33;
+  --muted:#6B6252;
+
+  --serif:"Lora",Georgia,"Times New Roman",serif;
+  --sans:"Source Sans 3","Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+
+  --measure:34rem;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--body);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  border-top:5px solid var(--navy);
+}
+
+/* ── grid ───────────────────────────────────────────── */
+.shell{max-width:62rem;margin:0 auto;padding:0 2rem}
+.measure{max-width:var(--measure)}
+
+/* ── masthead ───────────────────────────────────────── */
+.masthead{border-bottom:1px solid var(--rule)}
+.masthead .shell{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:1rem 2rem;
+  padding-top:2.25rem;
+  padding-bottom:1.5rem;
+}
+.brand{text-decoration:none;display:block}
+.wordmark{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:1.7rem;
+  line-height:1;
+  color:var(--navy);
+  margin:0;
+  letter-spacing:-.005em;
+}
+.tagline{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:.9rem;
+  color:var(--muted);
+  margin:.45rem 0 0;
+}
+nav{display:flex;flex-wrap:wrap;gap:2rem;padding-bottom:.2rem}
+nav a{
+  font-size:.73rem;
+  font-weight:600;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--navy);
+  text-decoration:none;
+  padding-bottom:.3rem;
+  border-bottom:1.5px solid transparent;
+}
+nav a:hover,nav a:focus{border-bottom-color:var(--gold)}
+nav a[aria-current="page"]{border-bottom-color:var(--navy)}
+
+/* ── labels ─────────────────────────────────────────── */
+.kicker,.label{
+  font-family:var(--sans);
+  font-weight:600;
+  font-size:.72rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--gold-ink);
+  margin:0;
+}
+.label{
+  color:var(--muted);
+  padding-bottom:.75rem;
+  margin-bottom:2rem;
+  border-bottom:1px solid var(--rule);
+}
+
+/* ── opening ────────────────────────────────────────── */
+.opening{padding:5rem 0 4rem;border-bottom:1px solid var(--rule)}
+.opening .kicker{margin-bottom:1.75rem}
+
+/* opening with a portrait alongside */
+.opening.with-portrait .shell{
+  display:grid;
+  grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);
+  gap:3.5rem;
+  align-items:center;
+}
+.opening.with-portrait .display{max-width:none}
+
+.portrait{margin:0}
+.portrait img{
+  display:block;
+  width:100%;
+  height:auto;
+  border:1px solid var(--rule);
+}
+.portrait figcaption{
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-top:.85rem;
+  line-height:1.5;
+}
+.display{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:clamp(2.3rem,5.6vw,3.5rem);
+  line-height:1.1;
+  letter-spacing:-.018em;
+  color:var(--navy);
+  margin:0;
+  max-width:18ch;
+}
+.display em{font-style:italic;font-weight:400;color:var(--navy-soft)}
+.opening .standfirst{
+  font-family:var(--serif);
+  font-size:1.2rem;
+  line-height:1.6;
+  color:var(--navy-soft);
+  margin:2rem 0 0;
+  max-width:30rem;
+}
+
+/* ── editorial two-column ───────────────────────────── */
+.spread{
+  display:grid;
+  grid-template-columns:minmax(0,1.85fr) minmax(0,1fr);
+  gap:4rem;
+  padding:4rem 0;
+  border-bottom:1px solid var(--rule);
+}
+.spread > div > *:first-child{margin-top:0}
+
+/* right-hand facts column */
+.facts{margin:0;font-size:.94rem;line-height:1.6}
+.facts dt{
+  font-weight:600;
+  font-size:.68rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:0 0 .3rem;
+}
+.facts dd{margin:0 0 1.5rem;color:var(--navy);font-family:var(--serif)}
+.facts dd:last-child{margin-bottom:0}
+
+/* ── type ───────────────────────────────────────────── */
+h1{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:clamp(2rem,4.6vw,2.9rem);
+  line-height:1.15;
+  letter-spacing:-.015em;
+  color:var(--navy);
+  margin:0 0 1.5rem;
+  max-width:20ch;
+}
+h2{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:1.45rem;
+  line-height:1.3;
+  color:var(--navy);
+  margin:3rem 0 1rem;
+}
+h3{
+  font-family:var(--sans);
+  font-weight:600;
+  font-size:1.02rem;
+  color:var(--navy);
+  margin:0 0 .4rem;
+}
+p{margin:0 0 1.3rem;max-width:var(--measure)}
+.lead{
+  font-size:1.17rem;
+  line-height:1.65;
+  color:var(--navy-soft);
+}
+.standfirst{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:1.2rem;
+  line-height:1.6;
+  color:var(--navy-soft);
+  margin:0 0 2rem;
+  max-width:32rem;
+}
+a{color:var(--blue)}
+strong{color:var(--navy);font-weight:600}
+section{padding:3.5rem 0;border-bottom:1px solid var(--rule)}
+section:last-of-type{border-bottom:0}
+
+/* ── numbered paths ─────────────────────────────────── */
+.paths{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.paths li{border-bottom:1px solid var(--rule)}
+.paths a{
+  display:grid;
+  grid-template-columns:4.5rem 1fr;
+  gap:1.5rem;
+  align-items:start;
+  padding:1.9rem .5rem 1.9rem 0;
+  text-decoration:none;
+  color:var(--body);
+}
+.paths a:hover,.paths a:focus{background:var(--raised)}
+.paths .num{
+  font-family:var(--serif);
+  font-size:1.5rem;
+  line-height:1.2;
+  color:var(--gold-ink);
+  font-style:italic;
+}
+.paths h3{font-size:1.2rem;font-family:var(--serif);font-weight:600;margin-bottom:.35rem}
+.paths p{margin:0;font-size:.97rem;line-height:1.6;color:var(--muted);max-width:42ch}
+.paths a:hover h3{color:var(--blue)}
+
+/* ── item list ──────────────────────────────────────── */
+.items{list-style:none;padding:0;margin:2rem 0 0;max-width:var(--measure)}
+.items li{padding:0 0 1.5rem;margin:0 0 1.5rem;border-bottom:1px solid var(--rule-soft)}
+.items li:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.items h3{font-family:var(--serif);font-size:1.12rem}
+.items p{margin:0}
+
+/* ── callout ────────────────────────────────────────── */
+.note{
+  background:var(--sunk);
+  border-left:3px solid var(--gold-ink);
+  padding:1.3rem 1.5rem;
+  margin:2.5rem 0;
+  max-width:var(--measure);
+  font-size:.97rem;
+  line-height:1.65;
+  color:#4A4030;
+}
+.note p{margin:0;max-width:none}
+
+/* ── contact band ───────────────────────────────────── */
+.reach{background:var(--sunk);border-bottom:0}
+.reach .shell{padding-top:3.25rem;padding-bottom:3.25rem}
+.reach h2{margin-top:0}
+.reach p{color:#4A4030}
+.reach .lines{
+  font-family:var(--serif);
+  font-size:1.35rem;
+  line-height:1.9;
+  margin-top:1.25rem;
+}
+.reach a{color:var(--navy);text-decoration:none;border-bottom:1px solid var(--gold)}
+.reach a:hover,.reach a:focus{border-bottom-color:var(--navy)}
+
+/* ── footer ─────────────────────────────────────────── */
+footer{background:var(--navy);color:#C3CEE1;padding:3rem 0 3.5rem;font-size:.83rem;line-height:1.7}
+footer .shell{display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:start}
+footer img{display:block;width:92px;height:auto}
+footer p{margin:0 0 .45rem;max-width:none}
+footer a{color:#E7C870;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.disclaimer{font-style:italic;color:#9DAAC4;margin-bottom:1.1rem !important;max-width:44rem !important}
+.legal{color:#9DAAC4}
+
+@media (max-width:52rem){
+  .spread{grid-template-columns:1fr;gap:2.5rem}
+  .opening{padding:3.5rem 0 2.75rem}
+  .opening.with-portrait .shell{grid-template-columns:1fr;gap:2.25rem}
+  .portrait{max-width:17rem}
+}
+@media (max-width:34rem){
+  body{font-size:16px}
+  .shell{padding:0 1.25rem}
+  nav{gap:1.25rem}
+  .paths a{grid-template-columns:2.5rem 1fr;gap:1rem}
+  footer .shell{grid-template-columns:1fr;gap:1.5rem}
+}
