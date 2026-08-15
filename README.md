@@ -65,17 +65,30 @@ under the wordmark). Lora for headlines, Source Sans for body. Tagline
 "Real Estate . . . Considered". The eXp logo in `assets/` is the brand-kit copy, already
 recolored to Secondary Blue rather than eXp's stock red.
 
-## Hosting
+## Hosting — GitHub Pages
 
-Not yet decided. `crawfordliving.com` currently points at Lovable (`185.158.133.1` at the
-apex, GoDaddy DNS, Google Workspace MX records that **must not be touched**).
+Decided 2026-08-14. Serves straight from `main` at the repository root. The `CNAME` file
+in this directory is what binds the site to the domain — **don't delete or rename it**, and
+note that GitHub rewrites it if the custom domain is changed in the Pages settings UI.
 
-Two straightforward options for a static site:
+DNS lives at **GoDaddy**. The apex needs GitHub's four A records:
 
-- **GitHub Pages** — free, publishes from this repo. Needs a `CNAME` file containing
-  `crawfordliving.com` plus A records at GoDaddy pointing to GitHub's IPs.
-- **Netlify / Cloudflare Pages** — free, connects to this repo, handles TLS and DNS more
-  gently.
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
 
-Either way `www.crawfordliving.com` needs a DNS record — it currently does not resolve
-at all.
+and `www` needs a CNAME to `flarealtormike.github.io`.
+
+**Two standing DNS cautions:**
+
+1. **Never touch the MX records.** They point at Google Workspace and carry
+   `mdc@crawfordliving.com`. Breaking them breaks email, silently, and mail sent in the
+   meantime may bounce rather than queue.
+2. The old apex A record pointing at **`185.158.133.1` (Lovable)** must be removed, or the
+   domain will keep resolving to the dead test site.
+
+After DNS propagates, tick **Enforce HTTPS** in the repository's Pages settings. It stays
+greyed out until GitHub has issued the certificate, which can take up to an hour.
