@@ -8,12 +8,20 @@ Plain static HTML. No build step, no framework, no dependencies.
 index.html       Home — who Mike is, the three paths, general resale/new construction
 probate.html     For personal representatives. Gentle, plain, no calendar, no urgency
 attorneys.html   For probate attorneys. Short and direct. noindex, nofollow
-about.html       Background — 20 years, the construction company, RENE
+about.html       Background — 20 years, the construction company, RENE, the county map
 assets/site.css  Shared stylesheet for all four pages
+
+assets/house-elevation.svg      Signature drawing — a Florida porch house, one window lit
+assets/house-detail.svg         The same drawing, framed closer (probate + attorneys heroes)
+assets/map-central-florida.svg  Schematic five-county map (inlined into about.html)
+assets/mark.svg                 Roundel monogram used in the masthead
+assets/favicon.svg              Tab icon
+assets/mike-crawford.jpg        Portrait
 ```
 
 *(Nav shows Home / Probate / About only. `attorneys.html` is deliberately kept out of the
-nav and out of search — it's reached from the letter and from the home page card.)*
+nav and out of search — it's reached from the letter and from the home page card. The nav
+had drifted to include it; the 2026-08-18 redesign put it back to the documented three.)*
 
 To preview the whole site with working navigation:
 
@@ -47,15 +55,41 @@ LLC" until that entity is formed and registered with DBPR.
 
 ## Deliberate omissions
 
-This page is a holding page, and the restraint is the point. It has, on purpose:
+The restraint is still the point. The site has, on purpose:
 
 - **No lead form, no email capture, no calendar embed.** The letters ask for a conversation,
   not a funnel. A form here would contradict them.
 - **No testimonials, no counts, no ratings, no "spots left."** This is the exact category of
   claim that made the previous page a compliance exposure.
-- **No stock photography.** Type and whitespace only.
+- **No stock photography.** Every graphic on the site is drawn by hand as SVG.
 
 If any of that gets added later, it should be a considered decision, not a default.
+
+## The 2026-08-18 redesign
+
+The first version was type and whitespace only — a deliberate reaction to the Lovable page it
+replaced. That overcorrected: it read as a well-set letter rather than a website. The overhaul
+added visual substance **without** touching the claims that made the old page an exposure.
+
+What went in:
+
+- **Drawn graphics, not stock.** A line-drawn Florida porch house with one lit window carries
+  the home page; a closer crop of the same drawing heads the probate and attorney pages; a
+  schematic five-county map sits on About; the item lists have drawn icons.
+- **A probate timeline.** Five stages from opening the estate to closing, with the third
+  highlighted in the gold/cream treatment from the brand kit. Stage labels are qualitative
+  ("Once the court acts") rather than durations, and the caption says plainly it is a general
+  sequence and not legal advice.
+- **Paper grain.** A very low-opacity SVG noise overlay so the ivory reads as stock rather
+  than a flat fill.
+- **Structure:** card grids, a sticky masthead, an editorial label rail on prose sections, a
+  navy contact band with a direct-line card, drop caps, pull quotes, and a footer nav.
+
+Unchanged: the palette, the fonts, the tagline, every required disclosure, and the copy —
+apart from short additions on About (Stellar MLS, the tagline paragraph) and the timeline text.
+
+**Still no white anywhere.** Three ivory levels — `#EADCBC` sunk, `#F2E9D5` ground,
+`#FCF8EC` raised, with `#DACBA9` rules.
 
 ## Brand
 
