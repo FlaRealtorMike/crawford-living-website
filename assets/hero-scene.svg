@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4 58 752 376" role="img" aria-labelledby="hs-t">
+  <title id="hs-t">Line drawing of a Florida porch house at dusk, a live oak beside it and one window lit</title>
+  <defs>
+    <radialGradient id="hs-sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#E7C870" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#E7C870" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hs-glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E7C870" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#E7C870" stop-opacity=".55"/>
+    </linearGradient>
+    <radialGradient id="hs-spill" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#E7C870" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#E7C870" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- sky and low sun -->
+  <circle cx="628" cy="176" r="132" fill="url(#hs-sun)"/>
+  <circle cx="628" cy="176" r="21" fill="#E7C870" opacity=".3"/>
+
+
+  <!-- neighbouring rooflines, set back -->
+  <g fill="none" stroke="#0E2A57" stroke-width="1.3" opacity=".3" stroke-linejoin="round">
+    <path d="M26 342 L86 306 L146 342"/>
+    <path d="M40 342 V368 M132 342 V368"/>
+  </g>
+
+  <!-- the house -->
+  <g transform="translate(146,117) scale(0.74)" fill="none" stroke="#0E2A57" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M112 214 L330 96 L548 214" stroke-width="2.8"/>
+    <path d="M134 214 L330 108 L526 214"/>
+    <path d="M330 110 L140 214 H520 Z" fill="#FCF8EC" stroke="none"/>
+    <path d="M140 214 L330 110 L520 214"/>
+    <path d="M302 170 a28 28 0 0 1 56 0 v18 h-56 z" fill="#F2E9D5"/>
+    <path d="M330 150 v38 M314 160 v28 M346 160 v28" stroke="#2A4877" stroke-width="1.1"/>
+
+    <rect x="176" y="214" width="308" height="122" fill="#FCF8EC" stroke="none"/>
+    <path d="M176 214 V336 M484 214 V336" stroke-width="2.6"/>
+    <path d="M176 336 H484" stroke-width="2.1"/>
+
+    <path d="M92 262 H568" stroke-width="2.8"/>
+    <path d="M92 262 L120 246 H540 L568 262"/>
+    <path d="M100 270 H560" stroke="#2A4877" stroke-width="1.1" opacity=".8"/>
+
+    <path d="M132 270 V336 M244 270 V336 M416 270 V336 M528 270 V336" stroke-width="2.1"/>
+
+    <path d="M118 336 H542 M118 336 V346 H542 V336" stroke-width="2"/>
+    <path d="M292 346 h76 v10 h-76 z" stroke-width="1.9"/>
+    <path d="M276 356 h108" stroke-width="1.9"/>
+
+    <path d="M306 274 h48 v62 h-48 z" fill="#F2E9D5"/>
+    <path d="M306 274 h48 v62 h-48 z"/>
+    <path d="M316 284 h28 v20 h-28 z" stroke="#2A4877" stroke-width="1.1"/>
+    <circle cx="347" cy="314" r="3" fill="#0E2A57" stroke="none"/>
+
+    <path d="M204 280 h56 v50 h-56 z" fill="#F2E9D5"/>
+    <path d="M204 280 h56 v50 h-56 z"/>
+    <path d="M232 280 v50 M204 305 h56" stroke="#2A4877" stroke-width="1.1"/>
+
+    <path d="M400 280 h56 v50 h-56 z" fill="url(#hs-glow)" stroke="none"/>
+    <path d="M400 280 h56 v50 h-56 z"/>
+    <path d="M428 280 v50 M400 305 h56" stroke="#8A6D2F" stroke-width="1.1"/>
+  </g>
+
+  <!-- light spilling from the lit window onto the porch -->
+  <ellipse cx="464" cy="376" rx="72" ry="16" fill="url(#hs-spill)"/>
+
+  <g fill="none" stroke="#0E2A57" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- live oak -->
+    <path d="M22 240 C6 216 26 186 56 188 C64 166 100 156 126 170 C152 156 190 165 199 187 C229 184 248 214 232 239 C222 258 192 264 175 254 C155 268 120 270 102 256 C80 265 34 262 22 240 Z"
+          fill="#F2E9D5" stroke-width="2"/>
+    <path d="M122 380 C126 344 120 304 127 266 L133 266 C140 304 134 344 138 380 Z" fill="#F2E9D5" stroke-width="1.7"/>
+    <path d="M128 288 C104 278 84 262 70 244 M132 280 C158 272 182 258 196 242" stroke-width="1.3"/>
+    <g stroke="#2A4877" stroke-width=".85" opacity=".55">
+      <path d="M52 258 q-4 14 2 22 M104 262 q-4 15 2 22 M180 254 q5 13 -1 21"/>
+    </g>
+
+    <!-- palm, right -->
+    <g stroke-width="1.7">
+      <path d="M690 380 C684 344 692 316 700 294"/>
+      <path d="M700 294 C686 282 670 278 660 282 M700 294 C692 274 678 264 664 262 M700 294 C702 272 698 254 690 244 M700 294 C714 276 728 268 742 268 M700 294 C718 284 734 284 742 292"/>
+    </g>
+
+    <!-- ground -->
+    <path d="M0 380 H760" stroke="#DACBA9" stroke-width="1.6"/>
+    <g stroke="#2A4877" stroke-width=".9" opacity=".55">
+      <path d="M30 380 q4 -8 8 -10 M52 380 q-4 -7 -8 -9 M196 380 q4 -8 9 -10 M580 380 q4 -8 8 -10 M604 380 q-4 -7 -9 -9 M742 380 q-4 -8 -8 -10"/>
+    </g>
+
+    <!-- hedge along the porch -->
+    <g stroke="#2A4877" stroke-width="1.35">
+      <path d="M216 380 q9 -17 20 -17 q11 0 18 17 M256 380 q9 -17 20 -17 q11 0 18 17"/>
+      <path d="M492 380 q9 -17 20 -17 q11 0 18 17 M532 380 q9 -16 19 -16 q11 0 17 16"/>
+    </g>
+
+    <!-- path to the steps -->
+    <path d="M352 380 L316 432 M430 380 L468 432" stroke="#DACBA9" stroke-width="1.5"/>
+
+    <!-- mailbox -->
+    <path d="M612 380 V332" stroke-width="1.5"/>
+    <path d="M596 332 h32 v-17 h-32 z" fill="#FCF8EC" stroke-width="1.5"/>
+    <path d="M596 315 q16 -11 32 0" stroke-width="1.4"/>
+    <path d="M628 324 h8 v-8" stroke="#8A6D2F" stroke-width="1.5"/>
+  </g>
+</svg>

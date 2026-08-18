@@ -11,7 +11,9 @@ attorneys.html   For probate attorneys. Short and direct. noindex, nofollow
 about.html       Background — 20 years, the construction company, RENE, the county map
 assets/site.css  Shared stylesheet for all four pages
 
-assets/house-elevation.svg      Signature drawing — a Florida porch house, one window lit
+assets/hero-scene.svg           Home page hero — the house at dusk with a live oak, sun and walk
+assets/skyline.svg              Rooftop silhouette behind the home page contact band
+assets/house-elevation.svg      The house on its own, one window lit
 assets/house-detail.svg         The same drawing, framed closer (probate + attorneys heroes)
 assets/map-central-florida.svg  Schematic five-county map (inlined into about.html)
 assets/mark.svg                 Roundel monogram used in the masthead
@@ -90,6 +92,22 @@ apart from short additions on About (Stellar MLS, the tagline paragraph) and the
 
 **Still no white anywhere.** Three ivory levels — `#EADCBC` sunk, `#F2E9D5` ground,
 `#FCF8EC` raised, with `#DACBA9` rules.
+
+### Home page, second pass
+
+Mike asked for more graphics, home page only. Added:
+
+- **`hero-scene.svg`** — the house is now in a scene rather than floating alone: a live oak
+  with moss, a low sun, a neighbouring roofline set back, a hedge, mailbox, walk and grass.
+  One window is lit in gold, the single warm accent.
+- **Vignettes on the three entry cards** — house and key, document and pen, a rocking chair.
+- **`skyline.svg`** — a rooftop-and-palm silhouette across the bottom of the navy contact
+  band, which had been dead space.
+- A gold diamond ornament between the lower sections.
+
+**These are scoped to the home page on purpose.** The hero column ratio, the smaller display
+size and the skyline all sit behind `.hero-scene` and `.reach.has-skyline`, so the other three
+pages render exactly as they did — verified by comparing page heights before and after.
 
 ## Brand
 
