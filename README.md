@@ -35,7 +35,7 @@ then open http://localhost:8765.
 
 **Created 2026-08-14** to replace the "Orlando Real Estate AI" Lovable test page that had
 been sitting on this domain carrying fabricated testimonials and scarcity claims. See
-`PROJECT_INDEX.md` in `crawford-living-brand-kit` for that history.
+`PROJECT_INDEX.md` in `Crawford-Living` for that history.
 
 ---
 
@@ -111,7 +111,7 @@ pages render exactly as they did — verified by comparing page heights before a
 
 ## Brand
 
-Values come from `crawford-living-brand-kit.md` in the `crawford-living-brand-kit` repo:
+Values come from `crawford-living-brand-kit.md` in the `Crawford-Living` repo:
 Primary Navy `#0E2A57`, Secondary Blue `#19469C`, Gold `#E7C870` (used once, as the rule
 under the wordmark). Lora for headlines, Source Sans for body. Tagline
 "Real Estate . . . Considered". The eXp logo in `assets/` is the brand-kit copy, already

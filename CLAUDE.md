@@ -10,7 +10,7 @@ Three repos, all siblings under `~/Crawford Living/`. **Read all three before ma
 |---|---|---|
 | **`crawford-living-website`** (here) | The site. HTML/CSS, no build step | What actually exists |
 | `../crawford-living-brand` | The brief — positioning, strategy, open decisions, `DESIGN.md`, motion research | **Why** anything is the way it is |
-| `../crawford-living-brand-kit` | Operations — brand kit, attorney letters, probate data, compliance, business context | Palette, logo, eXp facts, constraints |
+| `../Crawford-Living` | Operations — brand kit, attorney letters, probate data, compliance, business context | Palette, logo, eXp facts, constraints |
 
 Design and build work happens **here**. The brand repo holds decisions and studies, not shipping pages. If a draft appears there, it is reference — do not treat it as a second site.
 
@@ -28,7 +28,7 @@ Design and build work happens **here**. The brand repo holds decisions and studi
 
 ## Brand
 
-Canonical palette and type live in `../crawford-living-brand-kit/crawford-living-brand-kit.md`; the applied system is `../crawford-living-brand/DESIGN.md`.
+Canonical palette and type live in `../Crawford-Living/crawford-living-brand-kit.md`; the applied system is `../crawford-living-brand/DESIGN.md`.
 
 - **Primary Navy `#0E2A57`** · Secondary Blue `#19469C` · Gold `#E7C870` (emphasis only, sparingly) · gold text `#8A6D2F`
 - Ivory grounds — `#EADCBC` sunk · `#F2E9D5` page · `#FCF8EC` raised · `#DACBA9` rules. **No white anywhere.**
