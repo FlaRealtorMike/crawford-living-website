@@ -34,6 +34,12 @@
   --shell:76rem;
   --r:14px;
   --ease:cubic-bezier(.22,.61,.36,1);
+  /* Scroll-reveal easing and duration measured from RIO (rioproperty.co.za):
+     cubic-bezier(.625,.05,0,1) on 110 elements, .75s on 87.
+     See ../crawford-living-brand/motion-notes.md */
+  --ease-weight:cubic-bezier(.625,.05,0,1);
+  --dur-reveal:.75s;
+  --stagger:.11s;
   --shadow:0 1px 2px rgba(16,24,40,.04), 0 12px 32px -12px rgba(16,24,40,.14);
   --shadow-lg:0 2px 4px rgba(16,24,40,.06), 0 28px 60px -24px rgba(16,24,40,.30);
 }
@@ -316,14 +322,14 @@ a{color:var(--blue)}
 .foot-legal a{color:var(--gold);text-decoration:none}
 
 /* ── motion: reveal on scroll ───────────────────────── */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease), transform .7s var(--ease)}
+.rv{opacity:0;transform:translateY(22px);transition:opacity var(--dur-reveal) var(--ease-weight), transform var(--dur-reveal) var(--ease-weight)}
 .rv.in{opacity:1;transform:none}
-.rv-d1{transition-delay:.08s}
-.rv-d2{transition-delay:.16s}
-.rv-d3{transition-delay:.24s}
-.rv-d4{transition-delay:.32s}
-.rv-d5{transition-delay:.4s}
-.rv-d6{transition-delay:.48s}
+.rv-d1{transition-delay:calc(var(--stagger) * 1)}
+.rv-d2{transition-delay:calc(var(--stagger) * 2)}
+.rv-d3{transition-delay:calc(var(--stagger) * 3)}
+.rv-d4{transition-delay:calc(var(--stagger) * 4)}
+.rv-d5{transition-delay:calc(var(--stagger) * 5)}
+.rv-d6{transition-delay:calc(var(--stagger) * 6)}
 
 /* nothing may depend on motion to be readable */
 .no-js .rv,
