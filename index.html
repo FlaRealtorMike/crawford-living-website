@@ -1,198 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Crawford Living — Michael Crawford, Broker-Associate, eXp Realty LLC</title>
-<meta name="description" content="Michael Crawford, Broker-Associate with eXp Realty LLC. Residential real estate across Orange, Seminole, Osceola, Lake and Volusia counties, Florida — with particular experience in probate property.">
+<meta name="description" content="Crawford Living — Michael Crawford, Broker-Associate with eXp Realty LLC. Buying, selling, new construction, probate and estates across Orange, Seminole, Osceola, Lake and Volusia counties, Florida.">
 <link rel="canonical" href="https://crawfordliving.com/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,700;0,800;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site-v2.css">
+<script>document.documentElement.className='js';</script>
 </head>
 <body>
 
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="masthead">
+<header class="head" id="head">
   <div class="shell">
     <a class="brand" href="./">
-      <img class="mark" src="assets/mark.svg" alt="" width="48" height="48">
-      <span>
-        <span class="wordmark">Crawford Living</span>
-        <span class="tagline">Real Estate . . . Considered</span>
-      </span>
+      <span class="wordmark">Crawford Living</span>
+      <span class="brandline">Real Estate&#8230; <em>Considered</em></span>
     </a>
-    <nav aria-label="Primary">
-      <a href="./" aria-current="page">Home</a>
-      <a href="probate.html">Probate</a>
-      <a href="about.html">About</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#buy">Buy</a>
+      <a href="#sell">Sell</a>
+      <a href="#new-construction">New Construction</a>
+      <a href="probate.html">Probate &amp; Estates</a>
+      <a href="#communities">Communities</a>
+      <a href="search.html">Search Homes</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
 
-  <div class="hero hero-scene">
+  <!-- ── hero ─────────────────────────────────────── -->
+  <section class="hero on-dark">
+    <div class="grid-lines" aria-hidden="true"></div>
     <div class="shell">
-      <div>
-        <p class="kicker">Central Florida · Broker-Associate, eXp Realty</p>
-        <h1 class="display">Some houses are sold. Others have to be <em>untangled</em> first.</h1>
-        <p class="standfirst">Twenty years of Florida real estate, and before that a construction company building four hundred homes a year. Both turn out to matter when a property needs work before it can be sold.</p>
-        <div class="hero-actions">
-          <a class="btn" href="tel:+14078289029">Call 407-828-9029</a>
-          <a class="btn btn-quiet" href="probate.html">If you're settling an estate</a>
-        </div>
+      <p class="eyebrow rv">Central Florida · Broker-Associate, eXp Realty LLC</p>
+      <h1 class="rv rv-d1">I built houses before I <span class="accent">sold</span> them.</h1>
+      <p class="lede hero-lede rv rv-d2">Crawford Living is a one-person practice covering buying, selling, new construction, and property caught up in an estate. You deal with me directly — the same person who advises you is the one who meets you at the property and negotiates for you.</p>
+      <div class="hero-cta rv rv-d3">
+        <a class="btn btn-gold" href="tel:+14078289029">Call 407-828-9029 <span class="arw" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#paths">See how I can help <span class="arw" aria-hidden="true">→</span></a>
       </div>
-      <figure class="hero-figure">
-        <img src="assets/hero-scene.svg" alt="Line drawing of a Florida porch house at dusk, a live oak beside it and one window lit" width="752" height="376">
-      </figure>
-    </div>
-  </div>
-
-  <div class="shell">
-
-    <div class="spread">
-      <div>
-        <p class="lead">I'm Mike Crawford. Crawford Living is deliberately small — you work with me, not with a team you were handed off to.</p>
-        <p>Much of my work involves property held in an estate: helping personal representatives, and the attorneys who advise them, get a house through probate and sold. It's unhurried work, and it usually arrives at a difficult time for a family.</p>
-        <p>I also represent buyers and sellers in ordinary resale and in new construction. Estate work is a specialty, not the whole practice.</p>
-      </div>
-      <div>
-        <dl class="facts">
+      <dl class="hero-meta rv rv-d4">
+        <div>
           <dt>Experience</dt>
-          <dd>Florida licensed broker, 20+ years</dd>
+          <dd>Florida broker, 20+ years</dd>
+        </div>
+        <div>
           <dt>Before real estate</dt>
-          <dd>Ran a construction company building 400 homes a year</dd>
+          <dd>Built 400 homes a year</dd>
+        </div>
+        <div>
           <dt>Certification</dt>
-          <dd>NAR Real Estate Negotiation Expert</dd>
+          <dd>NAR Negotiation Expert</dd>
+        </div>
+        <div>
           <dt>Counties served</dt>
-          <dd>Orange, Seminole, Osceola, Lake, Volusia</dd>
-        </dl>
-      </div>
+          <dd>Five, across Central Florida</dd>
+        </div>
+      </dl>
     </div>
+  </section>
 
-    <section>
-      <p class="label">Where to start</p>
+  <!-- ── six paths ────────────────────────────────── -->
+  <section class="sec" id="paths">
+    <div class="shell">
+      <div class="sec-head rv">
+        <h2>Whatever brought you here, there's a way in.</h2>
+        <p>Six ways I work with people. They're different jobs, but the same practice and the same person on the other end of the phone.</p>
+      </div>
+
       <ul class="paths">
-        <li>
+        <li class="rv rv-d1" id="buy">
+          <a href="#contact">
+            <span class="idx">01 — Buy</span>
+            <h3>Buying a home</h3>
+            <p>From working out what you're actually looking for through evaluating properties, negotiating, and getting to closing without surprises.</p>
+            <span class="go">Start a conversation <span class="arw" aria-hidden="true">→</span></span>
+          </a>
+        </li>
+        <li class="rv rv-d2" id="sell">
+          <a href="#contact">
+            <span class="idx">02 — Sell</span>
+            <h3>Selling a home</h3>
+            <p>Preparing, pricing and positioning a property — market knowledge paired with a practical read on what the house itself needs first.</p>
+            <span class="go">Start a conversation <span class="arw" aria-hidden="true">→</span></span>
+          </a>
+        </li>
+        <li class="rv rv-d3" id="new-construction">
+          <a href="#contact">
+            <span class="idx">03 — New Construction</span>
+            <h3>New construction</h3>
+            <p>Buyer representation from someone who ran a homebuilding company. I know what a builder's contract commits to, and what it quietly doesn't.</p>
+            <span class="go">Start a conversation <span class="arw" aria-hidden="true">→</span></span>
+          </a>
+        </li>
+        <li class="rv rv-d4">
           <a href="probate.html">
-            <span class="cardtop"><span class="num">01</span><svg class="vig" viewBox="0 0 72 56" fill="none" stroke="#0E2A57" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M8 27 L24 13 L40 27"/>
-              <path d="M12 27 V45 H36 V27"/>
-              <path d="M20 45 V34 h8 v11"/>
-              <circle cx="55" cy="30" r="5.2"/>
-              <path d="M60 30 H69"/>
-              <path d="M64.5 30 v4.4 M67.5 30 v3.2"/>
-            </svg></span>
-            <h3>If you're settling an estate</h3>
-            <p>What usually has to happen with the house, what I can take off your plate, and how it typically starts.</p>
-            <span class="go">Read this first →</span>
+            <span class="idx">04 — Probate &amp; Estates</span>
+            <h3>Probate &amp; estates</h3>
+            <p>Practical help when a property is tied up in an estate, deferred maintenance, or a family that needs to reach one decision together.</p>
+            <span class="go">Read the guide <span class="arw" aria-hidden="true">→</span></span>
           </a>
         </li>
-        <li>
-          <a href="attorneys.html">
-            <span class="cardtop"><span class="num">02</span><svg class="vig" viewBox="0 0 72 56" fill="none" stroke="#0E2A57" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M10 9 h24 l8 8 v30 h-32 z"/>
-              <path d="M34 9 v8 h8"/>
-              <path d="M16 24 H36 M16 31 H36 M16 38 H30"/>
-              <path d="M52 47 L50 40 l14 -25 l6 3 l-14 25 z"/>
-              <path d="M62 18 l6 3"/>
-            </svg></span>
-            <h3>If you're a probate attorney</h3>
-            <p>What I handle on the property side, so the cleanouts, repairs and heirs with questions don't land back on your desk.</p>
-            <span class="go">For attorneys →</span>
+        <li class="rv rv-d5" id="communities">
+          <a href="#contact">
+            <span class="idx">05 — Communities</span>
+            <h3>Communities</h3>
+            <p>Orange, Seminole, Osceola, Lake and Volusia — the places I actually work, and what it's like to live in them.</p>
+            <span class="go">Ask about an area <span class="arw" aria-hidden="true">→</span></span>
           </a>
         </li>
-        <li>
-          <a href="about.html">
-            <span class="cardtop"><span class="num">03</span><svg class="vig" viewBox="0 0 72 56" fill="none" stroke="#0E2A57" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M20 33 H48"/>
-              <path d="M48 33 L53 10"/>
-              <path d="M41 32 L46 12 M34 32 L39 13" stroke-width="1.1"/>
-              <path d="M23 33 V45 M45 33 V45"/>
-              <path d="M14 46 q22 8 44 -1" stroke-width="1.4"/>
-              <path d="M20 33 L14 30" stroke-width="1.2"/>
-            </svg></span>
-            <h3>If you just want to know who I am</h3>
-            <p>The background, why the practice is one person by choice, and what the tagline is meant to mean.</p>
-            <span class="go">About Mike →</span>
+        <li class="rv rv-d6">
+          <a href="search.html">
+            <span class="idx">06 — Search Homes</span>
+            <h3>Search homes</h3>
+            <p>A straightforward way to see what's available across the five counties. I'm building this properly rather than bolting on something clumsy.</p>
+            <span class="soon">Coming soon</span>
           </a>
         </li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <p class="orn" aria-hidden="true"><span></span></p>
-      <p class="label">The rest of the practice</p>
-      <div class="spread" style="padding:0;border-bottom:0">
-        <div>
-          <p>Estate property is the part of this work that needs the most explaining, so it takes up the most room here. It isn't all of it.</p>
-          <p>I represent buyers and sellers in ordinary resale across the five counties, and I work on new construction — where knowing how a house is actually built, and what a builder's contract does and doesn't commit to, is worth more than it sounds.</p>
-          <div class="pull">
-            <p><em>Real Estate . . . Considered</em> is meant literally. Most of the decisions in this business are better for being slept on.</p>
-          </div>
+  <!-- ── proof ────────────────────────────────────── -->
+  <section class="sec proof on-dark">
+    <div class="shell">
+      <div class="proof-grid">
+        <div class="rv">
+          <p class="eyebrow">Why this is different</p>
+          <p class="statement">Twenty years selling them. Before that, <em>building</em> them.</p>
+          <p class="lede">Most agents can tell you what a house is worth. Fewer can tell you what's wrong with it, what the repair actually costs, and whether it's worth doing at all.</p>
         </div>
-        <div>
-          <ul class="brief">
+        <ul class="proof-list rv rv-d2">
+          <li>
+            <h3>400 homes a year</h3>
+            <p>I ran a construction company at that scale before moving into real estate. Scheduling trades, reading a bid, and telling a real problem from a cosmetic one came from there.</p>
+          </li>
+          <li>
+            <h3>Repair or sell as-is, with numbers</h3>
+            <p>Not an opinion — an actual cost-and-return comparison for the specific property, so the decision is yours to make on facts. Sometimes the answer is to do nothing.</p>
+          </li>
+          <li>
+            <h3>A certified negotiator</h3>
+            <p>NAR Real Estate Negotiation Expert. A fair amount of this work is helping people who don't fully agree arrive at a decision they can each live with.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── direct representation ────────────────────── -->
+  <section class="sec sec-mist">
+    <div class="shell">
+      <div class="direct">
+        <div class="rv">
+          <p class="eyebrow">Direct representation</p>
+          <h2>You get me. Not a version of me.</h2>
+          <p class="lede">Crawford Living is one person by design, not by circumstance. I'm not building a team and I'm not recruiting agents. The trade-off is real — I take on less at once — but you always know exactly who is doing the work.</p>
+        </div>
+        <div class="direct-card rv rv-d2">
+          <ul>
             <li>
-              <h3>Estate &amp; probate property</h3>
-              <p>Personal representatives and the attorneys advising them.</p>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 8 14.5 16 5.5"/></svg>
+              <span>The person you speak with first is the person who meets you at the property.</span>
             </li>
             <li>
-              <h3>Ordinary resale</h3>
-              <p>Buyers and sellers across the five counties.</p>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 8 14.5 16 5.5"/></svg>
+              <span>The same person advises you and negotiates on your behalf.</span>
             </li>
             <li>
-              <h3>New construction</h3>
-              <p>Where knowing how a house is built is worth more than it sounds.</p>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 8 14.5 16 5.5"/></svg>
+              <span>No assistant standing between you and your representation.</span>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 8 14.5 16 5.5"/></svg>
+              <span>No queue to reach the person responsible for the work.</span>
             </li>
           </ul>
         </div>
       </div>
-    </section>
 
-  </div>
-
-  <section class="reach has-skyline">
-    <div class="shell">
-      <div>
-        <p class="label">Getting in touch</p>
-        <h2>A phone call, and usually not a long one.</h2>
-        <p>You tell me where things stand, I tell you what I'd expect the property to need, and you decide whether it's worth going further. No charge for that conversation and no obligation attached to it.</p>
+      <div class="rv rv-d3" style="margin-top:3.5rem">
+        <p class="eyebrow">Where I work</p>
+        <p class="lede">Orlando and the communities around it — a deliberate boundary, because local knowledge stops being worth much when it's stretched too thin.</p>
+        <ul class="counties">
+          <li>Orange</li>
+          <li>Seminole</li>
+          <li>Osceola</li>
+          <li>Lake</li>
+          <li>Volusia</li>
+        </ul>
       </div>
-      <div class="reach-card">
-        <p class="label">Direct line</p>
-        <p class="lines">
-          <a href="tel:+14078289029">407-828-9029</a><br>
-          <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a>
-        </p>
-        <p class="reach-note">Both reach me, not an assistant.</p>
+    </div>
+  </section>
+
+  <!-- ── contact ──────────────────────────────────── -->
+  <section class="sec contact on-dark" id="contact">
+    <div class="shell">
+      <div class="contact-grid">
+        <div class="rv">
+          <p class="eyebrow">Getting in touch</p>
+          <h2>A phone call, and usually not a long one.</h2>
+          <p class="lede">Tell me where things stand, I'll tell you what I'd expect the property to need, and you decide whether it's worth going further. No charge for that conversation and nothing attached to it.</p>
+        </div>
+        <div class="rv rv-d2">
+          <div class="contact-lines">
+            <a href="tel:+14078289029">407-828-9029 <span class="arw" aria-hidden="true">→</span></a>
+            <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com <span class="arw" aria-hidden="true">→</span></a>
+          </div>
+          <p class="lede" style="margin-top:1.4rem;font-size:.95rem">Both reach me directly, not an assistant.</p>
+        </div>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer>
+<footer class="foot">
   <div class="shell">
-    <img src="assets/exp-realty-logo-white.svg" alt="eXp Realty">
-    <div>
+    <div class="foot-top">
+      <img src="assets/exp-realty-logo-white.svg" alt="eXp Realty">
       <ul class="foot-nav">
-        <li><a href="./">Home</a></li>
-        <li><a href="probate.html">Probate</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="#buy">Buy</a></li>
+        <li><a href="#sell">Sell</a></li>
+        <li><a href="#new-construction">New Construction</a></li>
+        <li><a href="probate.html">Probate &amp; Estates</a></li>
+        <li><a href="#communities">Communities</a></li>
+        <li><a href="search.html">Search Homes</a></li>
         <li><a href="tel:+14078289029">407-828-9029</a></li>
       </ul>
+    </div>
+    <div class="foot-legal">
       <p>Michael Crawford, RENE — Licensed Real Estate Broker-Associate, Florida License&nbsp;#BK3074190</p>
       <p>eXp Realty LLC · 10752 Deerwood Park Blvd., Suite 100, Jacksonville, FL 32256</p>
       <p>407-828-9029 · <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a></p>
-      <p class="legal">&copy; 2026 Michael Crawford. All rights reserved.</p>
+      <p>&copy; 2026 Michael Crawford. All rights reserved.</p>
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var head = document.getElementById('head');
+  var onScroll = function(){
+    head.classList.toggle('is-stuck', window.scrollY > 8);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.rv');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+  items.forEach(function(el){ io.observe(el); });
+})();
+</script>
 
 </body>
 </html>
