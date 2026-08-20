@@ -32,9 +32,22 @@ so the site now has a visible seam:
 | `probate.html` | `assets/site.css` | Lora + Source Sans 3 |
 | `attorneys.html` | `assets/site.css` | Lora + Source Sans 3 |
 
-**A visitor clicking Home → Probate crosses a font and style change.** This is the top
-outstanding defect. Finishing it means porting the three remaining pages onto `site-v2.css`,
-which is a real piece of work, not a find-and-replace.
+**The navigation splits too, and that is the sharper problem:**
+
+| Page | Nav |
+|---|---|
+| `index.html`, `search.html` | Buy · Sell · New Construction · Probate & Estates · Communities · Search Homes |
+| `about.html`, `probate.html`, `attorneys.html` | Home · Probate · About |
+
+**A visitor clicking Home → Probate crosses a font change, a style change, and loses four of
+the six ways in** — with no route back to Buy, Sell, New Construction, Communities or Search.
+That is an orientation failure, and it contradicts the rule that motion and structure never
+cost the visitor their place.
+
+This is the top outstanding defect. Finishing it means porting the three remaining pages onto
+`site-v2.css` and the six-item nav — a real piece of work, not a find-and-replace. If only one
+half can be done first, **do the nav**: mismatched type is a blemish, a mismatched nav is a
+dead end.
 
 Do not "fix" it by reverting the homepage. The homepage is the agreed direction.
 
