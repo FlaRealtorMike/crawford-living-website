@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 480" role="img" aria-labelledby="map-t map-d">
+  <title id="map-t">The five Central Florida counties served</title>
+  <desc id="map-d">A schematic diagram, not to scale, showing Lake to the west, Volusia to the northeast on the Atlantic coast, Seminole above Orange in the centre, and Osceola to the south. Orlando is marked in Orange County.</desc>
+
+  <g font-family="'Source Sans 3','Source Sans Pro',sans-serif">
+
+    <!-- Atlantic -->
+    <g stroke="#19469C" stroke-width="1.2" fill="none" opacity=".45" stroke-linecap="round">
+      <path d="M506 62 q10 -7 20 0 t20 0"/>
+      <path d="M512 92 q10 -7 20 0 t20 0"/>
+      <path d="M518 122 q10 -7 20 0 t20 0"/>
+      <path d="M524 152 q10 -7 20 0 t20 0"/>
+    </g>
+    <text x="546" y="196" text-anchor="end" font-size="11" letter-spacing="2.4" fill="#19469C" opacity=".65">ATLANTIC</text>
+
+    <g stroke="#0E2A57" stroke-width="1.6" stroke-linejoin="round">
+      <path d="M52 96 L152 80 L162 296 L74 318 Z" fill="#EADCBC"/>
+      <path d="M312 44 L470 30 L500 118 L432 206 L318 190 Z" fill="#EADCBC"/>
+      <path d="M172 168 L300 152 L306 240 L176 250 Z" fill="#EADCBC"/>
+      <path d="M172 258 L336 252 L342 356 L178 352 Z" fill="#EADCBC"/>
+      <path d="M168 364 L438 354 L446 452 L182 458 Z" fill="#EADCBC"/>
+    </g>
+
+    <g font-size="15" font-weight="600" letter-spacing="2.6" fill="#0E2A57" text-anchor="middle">
+      <text x="107" y="204">LAKE</text>
+      <text x="399" y="118">VOLUSIA</text>
+      <text x="239" y="207">SEMINOLE</text>
+      <text x="257" y="292">ORANGE</text>
+      <text x="304" y="412">OSCEOLA</text>
+    </g>
+
+    <!-- Orlando -->
+    <g>
+      <circle cx="252" cy="322" r="12" fill="none" stroke="#E7C870" stroke-width="1.2" opacity=".8"/>
+      <circle cx="252" cy="322" r="4.6" fill="#8A6D2F"/>
+      <text x="272" y="327" font-size="13.5" fill="#6B6252" font-style="italic" font-family="Lora,Georgia,serif">Orlando</text>
+    </g>
+
+    <!-- compass -->
+    <g transform="translate(500,410)" stroke="#6B6252" fill="#6B6252">
+      <path d="M0 -26 L6 0 L0 -6 L-6 0 Z" stroke-width="1"/>
+      <text x="0" y="18" font-size="11" letter-spacing="1.6" text-anchor="middle" stroke="none">N</text>
+    </g>
+  </g>
+</svg>

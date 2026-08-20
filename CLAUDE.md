@@ -19,22 +19,36 @@ Build work happens **here**. The brand repo holds decisions and studies, not shi
 A file in its `drafts/` is reference — never a second website. If a draft disagrees with this
 repo, this repo wins.
 
-## ⚠️ Branch state — check this first, every time
+## ⚠️ The site is currently split across two design systems
 
-**As of 2026-08-20 there is a full redesign sitting unmerged on
-`claude/crawford-living-website-status-unbl05`** — 5 commits, ~2,000 lines: a rebuilt
-umbrella homepage, drawn SVG graphics, `search.html`, and `assets/site-v2.css`.
+The 2026-08-19 redesign was merged into `main` on **2026-08-20**. It did not cover every page,
+so the site now has a visible seam:
 
-**`main` does not have any of it.** The live site is the earlier, plainer version.
+| Page | Stylesheet | Type |
+|---|---|---|
+| `index.html` | `assets/site-v2.css` | **Archivo + Inter** |
+| `search.html` | `assets/site-v2.css` | **Archivo + Inter** |
+| `about.html` | `assets/site.css` | Lora + Source Sans 3 |
+| `probate.html` | `assets/site.css` | Lora + Source Sans 3 |
+| `attorneys.html` | `assets/site.css` | Lora + Source Sans 3 |
 
-Consequences, all of which have already bitten:
+**A visitor clicking Home → Probate crosses a font and style change.** This is the top
+outstanding defect. Finishing it means porting the three remaining pages onto `site-v2.css`,
+which is a real piece of work, not a find-and-replace.
 
-- If asked "why does the site look old", run `git log main..origin/claude/crawford-living-website-status-unbl05` **before** concluding anything or rebuilding.
-- Do not redesign the homepage from scratch. It has been done. It is on that branch.
-- The branch carries its own `CLAUDE.md`, written before this one. Where they conflict, **this
-  file describes `main`** — the branch file describes the branch.
+Do not "fix" it by reverting the homepage. The homepage is the agreed direction.
 
-Merging that branch is Mike's call, not a session's. It changes the live domain.
+## Branch discipline
+
+Work has twice been committed to a branch and left unmerged while the live domain drifted.
+Before concluding the site "looks old" or rebuilding anything:
+
+```
+git log main..origin/<branch>
+git branch -a
+```
+
+`claude/crawford-living-website-status-unbl05` is **merged and spent**. Do not build on it.
 
 ## Hosting
 
@@ -46,22 +60,26 @@ Merging that branch is Mike's call, not a session's. It changes the live domain.
   `flarealtormike.github.io`.
 - **Never touch the MX records.** They point at Google Workspace and carry
   `mdc@crawfordliving.com`. Breaking them breaks email silently.
+- A push is not a live site. Pages rebuilds after the push — typically under a minute — and
+  the CDN can serve the old page briefly after that. Check with
+  `gh api repos/FlaRealtorMike/crawford-living-website/pages/builds/latest`.
 
 **Never push to `main` without Mike saying so explicitly.** 18 printed attorney letters point
 at this domain. A push is a publication.
 
-## Pages on `main` today
+## Pages
 
 ```
-index.html       Home — who Mike is, the three paths, general resale/new construction
+index.html       Home — the umbrella. Six paths: Buy, Sell, New Construction,
+                 Probate & Estates, Communities, Search Homes
 probate.html     For personal representatives. Gentle, plain, no calendar, no urgency
 attorneys.html   For probate attorneys. Short and direct. noindex, nofollow
-about.html       Background — 20 years, the construction company, RENE
-assets/site.css  Shared stylesheet
+about.html       Background — 20 years, construction coordination, RENE
+search.html      Honest placeholder. Says "not ready yet" rather than faking an IDX
 ```
 
-Nav shows **Home / Probate / About** only. `attorneys.html` is deliberately out of the nav and
-out of search — it is reached from the printed letter and from a home page card.
+`attorneys.html` stays **out of the nav and out of search** — it is reached from the printed
+letter and from a home page card.
 
 Preview with working navigation:
 
@@ -74,25 +92,21 @@ python3 -m http.server 8765
 Canonical values: `../Crawford-Living/crawford-living-brand-kit.md`.
 Applied system: `../crawford-living-brand/DESIGN.md`.
 
-**Colour — in use on `main` and settled:**
+**Colour — settled, and used site-wide:**
 
-- Primary Navy `#0E2A57` · Secondary Blue `#19469C` · Gold `#E7C870` (emphasis only,
-  at most once per screen) · gold text `#8A6D2F`
+- Primary Navy `#0E2A57` · Secondary Blue `#19469C` · Gold `#E7C870` (emphasis only, at most
+  once per screen) · gold text `#8A6D2F`
 - Ivory grounds — `#EADCBC` sunk · `#F2E9D5` page · `#FCF8EC` raised · `#DACBA9` rules
 - **No white anywhere.**
 
-**Type — not settled. Know which side you are on:**
+**Type — the site has moved to Archivo + Inter** (`DESIGN.md`), but the brand kit still names
+Lora / Source Sans Pro and has not been updated. That is `open-decisions.md` **item 6**, still
+open on paper even though the homepage has decided it in practice. **Fold Archivo + Inter into
+the brand kit** or the two will keep disagreeing. Note the printed attorney letters are on
+ivory cotton stock.
 
-- `main` loads **Lora + Source Sans 3**.
-- `DESIGN.md` and the unmerged branch specify **Archivo + Inter**, arguing the Lora pairing is
-  a large part of the "too old" feel.
-- The brand kit still names Lora / Source Sans Pro and has not been updated.
-
-This is `open-decisions.md` **item 6** and it is open. Do not silently switch a page's fonts
-in either direction — it makes pages disagree with each other. Raise it instead.
-
-The eXp logo in `assets/` is the brand-kit copy, already recoloured to Secondary Blue rather
-than eXp's stock red. Keep it that way.
+The eXp logo in `assets/` is the brand-kit copy, recoloured to Secondary Blue rather than
+eXp's stock red. Keep it that way.
 
 ## Positioning rules that bind the copy
 
@@ -100,20 +114,22 @@ than eXp's stock red. Keep it that way.
   homepage sells the practice, not a biography. No single niche defines it.
 - **Probate must be visible on the homepage but must never lead it.** The attorney letters
   point at the bare domain, so an attorney who types it in must find probate — but a seller
-  landing there must not think probate is all this is. "Some houses are sold. Others have to
-  be untangled first." belongs on `probate.html`, not `index.html`.
+  landing there must not think probate is all this is. It is panel `04` on the homepage;
+  "Some houses are sold. Others have to be untangled first." belongs on `probate.html`.
 - **The construction background is coordination, not trades.** Never claim hands-on building
-  and never publish a homes-built figure. It is inaccurate, it invites structural questions
-  Mike is not licensed to answer, and it risks NAR Article 12. New Construction portal only.
+  and **never publish a homes-built figure** — a "four hundred homes a year" line was live
+  until 2026-08-20. It is inaccurate, invites structural questions Mike is not licensed to
+  answer, and risks NAR Article 12. Always pair it with the disclaimer the deeper pages use:
+  process knowledge, not structural expertise; anything technical goes to a licensed inspector
+  or engineer.
 - **Boutique — neither one-man-show nor corporate.** Never imply staff who do not exist; never
-  read as a solo operator either. The lever is *standard*, not headcount: "by design, not by
-  default." See `../crawford-living-brand/copy-inventory.md` for approved and retired language.
+  read as a solo operator either. The lever is *standard*, not headcount: "takes on fewer
+  transactions than it could, by design." Retired: "deliberately small", "one person by
+  choice", "you work with me, not a team". See `../crawford-living-brand/copy-inventory.md`.
 - **No urgency, scarcity, testimonials, counts, or ratings.** Tone is the product, and that
-  category of claim is exactly what made the page this site replaced a compliance exposure.
+  category of claim is what made the page this site replaced a compliance exposure.
 
 ## Required disclosures — on every page, including new ones
-
-The footer carries both and must continue to:
 
 - Florida Broker license **BK3074190**
 - **eXp Realty LLC**, 10752 Deerwood Park Blvd., Suite 100, Jacksonville, FL 32256
@@ -121,13 +137,14 @@ The footer carries both and must continue to:
 All advertising must carry the brokerage name while Mike is a Broker-Associate under eXp.
 Nothing may be branded "Crawford Living Realty, LLC" until that entity is formed and
 registered with DBPR. **Send material changes to eXp compliance before they go live** — the
-page this site replaced was never reviewed, which was half the problem.
+page this site replaced was never reviewed, which was half the problem. *The merged redesign
+has not been reviewed by eXp.*
 
 ## Deliberate omissions — restraint is the point
 
 - **No lead form, no email capture, no calendar embed.** The letters ask for a conversation,
   not a funnel. A form here would contradict them.
-- **No stock photography** on the pages that currently have none.
+- **No testimonials, counts, ratings, or "spots left."**
 
 Adding any of these should be a considered decision, not a default.
 
@@ -145,18 +162,20 @@ of `DESIGN.md`. The two that matter most:
 2. **Never capture the scroll.** Animate anything; do not wheel-jack, snap-hold, or block
    advancement. Motion never costs the visitor their place.
 
-## Before building a homepage section, check what it can point at
+## Known gaps
 
-`open-decisions.md` items 1–5 block real work here. In particular: the brand line is
-undecided (item 1), the hero buttons point at pages that do not exist (item 3), and
-**Search Homes is not just a product question** — Stellar MLS IDX participation rules,
-attribution requirements, and whether eXp must approve are unchecked (item 5). Do not select
-an IDX provider before that.
+- **Two design systems** — see the top of this file.
+- **Communities** is a homepage panel with no page and no photography behind it.
+- **Search Homes** is an honest placeholder. Before selecting any IDX provider, check Stellar
+  MLS participation rules, attribution requirements, and whether eXp must approve
+  (`open-decisions.md` item 5).
+- **The brand line** — "Real Estate… CONSIDERED" is what shipped, on the site and on the
+  printed letters. `open-decisions.md` item 1 lists an alternative; treat the shipped line as
+  the default and change it only deliberately.
 
 ## Conventions
 
 - **Never use GitHub's web editor for HTML.** CodeMirror auto-closes tags and corrupts markup.
-- Record decisions with reasoning and date, in the repo they belong to, **as they are made** —
-  so a later session does not re-litigate a settled question or reintroduce retired copy.
+- Record decisions with reasoning and date, in the repo they belong to, **as they are made**.
 - Update this file when a structural fact changes: hosting, branch state, page inventory,
-  repo roles.
+  repo roles, design-system state.
