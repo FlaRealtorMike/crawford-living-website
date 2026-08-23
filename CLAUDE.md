@@ -2,6 +2,10 @@
 
 **This repo is the website itself.** It is what visitors see. Everything else is context.
 
+> **For everything open across all three repos, read `../crawford-living-brand/loose-ends.md`.**
+> It is the single "what have I got going on" file — website, attorney mailing, brand docs, data
+> pipeline, entity and eXp exit. The website items below are one section of it.
+
 Plain static HTML. No build step, no framework, no dependencies.
 
 ## ⚠️ Read all three repos before designing or writing anything
@@ -19,18 +23,26 @@ Build work happens **here**. The brand repo holds decisions and studies, not shi
 A file in its `drafts/` is reference — never a second website. If a draft disagrees with this
 repo, this repo wins.
 
-## ⚠️ The site is currently split across two design systems
+## ⚠️ The site is currently split across THREE design systems
 
-The 2026-08-19 redesign was merged into `main` on **2026-08-20**. It did not cover every page,
-so the site now has a visible seam:
+The 2026-08-19 redesign was merged into `main` on **2026-08-20**, and the homepage was replaced
+again by the Hybrid direction (`83669f9`). Neither pass covered every page, so the site has two
+seams, not one:
+
+**✅ Verified against the files on disk 2026-08-23:**
 
 | Page | Stylesheet | Type |
 |---|---|---|
-| `index.html` | `assets/site-v2.css` | **Archivo + Inter** |
+| `index.html` | **none — styles are inline** | **Big Shoulders / Newsreader / Instrument Sans / IBM Plex Mono** |
 | `search.html` | `assets/site-v2.css` | **Archivo + Inter** |
 | `about.html` | `assets/site.css` | Lora + Source Sans 3 |
 | `probate.html` | `assets/site.css` | Lora + Source Sans 3 |
 | `attorneys.html` | `assets/site.css` | Lora + Source Sans 3 |
+
+⚠️ **This table said `index.html` used `site-v2.css` with Archivo + Inter until 2026-08-23.**
+It never did after the Hybrid landed — it loads no external stylesheet at all. The homepage and
+`search.html` are **not** the same system, so "port the rest onto `site-v2.css`" is not the whole
+job: decide first which of the two the site is actually standardising on.
 
 **The navigation splits too, and that is the sharper problem:**
 
@@ -77,8 +89,8 @@ git branch -a
   the CDN can serve the old page briefly after that. Check with
   `gh api repos/FlaRealtorMike/crawford-living-website/pages/builds/latest`.
 
-**Never push to `main` without Mike saying so explicitly.** 18 printed attorney letters point
-at this domain. A push is a publication.
+**Never push to `main` without Mike saying so explicitly.** **21** printed attorney letters will
+point at this domain. A push is a publication.
 
 ## Pages
 
@@ -112,11 +124,13 @@ Applied system: `../crawford-living-brand/DESIGN.md`.
 - Ivory grounds — `#EADCBC` sunk · `#F2E9D5` page · `#FCF8EC` raised · `#DACBA9` rules
 - **No white anywhere.**
 
-**Type — the site has moved to Archivo + Inter** (`DESIGN.md`), but the brand kit still names
-Lora / Source Sans Pro and has not been updated. That is `open-decisions.md` **item 6**, still
-open on paper even though the homepage has decided it in practice. **Fold Archivo + Inter into
-the brand kit** or the two will keep disagreeing. Note the printed attorney letters are on
-ivory cotton stock.
+**Type — unsettled, and the docs disagree three ways.** `DESIGN.md` documents Archivo + Inter as
+the applied system; the brand kit still names Lora / Source Sans Pro; and **the homepage now runs
+neither** — Big Shoulders / Newsreader / Instrument Sans (see the table above). That is
+`open-decisions.md` **item 6**, and the homepage has *not* quietly decided it in practice as this
+file used to claim. **Decide the real type system first, then update the kit and `DESIGN.md`
+together** — writing Archivo + Inter into the kit today would enshrine something the homepage
+does not use. Note the printed attorney letters are on ivory cotton stock.
 
 The eXp logo in `assets/` is the brand-kit copy, recoloured to Secondary Blue rather than
 eXp's stock red. Keep it that way.
