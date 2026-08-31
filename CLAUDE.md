@@ -6,7 +6,31 @@
 > It is the single "what have I got going on" file — website, attorney mailing, brand docs, data
 > pipeline, entity and eXp exit. The website items below are one section of it.
 
-Plain static HTML. No build step, no framework, no dependencies.
+Plain static HTML today. **That is a description of what it currently is, not a constraint on
+what it becomes** — see the rebuild rule directly below.
+
+## 🔴 Taken offline 2026-08-31 — and the rebuild is not bound by what it replaced
+
+**Mike's decision, 2026-08-31:** *"I don't want to sell eXp anymore."* The live eXp-branded site
+came down that day. Two standing instructions follow, and both bind every future session:
+
+**1. Nothing publishes until Crawford Living Realty, LLC is licensed.** The site is rebuilt
+internally and held. This is the same hold that governs the attorney letters (policy 2026-08-29,
+`../crawford-living-brand/loose-ends.md` item 1) — materials are built in the Crawford Living
+Realty identity and distributed only once the licence issues.
+
+**2. Do not design to the old hosting.** Mike, 2026-08-31: *"I don't want this new website
+designed with constraints because the current hosting can't deliver something. Don't design a
+site just because all we are serving now is a static site. I want the site to be the best and
+then we can find the most cost effective (if necessary) means of hosting the site."*
+
+> **Design what the work actually needs, then choose hosting to match.** Never the reverse.
+> A dynamic requirement — IDX search against the MLS Grid feed, server-side rendering, a
+> database, saved searches, auth — is a hosting question to answer *later*, never a reason to
+> narrow the design *now*. "GitHub Pages can't do that" is not a design input. If a direction
+> needs a real application host, say so and cost it; do not quietly shrink the idea to fit a
+> static file server.
+
 
 ## ⚠️ Read all three repos before designing or writing anything
 
@@ -65,7 +89,9 @@ Do not "fix" it by reverting the homepage. The homepage is the agreed direction.
 
 ## Branch discipline
 
-Work has twice been committed to a branch and left unmerged while the live domain drifted.
+⚠️ **The original reason for this section is gone** — there is no live domain to drift from
+since 2026-08-31. Kept because the *other* half still bites: work has twice been committed to a
+branch and left unmerged, and a session then rebuilt from scratch what already existed.
 Before concluding the site "looks old" or rebuilding anything:
 
 ```
@@ -75,22 +101,44 @@ git branch -a
 
 `claude/crawford-living-website-status-unbl05` is **merged and spent**. Do not build on it.
 
-## Hosting
+## Hosting — 🔴 NOTHING IS SERVED. Verified 2026-08-31.
 
-**GitHub Pages serves `main`, path `/`, at https://crawfordliving.com.**
+**GitHub Pages was deleted on 2026-08-31** (`gh api -X DELETE .../pages`, run by Mike). The site
+is off the internet. Verified the same day: the Pages config returns 404, and the apex, `www`
+and deep links all return **404** — a visitor gets GitHub's generic *"Site not found"*, which
+carries no eXp branding and no Crawford Living branding.
 
-- `CNAME` in the repo root binds the domain. **Do not delete or rename it.** GitHub rewrites
-  it if the custom domain is changed in the Pages settings UI.
-- DNS is at **GoDaddy** — apex needs GitHub's four A records; `www` CNAMEs to
-  `flarealtormike.github.io`.
+**A push to `main` is therefore no longer a publication.** That changes the working rules:
+
+- **The repo is now safe to build in.** Commit and push freely while the new site is developed.
+  The old hazard — every push landing on a live domain — is gone.
+- **Re-enabling Pages is the publication event**, and it is gated on Crawford Living Realty, LLC
+  being licensed. See the rebuild rule at the top of this file. Do not re-enable it to "preview"
+  something; run `python3 -m http.server 8765` locally instead.
+- ⚠️ **Nothing was ever mailed**, so no attorney holds this domain — confirmed against
+  GoHighLevel, where every contact reads `Mail date: NOT YET MAILED`. That is *why* taking the
+  domain dark stranded nobody, and it stops being true the moment letters go out. **If letters
+  are ever mailed while the domain is dark, that is a live problem** — re-check this before any
+  print run.
+
+**What is still bound, and must not be disturbed:**
+
+- **DNS is untouched at GoDaddy.** The apex still carries GitHub's four A records and `www`
+  still CNAMEs to `flarealtormike.github.io`. Harmless — they point at a host serving 404 — and
+  leaving them makes the eventual relaunch or migration simpler.
 - **Never touch the MX records.** They point at Google Workspace and carry
-  `mdc@crawfordliving.com`. Breaking them breaks email silently.
-- A push is not a live site. Pages rebuilds after the push — typically under a minute — and
-  the CDN can serve the old page briefly after that. Check with
-  `gh api repos/FlaRealtorMike/crawford-living-website/pages/builds/latest`.
+  `mdc@crawfordliving.com`. Verified intact after the takedown. Breaking them breaks email
+  silently.
+- `CNAME` is still in the repo root. Keep it. It costs nothing and re-binds the domain if Pages
+  is ever re-enabled here.
 
-**Never push to `main` without Mike saying so explicitly.** **21** printed attorney letters will
-point at this domain. A push is a publication.
+**The HTTPS certificate was discarded with the Pages site.** It had been approved through
+2026-11-13. Re-enabling means re-adding the custom domain and waiting for a fresh Let's Encrypt
+cert, which can take up to ~24h. Budget for that on launch day; it is not instant.
+
+**Hosting is an open question, deliberately.** Do not assume the rebuild returns to GitHub Pages
+— see the rebuild rule at the top of this file. IDX search against the MLS Grid feed needs
+server-side fetching, caching and scheduled sync, which Pages cannot do at any price.
 
 ## Pages
 
@@ -156,16 +204,39 @@ eXp's stock red. Keep it that way.
 - **No urgency, scarcity, testimonials, counts, or ratings.** Tone is the product, and that
   category of claim is what made the page this site replaced a compliance exposure.
 
-## Required disclosures — on every page, including new ones
+## Required disclosures — 🔴 this rule INVERTED on 2026-08-31
 
-- Florida Broker license **BK3074190**
-- **eXp Realty LLC**, 10752 Deerwood Park Blvd., Suite 100, Jacksonville, FL 32256
+**Do not add eXp attribution to the rebuild, and do not flag its absence as a defect.**
 
-All advertising must carry the brokerage name while Mike is a Broker-Associate under eXp.
-Nothing may be branded "Crawford Living Realty, LLC" until that entity is formed and
-registered with DBPR. **Send material changes to eXp compliance before they go live** — the
-page this site replaced was never reviewed, which was half the problem. *The merged redesign
-has not been reviewed by eXp.*
+The old rule — *all advertising carries the eXp brokerage name* — applied because the site was
+**published** while Mike is a Broker-Associate under eXp. It is not published any more. Nothing
+being built now is advertising, because nothing is distributed, and the standing instruction for
+all pre-launch work is that it is built in the **Crawford Living Realty** identity and held until
+the licence issues. This matches the attorney letter, which had its eXp lockup removed on
+2026-08-29 for exactly this reason.
+
+| | While the rebuild is held | On the day it publishes |
+|---|---|---|
+| eXp lockup / address | **Out** | Out — the licence will have issued |
+| "Crawford Living Realty, LLC" | Fine to build with | Live once DBPR registers the entity |
+| Broker licence **BK3074190** | Keep — it is Mike's, not eXp's | Keep |
+
+⚠️ **The old files still carry eXp.** All five pages in this repo still have the eXp address and
+the Broker-Associate line, and `assets/exp-realty-logo-white.svg` is still referenced. That is
+fine while nothing is served, but **the eXp attribution must be stripped before anything is
+published**, not left for launch day to catch.
+
+🔴 **Two conditions that would re-arm the old rule.** Re-read this before assuming eXp is out:
+
+1. **If any surface goes live again while Mike is still under eXp**, that surface is advertising
+   and must carry the eXp brokerage name. The rule is about *publication*, not about the repo.
+2. **The eXp compliance e-mail is no longer needed for this site** (draft at
+   `../Crawford-Living/compliance/exp-website-review-request.md`, never sent). There is nothing
+   live to review. It becomes necessary again the moment condition 1 is true.
+
+**Nothing may be branded "Crawford Living Realty, LLC" in a *published* context** until the
+entity is formed and registered with DBPR. Building in that identity is exactly what is wanted;
+publishing in it before the licence is not.
 
 ## Deliberate omissions — restraint is the point
 
