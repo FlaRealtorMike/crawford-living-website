@@ -196,6 +196,15 @@ of `DESIGN.md`. The two that matter most:
 - **Search Homes** is an honest placeholder. Before selecting any IDX provider, check Stellar
   MLS participation rules, attribution requirements, and whether eXp must approve
   (`open-decisions.md` item 5).
+  - ✅ **A working MLS Grid DEMO feed against real Stellar MLS data is already available, set up
+    2026-08-31.** Data Consumer account + Access Token live in Mike's MLS Grid account
+    (`app.mlsgrid.com`, Manage Subscriptions → Crawford Living Realty LLC subscriptions.demo_display
+    Subscription). This is separate from — and not blocked by — the still-open Stellar Case
+    #00065984 for the production feed. **When work on `search.html`'s real search functionality
+    starts, this demo feed is what to build/test against**, not a placeholder or mock data. Full
+    detail in `../Crawford-Living/PROJECT_INDEX.md` under item 15. Going live for real visitors
+    still requires the separate production subscription + signed Data License Agreement (Mike's
+    signature, not Claude's) once ready to launch.
 - **The brand line** — "Real Estate… CONSIDERED" is what shipped, on the site and on the
   printed letters. `open-decisions.md` item 1 lists an alternative; treat the shipped line as
   the default and change it only deliberately.
