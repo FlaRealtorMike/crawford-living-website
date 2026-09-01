@@ -261,8 +261,14 @@ publishing in it before the licence is not.
 
 ## Deliberate omissions — restraint is the point
 
-- **No lead form, no email capture, no calendar embed.** The letters ask for a conversation,
-  not a funnel. A form here would contradict them.
+- ~~**No lead form, no email capture, no calendar embed.**~~ 🔴 **REVERSED 2026-09-01, Mike's
+  call:** *"Totally forget that I said we don't want lead form signups. Those are necessary. If a
+  person wants to give me their information, I certainly should have something there to take it."*
+  **Lead capture is permitted.** It routes to GoHighLevel. The old reasoning — that the attorney
+  letters ask for a conversation, not a funnel — is recorded here so the reversal is a decision
+  rather than a drift, but it no longer binds.
+  ⚠️ Still true, and unchanged: **no calendar embed**, and the form's *language* still has to pass
+  the brand rubric. Intake, not a gate.
 - **No testimonials, counts, ratings, or "spots left."**
 
 Adding any of these should be a considered decision, not a default.
