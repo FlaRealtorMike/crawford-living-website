@@ -212,6 +212,16 @@ eXp's stock red. Keep it that way.
   point at the bare domain, so an attorney who types it in must find probate — but a seller
   landing there must not think probate is all this is. It is panel `04` on the homepage;
   "Some houses are sold. Others have to be untangled first." belongs on `probate.html`.
+- 🔴 **ZERO probate transactions. Mike, 2026-09-01: *"I've never transacted a real property in an
+  estate."*** Nothing may imply otherwise — no count, no frequency, no "I've seen this before".
+  **Two false claims are live or drafted right now:** `probate.html:64` *"I've been through the
+  process enough times to know what tends to come next"*, and on the 2026-08 canvas
+  *"estate property is a regular part of the work rather than an occasional one."* Both must come
+  out. **CPRES is not held either.** What is true, and is enough: 20+ years a licensed broker,
+  RENE, and the construction-coordination background — the house in an estate is the part he has
+  actually been doing for two decades, and the legal part belongs to the attorney anyway. Full
+  inventory of true / false / unverified claims:
+  `../crawford-living-brand/.claude/skills/crawford-living-brand-editor/proof-points.md`.
 - **The construction background is coordination, not trades.** Never claim hands-on building
   and **never publish a homes-built figure** — a "four hundred homes a year" line was live
   until 2026-08-20. It is inaccurate, invites structural questions Mike is not licensed to
