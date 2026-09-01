@@ -165,12 +165,33 @@ python3 -m http.server 8765
 Canonical values: `../Crawford-Living/crawford-living-brand-kit.md`.
 Applied system: `../crawford-living-brand/DESIGN.md`.
 
-**Colour — settled, and used site-wide:**
+**Colour — 🔴 the palette below was SUPERSEDED 2026-08-29. Corrected here 2026-08-31.**
 
-- Primary Navy `#0E2A57` · Secondary Blue `#19469C` · Gold `#E7C870` (emphasis only, at most
-  once per screen) · gold text `#8A6D2F`
-- Ivory grounds — `#EADCBC` sunk · `#F2E9D5` page · `#FCF8EC` raised · `#DACBA9` rules
-- **No white anywhere.**
+> This file recorded navy + ivory + "no white anywhere" as settled and used site-wide. It
+> was superseded the same week by the 🔒 DECIDED block in
+> `../Crawford-Living/crawford-living-brand-kit.md`, and **this stale copy actively misled a
+> review on 2026-08-31** — it produced a finding that the 2026-08 canvas had "drifted" from
+> the brand when the canvas was implementing the current palette correctly.
+
+**The settled palette — brand kit, 2026-08-29:**
+
+| Token | Name | Hex | Use |
+|---|---|---|---|
+| `--ink` | Crawford Black | `#1A202C` | Text, wordmark, headings, buttons, rules |
+| `--surface` | Bond Paper | `#FAF9F6` | Every background |
+| `--accent` | Old Brass | `#A8813C` | One emphasis per page — **rules, seals, marks** |
+| `--muted` | Margin Grey | `#5E6470` | Secondary text, labels, captions |
+| `--subtle` | Onion Skin | `#E6E6E1` | Panel and callout fills |
+
+⚠️ **Old Brass is a MARK colour, not a text colour.** Computed 2026-08-31: `#A8813C` on
+Bond Paper is **3.40:1** — clears the 3:1 threshold for rules and marks, fails the 4.5:1
+floor for text. On Onion Skin it is **2.86:1** and fails everything, so that pairing has no
+safe use at any size. Set label text in Crawford Black or Margin Grey.
+
+**Superseded, kept only as history:** Primary Navy `#0E2A57` · Secondary Blue `#19469C` ·
+Gold `#E7C870` · gold text `#8A6D2F` · ivory grounds `#EADCBC` / `#F2E9D5` / `#FCF8EC` /
+`#DACBA9` · "no white anywhere". **The five live pages still use this system** — they
+predate the decision. That is one more thing to settle before anything publishes.
 
 **Type — unsettled, and the docs disagree three ways.** `DESIGN.md` documents Archivo + Inter as
 the applied system; the brand kit still names Lora / Source Sans Pro; and **the homepage now runs
