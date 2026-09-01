@@ -7,3 +7,10 @@
 
 # Windows
 Thumbs.db
+
+# Secrets — never commit
+.env
+.env.*
+*.token
+.mlsgrid-token
+secrets.json

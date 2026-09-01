@@ -285,7 +285,24 @@ of `DESIGN.md`. The two that matter most:
 
 - **Two design systems** — see the top of this file.
 - **Communities** is a homepage panel with no page and no photography behind it.
-- **Search Homes** is an honest placeholder. Before selecting any IDX provider, check Stellar
+- 🔴 **Search Homes — DECIDED 2026-09-01: do not build it. The honest placeholder stays.**
+  The MLS Grid demo feed was queried and the IDX rules read in full. Two findings settle it:
+  **every photo must be self-hosted** (their URLs are single-use and expire in an hour), which
+  against a 40,000-request/day cap is ~**two weeks** of syncing for a first load plus ~21,600
+  images/day of churn; and **it is not a search API** — only seven technical fields are
+  filterable, so it is a bulk-replication source you copy into your own database. That means a
+  server, a database and hundreds of GB of storage for a page with no audience yet.
+  - **What replaces it: OneHome**, free with the Stellar MLS subscription, branded to Crawford
+    Living, surviving the eXp exit. Invite-only, which fits *"tell us what you're looking for"*
+    better than a public grid does.
+  - **If it is ever genuinely needed, rent it** — iHomeFinder, IDX Broker, Showcase IDX.
+    **Do not build it.**
+  - ⚠️ **If this is reopened, the display rules bind the design before it is drawn:** listing
+    brokerage, listing number, phone/e-mail and status must sit immediately adjacent to every
+    listing, *"not smaller than the median used in the display of listing data"* — the small-grey
+    attribution treatment is not permitted. Full detail:
+    `../Crawford-Living/PROJECT_INDEX.md` item 15.
+- Before selecting any IDX provider, check Stellar
   MLS participation rules, attribution requirements, and whether eXp must approve
   (`open-decisions.md` item 5).
   - ✅ **A working MLS Grid DEMO feed against real Stellar MLS data is already available, set up
