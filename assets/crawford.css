@@ -140,10 +140,10 @@ strong{color:var(--ink);font-weight:600}
   transition:border-color .3s var(--ease), box-shadow .3s var(--ease);
 }
 .head.is-stuck{border-bottom-color:var(--line);box-shadow:0 8px 26px -20px rgba(26,32,44,.5)}
-.head .shell{display:flex;align-items:center;gap:2rem;min-height:72px}
-.brand{display:flex;flex-direction:column;justify-content:center;text-decoration:none;flex:none;gap:.12rem}
-.brand .wordmark{font-size:1.3rem;font-weight:600;color:var(--ink);letter-spacing:-.022em;line-height:1}
-.brand .brandline{font-size:.64rem;letter-spacing:.06em}
+.head .shell{display:flex;align-items:center;gap:2rem;min-height:82px}
+.brand{display:flex;flex-direction:column;justify-content:center;text-decoration:none;flex:none;gap:.18rem}
+.brand .wordmark{font-size:1.65rem;font-weight:600;color:var(--ink);letter-spacing:-.022em;line-height:1}
+.brand .brandline{font-size:.74rem;letter-spacing:.06em}
 
 .nav{display:flex;gap:clamp(1rem,2vw,1.9rem);margin-left:auto;align-items:center;flex-wrap:wrap;justify-content:flex-end}
 .nav a{
@@ -325,6 +325,17 @@ section:last-of-type{border-bottom:0}
 .items .ico svg{width:1.5rem;height:1.5rem;display:block}
 .items h3{font-size:1.12rem}
 .items p{margin:0;max-width:none}
+/* icon-free variant (attorneys) — a clean typographic list */
+.items-plain li{display:flex;flex-direction:column;gap:.35rem}
+
+/* boundary callout — the trust core, given full width and weight */
+.boundary{
+  background:var(--subtle);border-left:4px solid var(--accent);
+  border-radius:0 var(--r) var(--r) 0;padding:2rem 2.25rem;margin:2.5rem 0 .5rem;
+}
+.boundary .note-lead{margin:0 0 .9rem}
+.boundary-statement{margin:0;font-size:1.16rem;line-height:1.6;color:var(--ink);max-width:62ch}
+.boundary .note-fine{margin:1.1rem 0 0}
 
 /* ── probate timeline ───────────────────────────────── */
 .timeline{list-style:none;margin:2.4rem 0 0;padding:0;counter-reset:step;position:relative}
