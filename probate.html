@@ -9,26 +9,26 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/crawford.css">
 </head>
 <body>
 
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="masthead">
+<header class="head" id="head">
   <div class="shell">
     <a class="brand" href="./">
-      <img class="mark" src="assets/mark.svg" alt="" width="48" height="48">
-      <span>
-        <span class="wordmark">Crawford Living</span>
-        <span class="tagline">Real Estate . . . Considered</span>
-      </span>
+      <span class="wordmark">Crawford Living</span>
+      <span class="brandline">Real Estate . . . <em>Considered</em></span>
     </a>
-    <nav aria-label="Primary">
-      <a href="./">Home</a>
-      <a href="probate.html" aria-current="page">Probate</a>
-      <a href="about.html">About</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="./#buy">Buy</a>
+      <a href="./#sell">Sell</a>
+      <a href="./#new-construction">New Construction</a>
+      <a href="probate.html" aria-current="page">Probate &amp; Estates</a>
+      <a href="./#communities">Communities</a>
+      <a href="search.html">Search Homes</a>
     </nav>
   </div>
 </header>
@@ -123,7 +123,7 @@
       <ul class="items">
         <li>
           <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0E2A57" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2.5" y="8.5" width="19" height="7" rx="1"/>
               <path d="M7 8.5v3M11 8.5v4M15 8.5v3M19 8.5v4"/>
             </svg>
@@ -135,7 +135,7 @@
         </li>
         <li>
           <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0E2A57" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 5.5v13.5M8.5 19h7M4.5 8.5h15"/>
               <path d="M4.5 8.5 2.2 13.4a3 3 0 0 0 4.6 0Z"/>
               <path d="M19.5 8.5 17.2 13.4a3 3 0 0 0 4.6 0Z"/>
@@ -148,7 +148,7 @@
         </li>
         <li>
           <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0E2A57" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
               <ellipse cx="12" cy="6.5" rx="7" ry="2.8"/>
               <path d="M5 6.5v5c0 1.55 3.13 2.8 7 2.8s7-1.25 7-2.8v-5"/>
               <path d="M5 11.5v5c0 1.55 3.13 2.8 7 2.8s7-1.25 7-2.8v-5"/>
@@ -161,7 +161,7 @@
         </li>
         <li>
           <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0E2A57" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="6.5" cy="12" r="3.6"/>
               <path d="M10.1 12H21"/>
               <path d="M16.5 12v3.4M19.5 12v2.4"/>
@@ -174,7 +174,7 @@
         </li>
         <li>
           <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0E2A57" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="8.5" cy="8" r="3"/>
               <circle cx="16" cy="9.5" r="2.4"/>
               <path d="M3 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/>
@@ -213,24 +213,38 @@
 
 </main>
 
-<footer>
+<footer class="foot">
   <div class="shell">
-    <img src="assets/exp-realty-logo-white.svg" alt="eXp Realty">
-    <div>
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="wordmark">Crawford Living</span>
+        <span class="foot-cred">Realty, LLC · Fla Lic RE Broker</span>
+      </div>
       <ul class="foot-nav">
         <li><a href="./">Home</a></li>
-        <li><a href="probate.html">Probate</a></li>
+        <li><a href="probate.html">Probate &amp; Estates</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="search.html">Search Homes</a></li>
         <li><a href="tel:+14078289029">407-828-9029</a></li>
       </ul>
+    </div>
+    <div class="foot-legal">
       <p class="disclaimer">The information on this page is general and practical, not legal advice. Every estate is different. Decisions about probate, authority to sell, and homestead should be made with your attorney.</p>
-      <p>Michael Crawford, RENE — Licensed Real Estate Broker-Associate, Florida License&nbsp;#BK3074190</p>
-      <p>eXp Realty LLC · 10752 Deerwood Park Blvd., Suite 100, Jacksonville, FL 32256</p>
+      <p>Michael Crawford, RENE — Florida-licensed real estate broker · License&nbsp;#BK3074190</p>
       <p>407-828-9029 · <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a></p>
       <p class="legal">&copy; 2026 Michael Crawford. All rights reserved.</p>
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var head=document.getElementById('head');
+  if(!head)return;
+  var s=function(){head.classList.toggle('is-stuck',window.scrollY>8)};s();
+  window.addEventListener('scroll',s,{passive:true});
+})();
+</script>
 
 </body>
 </html>

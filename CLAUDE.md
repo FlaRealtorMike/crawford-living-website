@@ -49,6 +49,28 @@ repo, this repo wins.
 
 ## ⚠️ The site is currently split across THREE design systems
 
+> ## ✅ Updated 2026-09-03 — four of five pages consolidated onto ONE system
+>
+> **`about.html`, `probate.html`, `attorneys.html` and `search.html` now share one
+> stylesheet, `assets/crawford.css`**, on the settled palette (Crawford Black · Bond Paper ·
+> Old Brass · Margin Grey · Onion Skin), **Archivo + IBM Plex Mono**, the unified **six-item
+> nav**, a sticky header with labels always visible, and the accent-by-role / Onion-Skin
+> patterns from `../crawford-living-brand/DESIGN.md` ("Accent & mark application"). **eXp
+> attribution was stripped from these four** (logo, address, "Broker-Associate" → "Florida
+> broker"); they build in the Crawford Living Realty identity, licence BK3074190 kept. The
+> shared illustration `assets/house-detail.svg` was retinted to match.
+>
+> **`index.html` was deliberately left on its bespoke navy "Hybrid" system** — its concept is
+> built on the old palette, and it should be redesigned once the **type scale** and **nav
+> taxonomy** (still open in DESIGN.md) are settled, not re-skinned. Until then the site has
+> exactly one seam: the homepage vs. the other four.
+>
+> **`assets/site.css` and `assets/site-v2.css` are now unused** (index is inline; the other
+> four moved to `crawford.css`). Left in place as history; safe to delete once the homepage is
+> rebuilt. **Type scale and radius remain undecided** — `crawford.css` carried each page's
+> existing sizes over rather than inventing a scale, and uses a restrained 2px radius as an
+> interim. The rest of this section is the pre-2026-09-03 record.
+
 The 2026-08-19 redesign was merged into `main` on **2026-08-20**, and the homepage was replaced
 again by the Hybrid direction (`83669f9`). Neither pass covered every page, so the site has two
 seams, not one:
