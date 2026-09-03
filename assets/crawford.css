@@ -369,6 +369,12 @@ section:last-of-type{border-bottom:0}
   max-width:44rem;font-size:.98rem;line-height:1.6;color:var(--ink);
 }
 .note p{margin:0;max-width:none}
+.note p + p{margin-top:.75rem}
+.note-lead{
+  font-family:var(--mono);font-size:.7rem;font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--muted);
+}
+.note-fine{font-size:.82rem;font-style:italic;color:var(--muted);line-height:1.55}
 
 /* ── pull quote ─────────────────────────────────────── */
 .pull{
