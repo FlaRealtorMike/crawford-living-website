@@ -3,14 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>When a probate includes a house — Crawford Living</title>
-<meta name="description" content="For personal representatives settling an estate in Central Florida: what usually happens with the house, and what a real estate broker can take off your plate.">
+<title>When an estate includes a home — Crawford Living</title>
+<meta name="description" content="A plain-language guide for Florida personal representatives: what happens to a home in probate, the words you'll hear, and how a real estate broker can help. Not legal advice.">
 <link rel="canonical" href="https://crawfordliving.com/probate.html">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/crawford.css">
+<style>
+/* page-scoped components for the probate guide — built on crawford.css tokens */
+
+/* the road map — six linked questions that anchor the page */
+.roadmap{list-style:none;margin:2.2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;max-width:52rem}
+.roadmap a{display:flex;gap:1rem;align-items:baseline;background:var(--surface);padding:1.2rem 1.4rem;text-decoration:none;color:var(--ink);transition:background .25s var(--ease)}
+.roadmap a:hover{background:var(--subtle)}
+.roadmap .n{font-family:var(--mono);font-size:.78rem;font-weight:500;color:var(--muted);flex:none}
+.roadmap .q{font-weight:500;line-height:1.35}
+.roadmap .arw{margin-left:auto;color:var(--muted);transition:transform .25s var(--ease)}
+.roadmap a:hover .arw{transform:translateX(4px)}
+
+/* two paths through probate */
+.split{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin:2.2rem 0 0;max-width:52rem}
+.split .card{background:var(--subtle);border-top:3px solid var(--ink);border-radius:var(--r);padding:1.6rem 1.7rem}
+.split .card h3{margin-bottom:.2rem}
+.split .card .term{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.9rem}
+.split .card .span{font-style:italic;color:var(--muted);font-size:.94rem}
+.split .card p{margin:.5rem 0 0;font-size:.97rem;color:var(--ink);max-width:none}
+
+/* glossary — words you'll hear */
+.glossary{margin:2.2rem 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:0 3.5rem;max-width:56rem}
+.glossary dt{font-weight:600;color:var(--ink);padding-top:1.1rem;border-top:1px solid var(--line);margin-top:1.1rem}
+.glossary dd{margin:.3rem 0 0;color:var(--muted);font-size:.96rem;line-height:1.55}
+.glossary dt:first-of-type,.glossary dt:nth-of-type(2){border-top:2px solid var(--ink);margin-top:0}
+
+/* download the full guide */
+.download{display:flex;flex-wrap:wrap;align-items:center;gap:1.5rem 2rem;background:var(--subtle);border-left:4px solid var(--accent);border-radius:0 var(--r) var(--r) 0;padding:1.9rem 2.1rem;margin:2.4rem 0 0;max-width:52rem}
+.download .dl-text{flex:1 1 20rem}
+.download .dl-text .note-lead{margin:0 0 .5rem}
+.download .dl-text h3{margin:0 0 .3rem}
+.download .dl-text p{margin:0;font-size:.95rem;color:var(--muted)}
+.download .btn{flex:none}
+
+@media (max-width:52rem){
+  .roadmap,.split,.glossary{grid-template-columns:minmax(0,1fr)}
+  .glossary dt:nth-of-type(2){border-top:1px solid var(--line);margin-top:1.1rem}
+}
+</style>
 </head>
 <body>
 
@@ -39,8 +78,8 @@
     <div class="shell">
       <div>
         <p class="kicker">For personal representatives</p>
-        <h1 class="display">When a probate includes a <em>house</em>.</h1>
-        <p class="standfirst">If you're reading this, someone has died and you've been named to handle their affairs. I'm sorry. What follows is the practical part — written plainly, because most of what's written about probate isn't.</p>
+        <h1 class="display">When an estate includes a <em>home</em>.</h1>
+        <p class="standfirst">If you've been named to settle an estate and a home is part of it, this is the practical part, written plainly. You don't have to understand all of probate today. A place to begin is enough.</p>
       </div>
       <figure class="hero-figure framed">
         <img src="assets/house-detail.svg" alt="" width="484" height="292">
@@ -51,154 +90,239 @@
   <div class="shell">
 
     <section class="rail">
-      <p class="label">The practical part</p>
+      <p class="label">Where to begin</p>
       <div>
-      <p class="dropcap">A house is usually the largest thing in an estate and the most work. It also tends to be the part nobody prepared you for. There is a mortgage that keeps coming due, a lawn that keeps growing, insurance that behaves differently once a house sits empty, and belongings that someone has to go through.</p>
+        <p class="dropcap">Florida probate is not a single decision or a single event. It is a sequence: authority is established, the home is protected, and the family gathers what it needs before deciding anything. When a home is part of it, a handful of questions come up, roughly in this order.</p>
+        <p>You can read straight through, or start with whichever question is weighing on you now.</p>
 
-      <p>None of that is urgent today. It will still be there next month. But it helps to know roughly what's ahead.</p>
-
-      <h2>What usually has to happen first</h2>
-
-      <p>Before a house in an estate can be sold, someone has to have the legal authority to sell it. In Florida that comes through the probate court, and the path depends on the size of the estate, whether there was a will, and whether the property was the deceased's homestead.</p>
-
-      <p><strong>Your attorney is the right person to tell you which path applies</strong> and when you're actually able to sign. I'm not an attorney, and this isn't legal advice — but I've been through the process enough times to know what tends to come next, and to make sure the property side is ready when the legal side clears.</p>
-
-      <figure class="plate">
-        <ol class="timeline">
-          <li>
-            <span class="step" aria-hidden="true"></span>
-            <div class="body">
-              <span class="when">Before anything else</span>
-              <h3>The estate is opened</h3>
-              <p>An attorney files with the circuit court in the county where the person lived. If you don't have one yet, this is the first call — before any decision about the house.</p>
-            </div>
-          </li>
-          <li>
-            <span class="step" aria-hidden="true"></span>
-            <div class="body">
-              <span class="when">Once the court acts</span>
-              <h3>A personal representative is appointed</h3>
-              <p>The court issues the document that gives someone authority to act for the estate. Until that exists, nobody can sign to sell the house.</p>
-            </div>
-          </li>
-          <li class="mark">
-            <span class="step" aria-hidden="true"></span>
-            <div class="body">
-              <span class="when">While the legal side runs</span>
-              <h3>The property gets looked at properly</h3>
-              <p>This is the part I handle, and it can happen alongside the legal process rather than after it. What the house needs, what those repairs would actually cost, what it's worth as-is against repaired, and what to do about an empty building in the meantime.</p>
-            </div>
-          </li>
-          <li>
-            <span class="step" aria-hidden="true"></span>
-            <div class="body">
-              <span class="when">When the estate can sign</span>
-              <h3>The house is listed and sold</h3>
-              <p>Prepared in advance, so the sale isn't waiting on a cleanout, a roof quote or a contractor who can't start for six weeks.</p>
-            </div>
-          </li>
-          <li>
-            <span class="step" aria-hidden="true"></span>
-            <div class="body">
-              <span class="when">At the end</span>
-              <h3>Closing, and the estate settles up</h3>
-              <p>Proceeds go to the estate, and distribution follows whatever your attorney has set out.</p>
-            </div>
-          </li>
-        </ol>
-        <figcaption>A general sequence, not a schedule. Every estate differs, and which path applies to yours — and how long each part takes — is a question for your attorney, not for this page.</figcaption>
-      </figure>
-
-      <div class="note">
-        <p>If you don't yet have a probate attorney, that's the first call to make — before any decision about the house. I'm glad to suggest attorneys I've worked with in Central Florida, with no arrangement of any kind between us.</p>
-      </div>
+        <ul class="roadmap">
+          <li><a href="#authority"><span class="n">01</span><span class="q">Who is allowed to act?</span><span class="arw" aria-hidden="true">&#8594;</span></a></li>
+          <li><a href="#protect"><span class="n">02</span><span class="q">What needs attention right now?</span><span class="arw" aria-hidden="true">&#8594;</span></a></li>
+          <li><a href="#homestead"><span class="n">03</span><span class="q">Could the home be homestead?</span><span class="arw" aria-hidden="true">&#8594;</span></a></li>
+          <li><a href="#value"><span class="n">04</span><span class="q">What is the home worth?</span><span class="arw" aria-hidden="true">&#8594;</span></a></li>
+          <li><a href="#choices"><span class="n">05</span><span class="q">What are the choices?</span><span class="arw" aria-hidden="true">&#8594;</span></a></li>
+          <li><a href="#sale"><span class="n">06</span><span class="q">How does a sale actually happen?</span><span class="arw" aria-hidden="true">&#8594;</span></a></li>
+        </ul>
       </div>
     </section>
 
     <section class="rail">
-      <p class="label">What I can take off your plate</p>
+      <p class="label">How long it takes</p>
       <div>
-      <p>Much of what a house in probate generates isn't really real estate work. It's coordination. That's the part I handle.</p>
+        <p>Two paths run through Florida probate, and which one applies shapes the home's timing as much as anything else. Your attorney confirms which is yours.</p>
 
-      <ul class="items">
-        <li>
-          <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2.5" y="8.5" width="19" height="7" rx="1"/>
-              <path d="M7 8.5v3M11 8.5v4M15 8.5v3M19 8.5v4"/>
-            </svg>
-          </span>
-          <div>
-            <h3>Getting the property ready</h3>
-            <p>Before I sold real estate my work was coordinating residential construction. Scheduling contractors, sequencing the work in the right order, and getting real quotes in front of you quickly is the part I'm most useful for. For anything technical you want a licensed inspector or engineer — I'll tell you which one to call.</p>
+        <div class="split">
+          <div class="card">
+            <span class="term">The simplified path</span>
+            <h3>Summary administration</h3>
+            <p class="span">A few weeks to a few months</p>
+            <p>For smaller estates, or when the person died more than two years ago. It skips several formal steps, and often the creditor waiting period below, which is why it can finish quickly.</p>
           </div>
-        </li>
-        <li>
-          <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 5.5v13.5M8.5 19h7M4.5 8.5h15"/>
-              <path d="M4.5 8.5 2.2 13.4a3 3 0 0 0 4.6 0Z"/>
-              <path d="M19.5 8.5 17.2 13.4a3 3 0 0 0 4.6 0Z"/>
-            </svg>
-          </span>
-          <div>
-            <h3>Repair versus sell as-is — with real numbers</h3>
-            <p>Not an opinion. An actual cost-and-return comparison for the specific house, so the family can decide on facts rather than guesswork. Sometimes the answer is to do nothing.</p>
+          <div class="card">
+            <span class="term">The standard path</span>
+            <h3>Formal administration</h3>
+            <p class="span">More often six to twelve months</p>
+            <p>The full court-supervised process. A personal representative is appointed, Letters of Administration are issued, and a required waiting period lets creditors come forward before the estate can close.</p>
           </div>
-        </li>
-        <li>
-          <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <ellipse cx="12" cy="6.5" rx="7" ry="2.8"/>
-              <path d="M5 6.5v5c0 1.55 3.13 2.8 7 2.8s7-1.25 7-2.8v-5"/>
-              <path d="M5 11.5v5c0 1.55 3.13 2.8 7 2.8s7-1.25 7-2.8v-5"/>
-            </svg>
-          </span>
-          <div>
-            <h3>When the estate has no cash</h3>
-            <p>Estates are often asset-rich and cash-poor, and beneficiaries aren't always in a position to fund repairs. There are contractors who will work on a pay-at-closing basis, and buyers who will purchase as-is when speed matters more than top dollar. Both are real options.</p>
+        </div>
+
+        <figure class="plate" style="background:transparent;border:0;padding:0">
+          <ol class="timeline">
+            <li>
+              <span class="step" aria-hidden="true"></span>
+              <div class="body">
+                <span class="when">First weeks</span>
+                <h3>You're appointed</h3>
+                <p>The court issues Letters of Administration, the document that gives the personal representative authority to act for the estate. Until it exists, no one can sign to sell the home.</p>
+              </div>
+            </li>
+            <li class="mark">
+              <span class="step" aria-hidden="true"></span>
+              <div class="body">
+                <span class="when">Months 1&ndash;3</span>
+                <h3>The required waiting period</h3>
+                <p>A set window lets creditors of the estate come forward. It is the main reason formal probate can't be rushed. No court shortens it, and most of the waiting is that window running its course.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step" aria-hidden="true"></span>
+              <div class="body">
+                <span class="when">Months 3&ndash;6</span>
+                <h3>Debts settled, then distribution</h3>
+                <p>Valid claims against the estate are addressed before funds are fully distributed. A sale that closes earlier may still hold its proceeds until this step is complete.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step" aria-hidden="true"></span>
+              <div class="body">
+                <span class="when">Around a year</span>
+                <h3>The estate closes</h3>
+                <p>The attorney prepares the final accounting and the estate settles up. Most formal administrations land within about a year, though some take longer.</p>
+              </div>
+            </li>
+          </ol>
+          <figcaption>A general sequence, not a schedule. Florida's 67 counties each move at their own pace, and which path applies to yours is a question for your attorney.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="rail" id="authority">
+      <p class="label">01 &mdash; Authority</p>
+      <div>
+        <h2>Authority comes first, and it comes from the court</h2>
+        <p>A family often knows what it hopes to do with a home long before anyone is allowed to carry that plan out. In Florida, the court appoints a personal representative and issues Letters of Administration. Until that authority exists, major decisions about the home are premature.</p>
+        <p>If there is a will, it usually names an <strong>executor</strong>. If there is no will, the court appoints an <strong>administrator</strong>. Florida calls either one the <strong>personal representative</strong>. A home held in a living trust can pass outside probate entirely, which is among the first things an attorney will check.</p>
+        <p>Once appointed, the personal representative is generally responsible for managing, protecting, and preserving the estate's assets. A homestead home is treated differently, which is the next question worth understanding.</p>
+
+        <div class="note">
+          <p>If you don't yet have a probate attorney, that is the first call to make, before any decision about the home. I'm glad to point you toward a probate attorney I trust in Central Florida, with no arrangement of any kind between us.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rail" id="protect">
+      <p class="label">02 &mdash; Protecting the home</p>
+      <div>
+        <h2>Keeping an empty home safe while everything else waits</h2>
+        <p>Waiting on the legal process does not mean leaving the home alone. An unoccupied house develops problems quietly, and a few of them matter even when nothing else is urgent yet.</p>
+        <p>One of the first calls is often to the insurance agent. A death, a change in occupancy, or a long vacancy can change what a policy covers, and some policies stop covering a home once it sits empty. The point is to confirm what is actually in place, not to assume the existing coverage carries on unchanged.</p>
+        <p>After that it is mostly steadiness: access and locks, utilities kept on where they protect the home, regular checks for leaks or storm damage, the lawn, the mail. The belongings inside are part of the estate too. Before anything is removed, donated, or discarded, an attorney can confirm who has the authority and whether the will affects the contents. Photographs and a simple inventory are a good place to start.</p>
+        <p>Protecting the home is less about making it perfect than about preventing avoidable loss while the estate decides what happens next.</p>
+      </div>
+    </section>
+
+    <section class="rail" id="homestead">
+      <p class="label">03 &mdash; Homestead</p>
+      <div>
+        <h2>The home might be protected homestead</h2>
+        <p>In Florida, homestead can carry legal weight well beyond the property-tax exemption most people know. When an owner dies, protected homestead status can affect who receives the home, how the will applies, and who has authority to make decisions about it.</p>
+        <p>Whether a home qualifies depends on facts like ownership and whether it was the owner's permanent residence, and what happens next can depend on how title was held and whether a spouse or children survived. Florida law limits how a homestead can be left by will in some family situations.</p>
+        <p>The practical point is not to work the homestead question out yourself. It is to know the question exists, and to raise it with your attorney before the family settles on a plan for the home.</p>
+      </div>
+    </section>
+
+    <section class="rail" id="value">
+      <p class="label">04 &mdash; Value</p>
+      <div>
+        <h2>&ldquo;Value&rdquo; depends on the question you&rsquo;re asking</h2>
+        <p>A home in an estate often needs more than one kind of value, and they are not the same number.</p>
+        <p>A value tied to the date of death may be needed for the estate's inventory or for tax purposes; your attorney or accountant can say whether a formal appraisal is required, and for what date. For deciding what to actually do with the home, a current market picture is more useful: a comparative market analysis built from recent nearby sales, the current competition, and the home's real condition. A licensed appraiser provides an independent appraisal when a formal one is required.</p>
+        <p>Condition matters more than most people expect. Deferred maintenance, dated finishes, and a house still full of belongings all affect both what a home will sell for and how buyers receive it. Before the estate spends money on repairs, it is worth comparing the likely as-is value against the return those repairs would actually bring. Sometimes the honest answer is to do nothing.</p>
+      </div>
+    </section>
+
+    <section class="rail" id="choices">
+      <p class="label">05 &mdash; The choices</p>
+      <div>
+        <h2>Keep it, transfer it, rent it, or sell it</h2>
+        <p>Once the home's legal status and who decides are clear, the family can weigh the real options. The deed, the will, the mortgage, any liens, the ongoing costs, the home's condition, its current value, and what the people involved actually want all shape that conversation.</p>
+        <p>Keeping or transferring the home raises questions about who takes title and who carries the mortgage and the costs. Renting can preserve the home and bring in income, but it creates ongoing responsibilities and its own question of whether the estate has authority to lease. Selling brings the timing questions back: who signs, and whether the court has to approve.</p>
+        <p>The best decision is rarely about price alone. It balances legal authority, money, the family's priorities, the home's condition, and how much time and effort each option really takes. None of it has to be settled in a hurry.</p>
+      </div>
+    </section>
+
+    <section class="rail" id="sale">
+      <p class="label">06 &mdash; A sale</p>
+      <div>
+        <h2>How a sale actually happens</h2>
+        <p>If selling is the direction, your attorney confirms who must sign and whether the court has to authorize or confirm the sale. A title company will want to see the Letters of Administration and, once there is a buyer, a deed signed by the personal representative. They will want those well before the closing table, not the week of it.</p>
+        <p>From there it is ordinary real estate, handled with the estate's timeline in mind: pricing, whether to prepare the home or sell it as-is, the belongings, access and showings, disclosures, and a schedule that fits where the estate actually stands. A sale that closes early may still need to hold its proceeds until the estate's debts are resolved.</p>
+      </div>
+    </section>
+
+    <section class="rail" id="help">
+      <p class="label">Where I fit in</p>
+      <div>
+        <h2>What a real estate broker can do, and when</h2>
+        <p>My part can begin well before the family has decided anything, once your attorney has cleared who may authorize access and decisions. The aim is not to move anyone toward a sale. It is to put clear, current real estate information in front of you early enough to make an informed choice.</p>
+
+        <ul class="items items-plain">
+          <li>
+            <h3>Look at the home honestly</h3>
+            <p>A walk-through of the condition, the access and occupancy questions, and how much needs to be cleared before anything else can happen.</p>
+          </li>
+          <li>
+            <h3>Build a current market picture</h3>
+            <p>A comparative market analysis, the recent nearby sales and active competition, and a plain read on how the home would be received as it stands today.</p>
+          </li>
+          <li>
+            <h3>Compare the options with real numbers</h3>
+            <p>As-is against repaired, the time and effort each takes, and the practical work involved: an estate sale, a cleanout, landscaping, utilities, photography, vendor access. The same information helps whether the family keeps, transfers, rents, or sells.</p>
+          </li>
+          <li>
+            <h3>Build the plan once a direction is chosen</h3>
+            <p>If the family decides to sell, the pricing, preparation, marketing, and closing plan, coordinated with your attorney and the title company on authority, signatures, and documents.</p>
+          </li>
+          <li>
+            <h3>Help when the family doesn't agree</h3>
+            <p>Often the hardest part, and rarely really about the home. A good deal of this work is helping people reach a decision they can each live with.</p>
+          </li>
+        </ul>
+
+        <section class="boundary" aria-label="What stays with your attorney">
+          <p class="note-lead">The boundary</p>
+          <p class="boundary-statement">I don't give legal, tax, or financial advice. Those questions stay with your attorney and the other professionals. My part is the home, the market, and the practical work each option takes.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="rail" id="terms">
+      <p class="label">Words you'll hear</p>
+      <div>
+        <p>A short list of the terms that come up most often around a home in probate, in plain language. Your attorney is the source of truth for how any of them apply to your estate.</p>
+
+        <dl class="glossary">
+          <dt>Personal representative</dt>
+          <dd>The person with court authority to act for the estate. Named an <em>executor</em> in a will, or an <em>administrator</em> when there is no will; Florida uses one term for both.</dd>
+
+          <dt>Letters of Administration</dt>
+          <dd>The court document that proves the personal representative can act. A title company will ask to see it before a sale.</dd>
+
+          <dt>Summary administration</dt>
+          <dd>The simplified path, for smaller estates or when the person died more than two years ago. Faster, with fewer steps.</dd>
+
+          <dt>Formal administration</dt>
+          <dd>The full court-supervised path, with a personal representative appointed and a required creditor waiting period.</dd>
+
+          <dt>Creditor period</dt>
+          <dd>A set window during which the estate's creditors can come forward. It is the main reason formal probate can't be hurried.</dd>
+
+          <dt>Protected homestead</dt>
+          <dd>A legal status a Florida home may carry that can change who receives it and who may decide about it, beyond the familiar tax exemption.</dd>
+
+          <dt>Date-of-death value</dt>
+          <dd>What the home was worth on the day the owner died, sometimes needed for the estate's inventory or taxes. Different from today's market value.</dd>
+
+          <dt>Comparative market analysis</dt>
+          <dd>A broker's read on what a home would sell for now, built from recent nearby sales, current competition, and condition. Not a formal appraisal.</dd>
+
+          <dt>Personal representative's deed</dt>
+          <dd>The deed the personal representative signs to transfer the home when the estate sells it.</dd>
+
+          <dt>Final accounting</dt>
+          <dd>The attorney's summary of what came in and went out, filed as the estate closes.</dd>
+        </dl>
+
+        <div class="download">
+          <div class="dl-text">
+            <p class="note-lead">The complete guide</p>
+            <h3>Understanding probate when a home is involved</h3>
+            <p>Everything on this page, in more depth, as a PDF to keep or share.</p>
           </div>
-        </li>
-        <li>
-          <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="6.5" cy="12" r="3.6"/>
-              <path d="M10.1 12H21"/>
-              <path d="M16.5 12v3.4M19.5 12v2.4"/>
-            </svg>
-          </span>
-          <div>
-            <h3>An empty house</h3>
-            <p>Utilities, rekeying, the insurance implications of a vacancy, cleanout coordination, and keeping an eye on the place. These are the calls that otherwise come to you.</p>
-          </div>
-        </li>
-        <li>
-          <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1A202C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="8.5" cy="8" r="3"/>
-              <circle cx="16" cy="9.5" r="2.4"/>
-              <path d="M3 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/>
-              <path d="M15 14.2c3 .2 5 2.1 5 4.8"/>
-            </svg>
-          </span>
-          <div>
-            <h3>When the heirs don't agree</h3>
-            <p>Often the hardest part, and rarely really about the house. I'm a NAR-certified Real Estate Negotiation Expert, and a good deal of this work is helping people who are grieving reach a decision they can each live with.</p>
-          </div>
-        </li>
-      </ul>
+          <a class="btn" href="assets/understanding-probate-when-a-home-is-involved.pdf" download>Download the guide (PDF) <span class="arw" aria-hidden="true">&#8594;</span></a>
+        </div>
       </div>
     </section>
 
   </div>
 
-  <section class="reach">
+  <section class="reach" id="contact">
     <div class="shell">
       <div>
         <p class="label">How this usually starts</p>
-        <h2>With a phone call, and usually not a long one.</h2>
-        <p>You tell me where things stand, I tell you what I'd expect the property to need, and you decide whether it's worth going further. There's no charge for that conversation and no obligation attached to it.</p>
-        <p>If the timing isn't right — if the estate hasn't been opened, or the family isn't ready to talk about the house — that's a perfectly good answer. It's often the right one.</p>
+        <h2>A phone call, and usually not a long one.</h2>
+        <p>You tell me where things stand, I tell you what I'd expect the home to need, and you decide whether it's worth going further. No charge for that conversation, and nothing attached to it.</p>
+        <p>If the timing isn't right, that's a perfectly good answer. The estate may not be open yet, or the family may not be ready to talk about the home. Waiting is often the right call.</p>
       </div>
       <div class="reach-card">
         <p class="label">Direct line</p>
@@ -206,7 +330,7 @@
           <a href="tel:+14078289029">407-828-9029</a><br>
           <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a>
         </p>
-        <p class="reach-note">Both reach me, not an assistant.</p>
+        <p class="reach-note">There's no wrong time to ask a question.</p>
       </div>
     </div>
   </section>
@@ -218,7 +342,7 @@
     <div class="foot-top">
       <div class="foot-brand">
         <span class="wordmark">Crawford Living</span>
-        <span class="foot-cred">Realty, LLC · Fla Lic RE Broker</span>
+        <span class="foot-cred">Crawford Living Realty, LLC · Florida Licensed Real Estate Broker</span>
       </div>
       <ul class="foot-nav">
         <li><a href="./">Home</a></li>
@@ -229,8 +353,8 @@
       </ul>
     </div>
     <div class="foot-legal">
-      <p class="disclaimer">The information on this page is general and practical, not legal advice. Every estate is different. Decisions about probate, authority to sell, and homestead should be made with your attorney.</p>
-      <p>Michael Crawford, RENE — Florida-licensed real estate broker · License&nbsp;#BK3074190</p>
+      <p class="disclaimer">The information on this page is general and practical, not legal, tax, or financial advice. Every estate is different, and Florida's 67 counties move at different speeds. Decisions about probate, authority to sell, and homestead belong with your attorney.</p>
+      <p>Michael Crawford, RENE, CPRES — Florida-licensed real estate broker · License&nbsp;#BK3074190</p>
       <p>407-828-9029 · <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a></p>
       <p class="legal">&copy; 2026 Michael Crawford. All rights reserved.</p>
     </div>
