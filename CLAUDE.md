@@ -322,6 +322,10 @@ of `DESIGN.md`. The two that matter most:
 ## Known gaps
 
 - **Two design systems** — see the top of this file.
+- 🟡 **New Construction — deferred to Phase 2 (Mike, 2026-09-04).** The launch ("Phase 1")
+  site is **Buy, Sell, and Probate** — enough for a robust site. New Construction stays a
+  homepage path/anchor only, with no standalone page until Phase 2. When built, it remains
+  the **only** home for the construction-coordination story (`page-patterns.md`).
 - **Communities** is a homepage panel with no page and no photography behind it.
 - 🔴 **Search Homes — DECIDED 2026-09-01: do not build it. The honest placeholder stays.**
   The MLS Grid demo feed was queried and the IDX rules read in full. Two findings settle it:
