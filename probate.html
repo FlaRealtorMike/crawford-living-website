@@ -45,6 +45,10 @@
 .download .dl-text p{margin:0;font-size:.95rem;color:var(--muted)}
 .download .btn{flex:none}
 
+/* full-width interior image, a calm beat between sections */
+.band-figure{margin:clamp(3rem,6vw,4.5rem) 0 0}
+.band-figure img{display:block;width:100%;height:clamp(240px,32vw,420px);object-fit:cover;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--lift-lg)}
+
 @media (max-width:52rem){
   .roadmap,.split,.glossary{grid-template-columns:minmax(0,1fr)}
   .glossary dt:nth-of-type(2){border-top:1px solid var(--line);margin-top:1.1rem}
@@ -81,8 +85,8 @@
         <h1 class="display">When an estate includes a <em>home</em>.</h1>
         <p class="standfirst">If you've been named to settle an estate and a home is part of it, this is the practical part, written plainly. You don't have to understand all of probate today. A place to begin is enough.</p>
       </div>
-      <figure class="hero-figure framed">
-        <img src="assets/house-detail.svg" alt="" width="484" height="292">
+      <figure class="hero-figure photo">
+        <img src="assets/probate-hero-home.jpg" alt="A well-kept single-story Central Florida home in warm afternoon light, with a paver walkway and tidy landscaping" width="1800" height="1208">
       </figure>
     </div>
   </div>
@@ -165,6 +169,10 @@
         </figure>
       </div>
     </section>
+
+    <figure class="band-figure">
+      <img src="assets/probate-interior.jpg" alt="A bright, airy living room full of natural light in a cared-for home" width="1500" height="1006">
+    </figure>
 
     <section class="rail" id="authority">
       <p class="label">01 &mdash; Authority</p>
@@ -318,6 +326,9 @@
 
   <section class="reach" id="contact">
     <div class="shell">
+      <figure class="reach-figure">
+        <img src="assets/probate-table.jpg" alt="Two cups of coffee and a vase of wildflowers on a wooden table in a sunlit kitchen nook">
+      </figure>
       <div>
         <p class="label">How this usually starts</p>
         <h2>A phone call, and usually not a long one.</h2>
