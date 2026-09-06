@@ -11,6 +11,45 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/crawford.css">
+<style>
+/* page-scoped: the general contact form (matches search.html's .finder pattern) */
+.finder{margin:2.2rem 0 0;max-width:40rem}
+.finder .field{margin:0 0 1.5rem}
+.finder label{
+  display:block;font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 .55rem;
+}
+.finder input[type="text"],
+.finder input[type="email"],
+.finder input[type="tel"],
+.finder select,
+.finder textarea{
+  width:100%;font-family:var(--font);font-size:1rem;color:var(--ink);
+  background:var(--surface);border:1px solid var(--ink);border-radius:var(--r);
+  padding:.85rem 1rem;line-height:1.5;
+}
+.finder textarea{resize:vertical;min-height:5.5rem}
+.finder select{appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%231A202C' stroke-width='1.6'%3E%3Cpath d='M5 8l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 1rem center;background-size:1.1rem;padding-right:2.6rem}
+.finder input:focus-visible,.finder select:focus-visible,.finder textarea:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;
+}
+.finder .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem 1.5rem}
+.finder .fine{font-size:.82rem;color:var(--muted);margin:1.1rem 0 0}
+
+.thanks{
+  margin:2.2rem 0 0;max-width:40rem;background:var(--subtle);
+  border-left:4px solid var(--accent);border-radius:0 var(--r) var(--r) 0;
+  padding:1.75rem 2rem;
+}
+.thanks p{margin:0;max-width:none}
+.thanks p + p{margin-top:.6rem}
+
+@media (max-width:34rem){
+  .finder .grid-2{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
 
@@ -144,6 +183,67 @@
       </div>
     </section>
 
+    <section class="rail" id="get-in-touch">
+      <p class="label">Get in touch</p>
+      <div>
+        <h2>Whatever this is about, start here</h2>
+        <p>Buying, selling, an estate, new construction, or something you're not sure how to categorize yet &mdash; tell me what's going on and I'll follow up personally.</p>
+
+        <!--
+          DROP-IN: replace this entire <form id="about-form">...</form>
+          block (through the matching closing tag below) with the
+          GoHighLevel form embed code once it exists. The embed handles
+          its own submission and thank-you state. The JS at the bottom of
+          this page and the #about-thanks block are a local-preview
+          placeholder only, and should be removed once the real embed is
+          in place.
+        -->
+        <form class="finder" id="about-form">
+          <div class="grid-2">
+            <div class="field">
+              <label for="ab-name">Name</label>
+              <input type="text" id="ab-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="ab-email">Email</label>
+              <input type="email" id="ab-email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="ab-phone">Phone</label>
+              <input type="tel" id="ab-phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="ab-topic">What's this about</label>
+              <select id="ab-topic" name="topic">
+                <option value="">Not sure yet</option>
+                <option>Buying a home</option>
+                <option>Selling a home</option>
+                <option>An estate or probate matter</option>
+                <option>New construction</option>
+                <option>Something else</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="ab-notes">Anything else</label>
+            <textarea id="ab-notes" name="notes" placeholder="As much detail as you'd like"></textarea>
+          </div>
+
+          <button class="btn" type="submit">Send it to me <span class="arw" aria-hidden="true">&#8594;</span></button>
+          <p class="fine">This reaches me directly.</p>
+        </form>
+
+        <div class="thanks" id="about-thanks" hidden>
+          <p><strong>One more step.</strong> Your email app should have opened with everything you entered, addressed to me. Send it, and I'll follow up personally.</p>
+          <p>If nothing opened, the direct line below reaches me just as well.</p>
+        </div>
+      </div>
+    </section>
+
   </div>
 
   <section class="reach">
@@ -151,7 +251,7 @@
       <div>
         <p class="label">Getting in touch</p>
         <h2>Direct, either way.</h2>
-        <p>No form, no assistant, no queue. The phone and the email below both reach me.</p>
+        <p>Send the form above, or call or email directly &mdash; either way, it reaches me.</p>
       </div>
       <div class="reach-card">
         <p class="label">Direct line</p>
@@ -159,7 +259,7 @@
           <a href="tel:+14078289029">407-828-9029</a><br>
           <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a>
         </p>
-        <p class="reach-note">Both reach me, not an assistant.</p>
+        <p class="reach-note">Both reach me personally.</p>
       </div>
     </div>
   </section>
@@ -195,6 +295,39 @@
   if(!head)return;
   var s=function(){head.classList.toggle('is-stuck',window.scrollY>8)};s();
   window.addEventListener('scroll',s,{passive:true});
+})();
+
+/* TEMPORARY MAILTO FALLBACK — remove once the GoHighLevel embed replaces
+   the <form id="about-form"> block above. Until then, submitting opens
+   the visitor's own email app addressed to Mike with everything they
+   entered, so a real submission today actually reaches him — it does
+   not get silently stored or routed anywhere else. */
+(function(){
+  var form=document.getElementById('about-form');
+  var thanks=document.getElementById('about-thanks');
+  if(!form||!thanks)return;
+
+  function buildMailto(){
+    var fd=new FormData(form);
+    var lines=[
+      'Name: '+(fd.get('name')||''),
+      'Email: '+(fd.get('email')||''),
+      'Phone: '+(fd.get('phone')||'Not given'),
+      'What this is about: '+(fd.get('topic')||'Not sure yet'),
+      'Anything else: '+(fd.get('notes')||'Not given')
+    ];
+    return 'mailto:mdc@crawfordliving.com'
+      +'?subject='+encodeURIComponent('General inquiry from the website')
+      +'&body='+encodeURIComponent(lines.join('\n'));
+  }
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    window.location.href=buildMailto();
+    form.hidden=true;
+    thanks.hidden=false;
+    thanks.scrollIntoView({behavior:'smooth',block:'center'});
+  });
 })();
 </script>
 
