@@ -328,6 +328,25 @@ of `DESIGN.md`. The two that matter most:
   the **only** home for the construction-coordination story (`page-patterns.md`).
 - **Communities** is a homepage panel with no page and no photography behind it.
 - 🔴 **Search Homes — DECIDED 2026-09-01: do not build it. The honest placeholder stays.**
+  - 🟡 **Updated 2026-09-05 — a concrete plan for the consumer search, still UNBUILT.**
+    Investigated with Mike. **Stellar MLS-Touch "Brand & Share"** is a **branded mobile app**
+    (iOS/Android, free with the Stellar subscription): Mike personalizes it with his logo, shares
+    it, prospects search Matrix listings, their activity flows back to him, and the branding
+    carries into **OneHome**. It is **app-first — not a web/desktop search you can embed** (the
+    product page confirms mobile app; a web-openable link is unconfirmed). So the site's **Search
+    Homes** page becomes a **launch pad**: the Brand & Share link + App Store / Play badges, PLUS
+    a short *"prefer I set one up?"* **intake form → GoHighLevel → Mike sends a OneHome invite**.
+    The **OneHome invite is manual** (sign into Stellar, add the customer, send the link); lead
+    capture is permitted (reversed 2026-09-01) and routes to GoHighLevel.
+    - **Instant delivery is solved by the self-serve share link + a GHL auto-reply — NOT by
+      automating a Stellar login.** A login bot would risk MLS ToS, is brittle, and needs an
+      always-on runner (a Claude Code / Claude-in-Chrome session is interactive, not a 24/7
+      server). The mobile-app share removes the need to automate anything.
+    - **Blocked on Mike:** (a) confirm with Stellar whether Brand & Share gives a web-openable
+      link vs app-only, and anonymous-vs-registration; (b) supply the **GoHighLevel form
+      embed/webhook URL**; (c) supply the **Brand & Share URL + App Store/Play links**.
+    - True anonymous **desktop** browsing on our own domain is still only solved by a **rented
+      IDX** (iHomeFinder/IDX Broker, paid) — a later call, and still "do not build your own."
   The MLS Grid demo feed was queried and the IDX rules read in full. Two findings settle it:
   **every photo must be self-hosted** (their URLs are single-use and expire in an hour), which
   against a 40,000-request/day cap is ~**two weeks** of syncing for a first load plus ~21,600
