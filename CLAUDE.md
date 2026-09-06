@@ -327,8 +327,24 @@ of `DESIGN.md`. The two that matter most:
   homepage path/anchor only, with no standalone page until Phase 2. When built, it remains
   the **only** home for the construction-coordination story (`page-patterns.md`).
 - **Communities** is a homepage panel with no page and no photography behind it.
-- 🔴 **Search Homes — DECIDED 2026-09-01: do not build it. The honest placeholder stays.**
-  - 🟡 **Updated 2026-09-05 — a concrete plan for the consumer search, still UNBUILT.**
+- 🟢 **Search Homes — BUILT 2026-09-06.** `search.html` is now a real launch-pad page, not the
+  honest placeholder (superseding the 2026-09-01 "do not build it" call below, which applied to
+  a full public IDX grid, not this model). Two paths: **Search it yourself** (the MLS-Touch
+  Brand & Share pitch + two app buttons) and **Prefer something curated** (a full intake form —
+  name/email/phone, the five counties as checkboxes, price range, beds/baths, a free-text
+  must-haves field, timeline, financing status). A `#contact` band covers anyone not ready for
+  either. Copy passed the brand-editor rubric; images are house-style (a screen-off phone on a
+  sunlit table — deliberately no fake app UI, no logos).
+  - 🟡 **Still blocked on Mike before this goes live** — nothing works yet without these:
+    1. **The two `href="#"` app buttons** (`search.html`, `id="app"` section) need the real
+       Stellar MLS-Touch Brand & Share App Store / Google Play links, once confirmed those exist
+       as shareable URLs (still open per the 2026-09-05 investigation below).
+    2. **The `<form id="finder-form">` block** (`id="curated"` section) needs to be replaced
+       wholesale with the GoHighLevel embed code. Right now it's a fully designed, working-looking
+       form with a **local-preview-only JS handler** (bottom of the file, clearly commented) that
+       just hides the form and shows a canned "Got it" message on submit — it does **not** send
+       data anywhere. Both drop-in points are marked with HTML comments in the file itself.
+  - 🟡 **Updated 2026-09-05 — the plan behind this build.**
     Investigated with Mike. **Stellar MLS-Touch "Brand & Share"** is a **branded mobile app**
     (iOS/Android, free with the Stellar subscription): Mike personalizes it with his logo, shares
     it, prospects search Matrix listings, their activity flows back to him, and the branding

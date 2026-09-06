@@ -1,17 +1,69 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<title>Search Homes — Crawford Living</title>
-<meta name="description" content="Home search across Orange, Seminole, Osceola, Lake and Volusia counties — coming soon from Crawford Living.">
+<title>Search homes — Crawford Living</title>
+<meta name="description" content="Two ways to start looking at homes across Orange, Seminole, Osceola, Lake and Volusia counties: a branded MLS search app, or a curated search built for you.">
+<link rel="canonical" href="https://crawfordliving.com/search.html">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/crawford.css">
-<script>document.documentElement.className='js';</script>
+<style>
+/* page-scoped: the two-path CTA row and the curated-search form */
+
+.app-cta{display:flex;flex-wrap:wrap;gap:.85rem;margin:1.8rem 0 0}
+
+.finder{margin:2.2rem 0 0;max-width:40rem}
+.finder fieldset{border:0;margin:0 0 1.5rem;padding:0}
+.finder legend{
+  font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 .7rem;padding:0;
+}
+.finder .field{margin:0 0 1.5rem}
+.finder label{
+  display:block;font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 .55rem;
+}
+.finder input[type="text"],
+.finder input[type="email"],
+.finder input[type="tel"],
+.finder input[type="number"],
+.finder select,
+.finder textarea{
+  width:100%;font-family:var(--font);font-size:1rem;color:var(--ink);
+  background:var(--surface);border:1px solid var(--ink);border-radius:var(--r);
+  padding:.85rem 1rem;line-height:1.5;
+}
+.finder textarea{resize:vertical;min-height:5.5rem}
+.finder select{appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%231A202C' stroke-width='1.6'%3E%3Cpath d='M5 8l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 1rem center;background-size:1.1rem;padding-right:2.6rem}
+.finder input:focus-visible,.finder select:focus-visible,.finder textarea:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;
+}
+.finder .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem 1.5rem}
+.finder .counties{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem 1.6rem}
+.finder .counties li{display:flex;align-items:center;gap:.55rem}
+.finder .counties input{width:1.05rem;height:1.05rem;accent-color:var(--ink)}
+.finder .counties label{margin:0;font-family:var(--font);font-size:.96rem;font-weight:400;
+  letter-spacing:normal;text-transform:none;color:var(--ink)}
+.finder .fine{font-size:.82rem;color:var(--muted);margin:1.1rem 0 0}
+
+.thanks{
+  margin:2.2rem 0 0;max-width:40rem;background:var(--subtle);
+  border-left:4px solid var(--accent);border-radius:0 var(--r) var(--r) 0;
+  padding:1.75rem 2rem;
+}
+.thanks p{margin:0;max-width:none}
+.thanks p + p{margin-top:.6rem}
+
+@media (max-width:34rem){
+  .finder .grid-2{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
 
@@ -35,19 +87,169 @@
 </header>
 
 <main id="main">
-  <section class="hero on-dark">
-    <div class="grid-lines" aria-hidden="true"></div>
+
+  <div class="hero">
     <div class="shell">
-      <p class="eyebrow rv">Search Homes</p>
-      <h1 class="rv rv-d1">Not ready yet — and I'd rather say so.</h1>
-      <p class="lede hero-lede rv rv-d2">Property search is coming to this site. I'm working out how to do it properly across all five counties rather than bolting on something that shows stale listings and asks for your details before it shows you anything.</p>
-      <div class="hero-cta rv rv-d3">
-        <a class="btn btn-gold" href="tel:+14078289029">Tell me what you're looking for <span class="arw" aria-hidden="true">→</span></a>
-        <a class="btn btn-ghost" href="./">Back to home <span class="arw" aria-hidden="true">→</span></a>
+      <div>
+        <p class="kicker">Search homes</p>
+        <h1 class="display">Look at homes on your own, or let me build the <em>search</em>.</h1>
+        <p class="standfirst">Both come from Stellar MLS &mdash; the same system agents actually work from, not a public scrape or a stale export. Search it yourself in a few taps, or tell me what you're after and I'll put a search together myself.</p>
       </div>
-      <p class="lede rv rv-d4" style="margin-top:2.5rem;font-size:.98rem">In the meantime, the fastest route is a phone call. Tell me the area, the budget and roughly what you're after, and I'll send you what's actually worth looking at.</p>
+      <figure class="hero-figure photo">
+        <img src="assets/search-hero-phone.jpg" alt="A phone resting screen-down on a warm wood table beside a notepad, pen and coffee near a sunlit window" width="1800" height="1208">
+      </figure>
+    </div>
+  </div>
+
+  <div class="shell">
+
+    <section class="rail">
+      <p class="label">Why not a plain search box?</p>
+      <div>
+        <p class="dropcap">A lot of real estate sites bolt on a listings widget that shows whatever a data feed serves up, sometimes days old, with no one behind it. This isn't that. Both paths below run on Stellar MLS, the system agents actually use, so what you're looking at is current &mdash; and either way, it's tied to a real person rather than a form that disappears into nowhere.</p>
+      </div>
+    </section>
+
+    <section class="rail" id="app">
+      <p class="label">Search it yourself</p>
+      <div>
+        <h2>The app, branded to Crawford Living</h2>
+        <p>This is Stellar MLS's own consumer app, MLS-Touch, personalized with the Crawford Living name. It searches the same Matrix listings agents work from &mdash; filter by area, price and the basics, and save the ones worth a second look. If you reach out afterward, I'll already have a sense of what you've been drawn to, instead of starting from zero.</p>
+
+        <!-- DROP-IN: replace both href="#" below with the confirmed Stellar
+             MLS-Touch "Brand & Share" App Store / Google Play links. -->
+        <div class="app-cta">
+          <a class="btn" href="#">Get it for iPhone <span class="arw" aria-hidden="true">&#8594;</span></a>
+          <a class="btn btn-ghost" href="#">Get it for Android <span class="arw" aria-hidden="true">&#8594;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="rail" id="curated">
+      <p class="label">Prefer something curated</p>
+      <div>
+        <h2>Would you rather I set one up for you?</h2>
+        <p>Tell me the area, the price range, and what actually matters, and I'll build something myself rather than you guessing at filters. No charge, and no obligation attached to it.</p>
+
+        <!--
+          DROP-IN: replace this entire <form id="finder-form">...</form> block
+          (through the matching closing tag below) with the GoHighLevel form
+          embed code once it exists. The embed handles its own submission and
+          thank-you state. The JS at the bottom of this page and the
+          #finder-thanks block are a local-preview placeholder only, and
+          should be removed once the real embed is in place.
+        -->
+        <form class="finder" id="finder-form">
+          <div class="grid-2">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input type="text" id="f-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input type="tel" id="f-phone" name="phone" autocomplete="tel">
+          </div>
+
+          <fieldset>
+            <legend>Areas you're considering</legend>
+            <ul class="counties">
+              <li><input type="checkbox" id="c-orange" name="counties" value="Orange"><label for="c-orange">Orange</label></li>
+              <li><input type="checkbox" id="c-seminole" name="counties" value="Seminole"><label for="c-seminole">Seminole</label></li>
+              <li><input type="checkbox" id="c-osceola" name="counties" value="Osceola"><label for="c-osceola">Osceola</label></li>
+              <li><input type="checkbox" id="c-lake" name="counties" value="Lake"><label for="c-lake">Lake</label></li>
+              <li><input type="checkbox" id="c-volusia" name="counties" value="Volusia"><label for="c-volusia">Volusia</label></li>
+            </ul>
+          </fieldset>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="f-price-min">Price &mdash; low end</label>
+              <input type="text" id="f-price-min" name="price_min" inputmode="numeric" placeholder="$">
+            </div>
+            <div class="field">
+              <label for="f-price-max">Price &mdash; high end</label>
+              <input type="text" id="f-price-max" name="price_max" inputmode="numeric" placeholder="$">
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="f-beds">Bedrooms, at least</label>
+              <select id="f-beds" name="beds">
+                <option value="">No preference</option>
+                <option>2</option><option>3</option><option>4</option><option>5+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-baths">Bathrooms, at least</label>
+              <select id="f-baths" name="baths">
+                <option value="">No preference</option>
+                <option>2</option><option>3</option><option>4+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-musts">What actually matters</label>
+            <textarea id="f-musts" name="musts" placeholder="Pools, school zones, a fenced yard, single-story &mdash; whatever the real list is"></textarea>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="f-timeline">Timeline</label>
+              <select id="f-timeline" name="timeline">
+                <option value="">Early days</option>
+                <option>A few months out</option>
+                <option>Ready now</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-financing">Financing</label>
+              <select id="f-financing" name="financing">
+                <option value="">Not sure yet</option>
+                <option>Cash</option>
+                <option>Already pre-approved</option>
+                <option>Need a lender introduction</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="btn" type="submit">Send it to me <span class="arw" aria-hidden="true">&#8594;</span></button>
+          <p class="fine">Both reach me directly. I'll follow up personally, not with an auto-reply.</p>
+        </form>
+
+        <div class="thanks" id="finder-thanks" hidden>
+          <p><strong>Got it.</strong> I'll put a search together around what you told me and follow up personally.</p>
+          <p>If anything changes in the meantime, the direct line below always reaches me.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <section class="reach" id="contact">
+    <div class="shell">
+      <div>
+        <p class="label">Not ready for either yet</p>
+        <h2>A phone call works too.</h2>
+        <p>Tell me the area, the budget and roughly what you're after, and I'll send you what's actually worth looking at. No charge for that conversation, and nothing attached to it.</p>
+      </div>
+      <div class="reach-card">
+        <p class="label">Direct line</p>
+        <p class="lines">
+          <a href="tel:+14078289029">407-828-9029</a><br>
+          <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a>
+        </p>
+      </div>
     </div>
   </section>
+
 </main>
 
 <footer class="foot">
@@ -55,18 +257,19 @@
     <div class="foot-top">
       <div class="foot-brand">
         <span class="wordmark">Crawford Living</span>
-        <span class="foot-cred">Realty, LLC · Fla Lic RE Broker</span>
+        <span class="foot-cred">Crawford Living Realty, LLC · Florida Licensed Real Estate Broker</span>
       </div>
       <ul class="foot-nav">
         <li><a href="./">Home</a></li>
+        <li><a href="buy.html">Buy</a></li>
+        <li><a href="sell.html">Sell</a></li>
         <li><a href="probate.html">Probate &amp; Estates</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="search.html">Search Homes</a></li>
         <li><a href="tel:+14078289029">407-828-9029</a></li>
       </ul>
     </div>
     <div class="foot-legal">
-      <p>Michael Crawford, RENE — Florida-licensed real estate broker · License&nbsp;#BK3074190</p>
+      <p>Michael Crawford, RENE, CPRES — Florida-licensed real estate broker · License&nbsp;#BK3074190</p>
       <p>407-828-9029 · <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a></p>
       <p class="legal">&copy; 2026 Michael Crawford. All rights reserved.</p>
     </div>
@@ -76,9 +279,23 @@
 <script>
 (function(){
   var head=document.getElementById('head');
+  if(!head)return;
   var s=function(){head.classList.toggle('is-stuck',window.scrollY>8)};s();
   window.addEventListener('scroll',s,{passive:true});
-  document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});
+})();
+
+/* LOCAL-PREVIEW PLACEHOLDER ONLY — remove once the GoHighLevel embed
+   replaces the <form id="finder-form"> block above. */
+(function(){
+  var form=document.getElementById('finder-form');
+  var thanks=document.getElementById('finder-thanks');
+  if(!form||!thanks)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    form.hidden=true;
+    thanks.hidden=false;
+    thanks.scrollIntoView({behavior:'smooth',block:'center'});
+  });
 })();
 </script>
 
