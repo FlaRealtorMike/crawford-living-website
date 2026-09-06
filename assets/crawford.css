@@ -196,7 +196,7 @@ strong{color:var(--ink);font-weight:600}
   gap:3rem;align-items:center;
 }
 /* single-column heroes (search) */
-.hero.on-dark .shell,.hero.solo .shell{display:block}
+.hero.solo .shell{display:block}
 .hero-figure{margin:0}
 .hero-figure img{display:block;width:100%;height:auto}
 .hero-figure.framed{
@@ -222,7 +222,8 @@ strong{color:var(--ink);font-weight:600}
 /* dark hero — flat Crawford Black, no gradient blobs, no colour */
 .hero.on-dark{background:var(--ink);color:var(--on-dark);border-bottom:0}
 .hero.on-dark h1{color:var(--on-dark)}
-.hero.on-dark .lede,.hero.on-dark .hero-lede{color:var(--on-dark-muted)}
+.hero.on-dark h1 em,.hero.on-dark .display em{color:var(--on-dark-muted)}
+.hero.on-dark .lede,.hero.on-dark .hero-lede,.hero.on-dark .standfirst{color:var(--on-dark-muted)}
 .hero.on-dark .shell{padding-top:clamp(4rem,8vw,6.5rem);padding-bottom:clamp(3.5rem,7vw,5.5rem)}
 .hero .grid-lines{
   position:absolute;inset:0;z-index:0;pointer-events:none;
