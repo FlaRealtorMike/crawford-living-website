@@ -225,8 +225,8 @@
         </form>
 
         <div class="thanks" id="finder-thanks" hidden>
-          <p><strong>Got it.</strong> I'll put a search together around what you told me and follow up personally.</p>
-          <p>If anything changes in the meantime, the direct line below always reaches me.</p>
+          <p><strong>One more step.</strong> Your email app should have opened with everything you entered, addressed to me. Send it, and I'll put a search together around it and follow up personally.</p>
+          <p>If nothing opened, the direct line below reaches me just as well.</p>
         </div>
       </div>
     </section>
@@ -284,14 +284,39 @@
   window.addEventListener('scroll',s,{passive:true});
 })();
 
-/* LOCAL-PREVIEW PLACEHOLDER ONLY — remove once the GoHighLevel embed
-   replaces the <form id="finder-form"> block above. */
+/* TEMPORARY MAILTO FALLBACK — remove once the GoHighLevel embed replaces
+   the <form id="finder-form"> block above. Until then, submitting opens
+   the visitor's own email app addressed to Mike with everything they
+   entered, so a real submission today actually reaches him — it does
+   not get silently stored or routed anywhere else. */
 (function(){
   var form=document.getElementById('finder-form');
   var thanks=document.getElementById('finder-thanks');
   if(!form||!thanks)return;
+
+  function buildMailto(){
+    var fd=new FormData(form);
+    var counties=fd.getAll('counties').join(', ')||'Not specified';
+    var lines=[
+      'Name: '+(fd.get('name')||''),
+      'Email: '+(fd.get('email')||''),
+      'Phone: '+(fd.get('phone')||'Not given'),
+      'Areas: '+counties,
+      'Price range: '+(fd.get('price_min')||'—')+' to '+(fd.get('price_max')||'—'),
+      'Bedrooms, at least: '+(fd.get('beds')||'No preference'),
+      'Bathrooms, at least: '+(fd.get('baths')||'No preference'),
+      'What actually matters: '+(fd.get('musts')||'Not given'),
+      'Timeline: '+(fd.get('timeline')||'Early days'),
+      'Financing: '+(fd.get('financing')||'Not sure yet')
+    ];
+    return 'mailto:mdc@crawfordliving.com'
+      +'?subject='+encodeURIComponent('Home search request from the website')
+      +'&body='+encodeURIComponent(lines.join('\n'));
+  }
+
   form.addEventListener('submit',function(e){
     e.preventDefault();
+    window.location.href=buildMailto();
     form.hidden=true;
     thanks.hidden=false;
     thanks.scrollIntoView({behavior:'smooth',block:'center'});

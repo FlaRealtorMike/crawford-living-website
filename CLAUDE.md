@@ -340,10 +340,13 @@ of `DESIGN.md`. The two that matter most:
        Stellar MLS-Touch Brand & Share App Store / Google Play links, once confirmed those exist
        as shareable URLs (still open per the 2026-09-05 investigation below).
     2. **The `<form id="finder-form">` block** (`id="curated"` section) needs to be replaced
-       wholesale with the GoHighLevel embed code. Right now it's a fully designed, working-looking
-       form with a **local-preview-only JS handler** (bottom of the file, clearly commented) that
-       just hides the form and shows a canned "Got it" message on submit — it does **not** send
-       data anywhere. Both drop-in points are marked with HTML comments in the file itself.
+       wholesale with the GoHighLevel embed code — that's the permanent solution. Until then,
+       submitting it does **not go through GHL** — it opens the visitor's own email app with
+       everything they entered, addressed to `mdc@crawfordliving.com` (a `mailto:` fallback, the
+       JS at the bottom of the file, clearly commented as temporary). That's real lead delivery
+       today, not a dead end, but it depends on the visitor's device having a mail app configured
+       and them actually pressing send — it is not a silent, guaranteed capture the way a GHL
+       webhook is. Both drop-in points are marked with HTML comments in the file itself.
   - 🟡 **Updated 2026-09-05 — the plan behind this build.**
     Investigated with Mike. **Stellar MLS-Touch "Brand & Share"** is a **branded mobile app**
     (iOS/Android, free with the Stellar subscription): Mike personalizes it with his logo, shares
