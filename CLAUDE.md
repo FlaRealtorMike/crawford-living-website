@@ -335,18 +335,17 @@ of `DESIGN.md`. The two that matter most:
   must-haves field, timeline, financing status). A `#contact` band covers anyone not ready for
   either. Copy passed the brand-editor rubric; images are house-style (a screen-off phone on a
   sunlit table — deliberately no fake app UI, no logos).
-  - 🟡 **Still blocked on Mike before this goes live** — nothing works yet without these:
-    1. **The two `href="#"` app buttons** (`search.html`, `id="app"` section) need the real
-       Stellar MLS-Touch Brand & Share App Store / Google Play links, once confirmed those exist
-       as shareable URLs (still open per the 2026-09-05 investigation below).
-    2. **The `<form id="finder-form">` block** (`id="curated"` section) needs to be replaced
-       wholesale with the GoHighLevel embed code — that's the permanent solution. Until then,
-       submitting it does **not go through GHL** — it opens the visitor's own email app with
-       everything they entered, addressed to `mdc@crawfordliving.com` (a `mailto:` fallback, the
-       JS at the bottom of the file, clearly commented as temporary). That's real lead delivery
-       today, not a dead end, but it depends on the visitor's device having a mail app configured
-       and them actually pressing send — it is not a silent, guaranteed capture the way a GHL
-       webhook is. Both drop-in points are marked with HTML comments in the file itself.
+  - 🟢 **Intake form wired to GoHighLevel, 2026-09-07.** The `#curated` section's form is now
+    the real GHL embed (formId `sq2766ibosmcvJXZqc3L`, "Website — Search Homes Page" — sixth and
+    last of the site's forms; Buy, Sell, Probate, Attorneys and About were done earlier). Fields:
+    name/email/phone, "Areas you're considering" (5 counties), price low/high, bedrooms/bathrooms
+    at least, "What actually matters" (free text), timeline, financing. The mailto fallback and
+    its page-scoped `.finder`/`.thanks` CSS were removed — submissions now go through GHL like
+    every other page, not a `mailto:` link.
+  - 🟡 **Still blocked on Mike before this goes live:** the two `href="#"` app buttons
+    (`search.html`, `id="app"` section) need the real Stellar MLS-Touch Brand & Share App Store /
+    Google Play links, once confirmed those exist as shareable URLs (still open per the
+    2026-09-05 investigation below).
   - 🟡 **Updated 2026-09-05 — the plan behind this build.**
     Investigated with Mike. **Stellar MLS-Touch "Brand & Share"** is a **branded mobile app**
     (iOS/Android, free with the Stellar subscription): Mike personalizes it with his logo, shares
