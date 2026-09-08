@@ -342,14 +342,13 @@ of `DESIGN.md`. The two that matter most:
     at least, "What actually matters" (free text), timeline, financing. The mailto fallback and
     its page-scoped `.finder`/`.thanks` CSS were removed — submissions now go through GHL like
     every other page, not a `mailto:` link.
-  - 🟢 **App Store / Play Store links wired, 2026-09-08.** Mike supplied both:
-    `https://apps.apple.com/ca/app/mls-touch/id429788428` (iPhone) and
-    `https://play.google.com/store/apps/details?id=com.mls_touch` (Android). Both buttons in
-    `search.html`'s `id="app"` section now point at the real app listings instead of `href="#"`.
-    ⚠️ **These are the plain public MLS-Touch listings, not a personalized deep link.** The
-    "Brand & Share" branding (Mike's logo, activity flowing back to him) still depends on him
-    configuring it inside Stellar and, if Stellar offers one, sharing that specific branded
-    link/QR code instead of the generic store page — that piece is still open, see below.
+  - 🟢 **Brand & Share link wired, 2026-09-08.** Mike's initial reply supplied the plain App
+    Store / Google Play URLs, then corrected that there's no separate per-platform link — only
+    one: `https://mls-client.com/0C1C5F73`. This is the actual personalized Brand & Share link
+    (device-aware, routes to the right store/app, and is what carries his branding and reports
+    activity back to him — not a generic store page). `search.html`'s `id="app"` section now has
+    a single "Open the app" button pointing at it, replacing the earlier two-button iPhone/Android
+    layout and the `href="#"` placeholders before that.
   - 🟡 **Updated 2026-09-05 — the plan behind this build.**
     Investigated with Mike. **Stellar MLS-Touch "Brand & Share"** is a **branded mobile app**
     (iOS/Android, free with the Stellar subscription): Mike personalizes it with his logo, shares
@@ -364,9 +363,10 @@ of `DESIGN.md`. The two that matter most:
       automating a Stellar login.** A login bot would risk MLS ToS, is brittle, and needs an
       always-on runner (a Claude Code / Claude-in-Chrome session is interactive, not a 24/7
       server). The mobile-app share removes the need to automate anything.
-    - **Blocked on Mike:** (a) confirm with Stellar whether Brand & Share gives a web-openable
-      link vs app-only, and anonymous-vs-registration; (b) supply the **GoHighLevel form
-      embed/webhook URL**; (c) supply the **Brand & Share URL + App Store/Play links**.
+    - **Blocked on Mike, updated 2026-09-08:** (a) still open — confirm with Stellar whether
+      Brand & Share is anonymous or requires registration to search; (b) ✅ done — the GHL form
+      is built and embedded (see above); (c) ✅ done — the Brand & Share link is
+      `https://mls-client.com/0C1C5F73`, wired into `search.html`.
     - True anonymous **desktop** browsing on our own domain is still only solved by a **rented
       IDX** (iHomeFinder/IDX Broker, paid) — a later call, and still "do not build your own."
   The MLS Grid demo feed was queried and the IDX rules read in full. Two findings settle it:
