@@ -342,10 +342,14 @@ of `DESIGN.md`. The two that matter most:
     at least, "What actually matters" (free text), timeline, financing. The mailto fallback and
     its page-scoped `.finder`/`.thanks` CSS were removed — submissions now go through GHL like
     every other page, not a `mailto:` link.
-  - 🟡 **Still blocked on Mike before this goes live:** the two `href="#"` app buttons
-    (`search.html`, `id="app"` section) need the real Stellar MLS-Touch Brand & Share App Store /
-    Google Play links, once confirmed those exist as shareable URLs (still open per the
-    2026-09-05 investigation below).
+  - 🟢 **App Store / Play Store links wired, 2026-09-08.** Mike supplied both:
+    `https://apps.apple.com/ca/app/mls-touch/id429788428` (iPhone) and
+    `https://play.google.com/store/apps/details?id=com.mls_touch` (Android). Both buttons in
+    `search.html`'s `id="app"` section now point at the real app listings instead of `href="#"`.
+    ⚠️ **These are the plain public MLS-Touch listings, not a personalized deep link.** The
+    "Brand & Share" branding (Mike's logo, activity flowing back to him) still depends on him
+    configuring it inside Stellar and, if Stellar offers one, sharing that specific branded
+    link/QR code instead of the generic store page — that piece is still open, see below.
   - 🟡 **Updated 2026-09-05 — the plan behind this build.**
     Investigated with Mike. **Stellar MLS-Touch "Brand & Share"** is a **branded mobile app**
     (iOS/Android, free with the Stellar subscription): Mike personalizes it with his logo, shares
