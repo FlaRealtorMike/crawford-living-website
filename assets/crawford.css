@@ -373,6 +373,17 @@ section:last-of-type{border-bottom:0}
   border-radius:0 var(--r) var(--r) 0;padding:1.1rem 1.3rem;margin-top:-.4rem;
 }
 
+/* ── form panel — sets a lead-form block apart from body copy ── */
+.form-panel{
+  background:var(--subtle);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  padding:2.25rem 2.25rem 1.75rem;
+  margin-top:.5rem;
+}
+.form-panel h2{margin-top:0}
+.form-panel iframe{border-radius:var(--r)}
+
 /* ── figure plates ──────────────────────────────────── */
 .plate{
   background:var(--subtle);border:1px solid var(--line);border-radius:var(--r);
