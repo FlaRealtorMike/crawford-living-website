@@ -185,6 +185,12 @@ strong{color:var(--ink);font-weight:600}
 .btn-ghost:hover,.btn-ghost:focus-visible,.btn-quiet:hover,.btn-quiet:focus-visible{background:var(--subtle);color:var(--ink);border-color:var(--ink)}
 .on-dark .btn-ghost{color:var(--on-dark);border-color:rgba(250,249,246,.4)}
 .on-dark .btn-ghost:hover{background:rgba(250,249,246,.12);color:var(--on-dark);border-color:var(--on-dark)}
+/* .btn's default ink-on-ink fill disappears against an on-dark ground — invert it */
+.on-dark .btn:not(.btn-ghost):not(.btn-quiet){background:var(--surface);color:var(--ink);border-color:var(--surface)}
+.on-dark .btn:not(.btn-ghost):not(.btn-quiet):hover,.on-dark .btn:not(.btn-ghost):not(.btn-quiet):focus-visible{background:#fff;border-color:#fff;color:var(--ink)}
+.on-dark .note-fine{color:var(--on-dark-muted)}
+.on-dark .note-fine a{color:var(--on-dark);border-bottom:1px solid var(--accent)}
+.on-dark .note-fine a:hover{color:#fff;border-bottom-color:var(--on-dark)}
 
 /* ── hero (light Bond Paper by default) ─────────────── */
 .hero{
