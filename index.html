@@ -1,538 +1,238 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Crawford Living — Michael Crawford, Broker-Associate, eXp Realty LLC</title>
-<meta name="description" content="Buying, selling, new construction and probate real estate across Central Florida.">
+<title>Crawford Living — Real Estate . . . Considered</title>
+<meta name="description" content="Buying, selling, new construction, probate and estate work, and community guidance across Central Florida.">
+<link rel="canonical" href="https://crawfordliving.com/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-/* ─────────────────────────────────────────────────────────────
-   CRAWFORD LIVING — "HYBRID"
-   Study, 2026-08-20. Split's front door, Plat's interior.
-
-   The page changes register as it descends. Above the ticker it
-   is a practice introducing itself: navy ground, condensed caps,
-   a photograph. Below the ticker it is someone reading carefully,
-   often at a bad moment: ivory ground, serif, hairlines.
-
-   The ticker is the hinge. Palette, spacing rhythm, mono labels
-   and hairline rules are identical either side of it, so the
-   change of voice reads as intent rather than inconsistency.
-   ───────────────────────────────────────────────────────────── */
-
-:root{
-  --page:#F2E9D5;
-  --raised:#FCF8EC;
-  --sunk:#EADCBC;
-  --rule:#DACBA9;
-
-  --navy:#0E2A57;
-  --navy-deep:#0A1F42;
-  --blue:#19469C;
-  --gold:#E7C870;
-  --gold-ink:#8A6D2F;
-
-  --on-navy:rgba(242,233,213,.72);
-  --on-navy-mute:rgba(242,233,213,.52);
-  --ink-soft:rgba(14,42,87,.64);
-  --ink-faint:rgba(14,42,87,.30);
-  --line:rgba(14,42,87,.15);
-  --line-on-navy:rgba(242,233,213,.18);
-
-  /* front-door voice */
-  --stencil:"Big Shoulders Display",Impact,sans-serif;
-  /* interior voice */
-  --serif:"Newsreader",Georgia,"Times New Roman",serif;
-  /* constant either side */
-  --body:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-
-  --gutter:clamp(1.25rem,4vw,3.5rem);
-  --measure:34rem;
-  --radius:9px;
-  --ease:cubic-bezier(.22,.61,.36,1);
-}
-
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{
-  margin:0;background:var(--page);color:var(--navy);
-  font-family:var(--body);
-  font-size:clamp(1rem,.96rem + .16vw,1.0625rem);
-  line-height:1.62;
-  -webkit-font-smoothing:antialiased;
-}
-
-.ann{
-  font-family:var(--mono);font-size:.6875rem;font-weight:500;
-  letter-spacing:.16em;text-transform:uppercase;
-}
-a{color:var(--blue)}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-
-.skip{position:absolute;left:-9999px;background:var(--navy);color:var(--page);
-  padding:.75rem 1rem;font-family:var(--mono);font-size:.75rem;text-decoration:none;border-radius:var(--radius)}
-.skip:focus{left:1rem;top:1rem;z-index:99}
-
-.wrap{max-width:82rem;margin-inline:auto;padding-inline:var(--gutter)}
-
-/* ══ FRONT DOOR ══════════════════════════════════════════════ */
-
-.masthead{
-  position:sticky;top:0;z-index:30;
-  background:var(--navy-deep);
-  border-bottom:1px solid rgba(242,233,213,.10);
-}
-.masthead .wrap{display:flex;align-items:center;gap:1.25rem;min-height:4.25rem}
-.mark{display:flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--page);flex:none;margin-right:auto}
-.mark .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
-.mark b,.mark i{
-  font-family:var(--stencil);font-size:1.375rem;
-  text-transform:uppercase;line-height:1;font-style:normal;
-}
-.mark b{font-weight:700}
-.mark i{font-weight:600;color:var(--gold)}
-
-.sitenav{display:flex;align-items:center;gap:clamp(.85rem,1.8vw,1.75rem);overflow-x:auto;scrollbar-width:none}
-.sitenav::-webkit-scrollbar{display:none}
-.sitenav a{
-  font-family:var(--mono);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--on-navy);text-decoration:none;white-space:nowrap;
-  padding-block:.4rem;border-bottom:1px solid transparent;
-  transition:color .22s var(--ease),border-color .22s var(--ease);
-}
-.sitenav a:hover{color:var(--page);border-bottom-color:var(--gold)}
-
-.standing-cta{
-  flex:none;font-family:var(--mono);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;
-  text-decoration:none;background:var(--gold);color:var(--navy-deep);padding:.85rem 1.15rem;border-radius:var(--radius);
-  transition:background-color .22s var(--ease),transform .22s var(--ease);
-}
-.standing-cta:hover{background:#f0d78c;color:var(--navy-deep);transform:translateY(-1px)}
-@media (max-width:60rem){ .standing-cta{display:none} }
-
-.hero{display:grid;grid-template-columns:minmax(0,1fr);background:var(--navy)}
-@media (min-width:60rem){ .hero{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr)} }
-
-.hero-field{
-  padding:clamp(2.5rem,5vw,4.5rem) clamp(1.25rem,4vw,4rem) clamp(2rem,4vw,3.25rem);
-  display:flex;flex-direction:column;justify-content:center;
-  min-height:clamp(30rem,72vh,46rem);
-}
-.hero-eyebrow{display:flex;align-items:center;gap:.8rem;color:var(--on-navy);margin-bottom:clamp(1.25rem,2.5vw,2rem)}
-.hero-eyebrow::before{content:"";width:2.25rem;height:1px;background:var(--on-navy-mute);flex:none}
-
-.hero h1{
-  margin:0;font-family:var(--stencil);font-weight:800;text-transform:uppercase;
-  font-size:clamp(2.9rem,1.4rem + 7.4vw,6.5rem);line-height:.88;letter-spacing:-.005em;
-  color:var(--page);
-}
-.hero h1 .tint{
-  display:block;text-transform:none;
-  font-family:var(--serif);font-style:italic;font-weight:300;
-  font-size:.84em;line-height:1.04;letter-spacing:-.022em;
-  color:var(--gold);margin-top:.06em;
-}
-.hero h1 .dots{color:var(--gold);font-weight:700;font-size:.72em;letter-spacing:.14em;padding-left:.12em}
-
-.hero-lede{margin:clamp(1.5rem,3vw,2.25rem) 0 0;max-width:31rem;color:var(--on-navy);font-size:clamp(1rem,.95rem + .25vw,1.125rem)}
-
-.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:clamp(1.75rem,3.5vw,2.5rem)}
-@media (max-width:30rem){ .cta{display:grid;grid-template-columns:1fr} }
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  font-family:var(--mono);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;
-  text-decoration:none;padding:1.05rem 1.5rem;border:1px solid transparent;border-radius:var(--radius);
-  transition:background-color .22s var(--ease),color .22s var(--ease),border-color .22s var(--ease),transform .22s var(--ease);
-}
-.btn-solid{background:var(--page);color:var(--navy-deep)}
-.btn-solid:hover{background:var(--raised);color:var(--navy-deep);transform:translateY(-1px)}
-.btn-line{border-color:var(--line-on-navy);color:var(--page)}
-.btn-line:hover{border-color:var(--page);color:var(--page);transform:translateY(-1px)}
-
-.hero-status{
-  display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem;
-  margin-top:clamp(2rem,4vw,3rem);padding-top:1.25rem;
-  border-top:1px solid var(--line-on-navy);color:var(--on-navy);
-}
-.hero-status .live{display:inline-flex;align-items:center;gap:.55rem}
-.hero-status .live::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
-.hero-status a{color:var(--page);text-decoration:none;border-bottom:1px solid var(--gold)}
-.hero-status a:hover{color:var(--gold)}
-
-.hero-plate{position:relative;min-height:18rem;background:var(--navy-deep);overflow:hidden}
-.hero-plate img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.hero-plate::after{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(90deg,rgba(14,42,87,.62),rgba(14,42,87,0) 30%);
-}
-
-/* ── the hinge ─────────────────────────────────────────────── */
-.ticker{background:var(--navy-deep);border-top:1px solid rgba(242,233,213,.10);overflow:hidden;padding-block:.95rem}
-.ticker-run{display:flex;width:max-content;animation:run 46s linear infinite}
-.ticker-run span{
-  font-family:var(--mono);font-size:.6875rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--on-navy);padding-inline:1.6rem;white-space:nowrap;
-}
-.ticker-run span::after{content:"·";color:var(--gold);margin-left:1.6rem}
-@keyframes run{to{transform:translateX(-50%)}}
-
-/* ══ INTERIOR ════════════════════════════════════════════════ */
-
-.band{position:relative;border-top:1px solid var(--line);padding-block:clamp(3.5rem,7vw,6rem)}
-.band::before,.band::after{content:"";position:absolute;top:-1px;width:9px;height:9px;border-top:1px solid var(--ink-faint)}
-.band::before{left:0;border-left:1px solid var(--ink-faint)}
-.band::after{right:0;border-right:1px solid var(--ink-faint)}
-
-.band-label{
-  display:block;padding-bottom:.7rem;
-  margin-bottom:clamp(1.75rem,3vw,2.5rem);
-  border-bottom:1px solid var(--rule);
-  color:var(--ink-soft);
-}
-
-h2{
-  margin:0;font-family:var(--serif);font-weight:400;
-  font-size:clamp(1.875rem,1.3rem + 2.2vw,3rem);line-height:1.06;
-  letter-spacing:-.018em;text-wrap:balance;color:var(--navy);
-}
-h3{
-  margin:0;font-family:var(--serif);font-weight:400;
-  font-size:clamp(1.25rem,1.1rem + .55vw,1.5rem);line-height:1.18;letter-spacing:-.012em;
-}
-.lede{
-  font-family:var(--serif);font-weight:300;
-  font-size:clamp(1.125rem,1.02rem + .45vw,1.375rem);line-height:1.5;
-  color:var(--ink-soft);max-width:var(--measure);margin:1.35rem 0 0;
-}
-
-/* ── paths ─────────────────────────────────────────────────── */
-.schedule{list-style:none;margin:clamp(2rem,4vw,3rem) 0 0;padding:0;border-top:1px solid var(--rule)}
-.schedule li{border-bottom:1px solid var(--rule)}
-.path{
-  display:grid;gap:.4rem 2rem;grid-template-columns:minmax(0,1fr);
-  padding:clamp(1.4rem,2.6vw,2rem) 0;text-decoration:none;color:inherit;position:relative;
-  transition:background-color .28s var(--ease),padding-inline .28s var(--ease);
-}
-@media (min-width:52rem){ .path{grid-template-columns:11rem minmax(0,1fr) 11rem;align-items:baseline} }
-.path::before{content:"";position:absolute;left:0;top:50%;width:2px;height:0;background:var(--gold-ink);transform:translateY(-50%);transition:height .28s var(--ease)}
-.path:hover,.path:focus-visible{background:var(--raised);padding-inline:clamp(.75rem,1.5vw,1.25rem)}
-.path:hover::before,.path:focus-visible::before{height:calc(100% - 2rem)}
-.path .ann{color:var(--ink-soft)}
-.path h3{margin-bottom:.45rem}
-.path p{margin:0;color:var(--ink-soft);font-size:.9375rem;max-width:36rem}
-.path-do{font-family:var(--mono);font-size:.6875rem;letter-spacing:.13em;text-transform:uppercase;color:var(--blue);display:inline-flex;align-items:center;gap:.45rem}
-@media (min-width:52rem){ .path-do{justify-self:end;text-align:right} }
-.path-do .arw{transition:transform .22s var(--ease)}
-.path:hover .path-do .arw{transform:translateX(3px)}
-.path-do[data-state="pending"]{color:var(--ink-faint)}
-
-/* ── positions ─────────────────────────────────────────────── */
-.positions{display:grid;gap:1px;background:var(--line);border-block:1px solid var(--line);margin-top:clamp(2rem,4vw,3rem)}
-@media (min-width:52rem){ .positions{grid-template-columns:repeat(3,1fr)} }
-.positions article{background:var(--page);padding:clamp(1.5rem,2.5vw,2rem)}
-.positions h3{margin:.9rem 0 .6rem}
-.positions p{margin:0;color:var(--ink-soft);font-size:.9375rem}
-
-/* ── standard, on navy ─────────────────────────────────────── */
-.standard{background:var(--navy);color:var(--page)}
-.standard::before,.standard::after{border-color:rgba(242,233,213,.25)}
-.standard h2{color:var(--page)}
-.standard .band-label{border-bottom-color:var(--line-on-navy);color:var(--on-navy)}
-.standard .lede{color:var(--on-navy)}
-.standard .grid{display:grid;gap:clamp(2rem,4vw,3.5rem)}
-@media (min-width:58rem){ .standard .grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)} }
-.assurances{list-style:none;margin:0;padding:0}
-.assurances li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.9rem;padding-block:.9rem;border-bottom:1px solid var(--line-on-navy);color:var(--on-navy);font-size:.9375rem}
-.assurances li:first-child{border-top:1px solid var(--line-on-navy)}
-.assurances .pip{width:7px;height:7px;margin-top:.55rem;border:1px solid var(--gold);transform:rotate(45deg);flex:none}
-
-/* ── where I work: the parcel ──────────────────────────────── */
-.where{display:grid;gap:clamp(2.5rem,5vw,4rem);align-items:center}
-@media (min-width:60rem){ .where{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr)} }
-.parcel{width:100%;height:auto;display:block;overflow:visible}
-.parcel .lot{fill:rgba(252,248,236,.5);stroke:var(--navy);stroke-width:1.1;vector-effect:non-scaling-stroke}
-.parcel .tick{stroke:var(--navy);stroke-width:1.1;vector-effect:non-scaling-stroke;fill:none}
-.parcel .dim{stroke:var(--ink-faint);stroke-width:1;stroke-dasharray:3 4;vector-effect:non-scaling-stroke}
-.parcel text{font-family:var(--mono);fill:var(--navy)}
-.parcel .cty{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase}
-.parcel .note{font-size:8px;letter-spacing:.14em;fill:var(--ink-soft);text-transform:uppercase}
-.county-row{
-  display:flex;flex-wrap:wrap;gap:.35rem .9rem;align-items:baseline;
-  margin:clamp(1.5rem,3vw,2rem) 0 0;padding:0;max-width:none;
-  font-family:var(--mono);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;
-}
-.county-row span{display:inline-flex;align-items:baseline;gap:.9rem}
-.county-row span:not(:last-child)::after{content:"·";color:var(--gold-ink)}
-
-.place-actions{list-style:none;margin:clamp(1.5rem,3vw,2rem) 0 0;padding:0;border-top:1px solid var(--rule)}
-.place-actions li{border-bottom:1px solid var(--rule)}
-.place-actions a{
-  display:grid;gap:.3rem;grid-template-columns:minmax(0,1fr);
-  padding:1.05rem 0;text-decoration:none;color:inherit;position:relative;
-  transition:background-color .28s var(--ease),padding-inline .28s var(--ease);
-}
-@media (min-width:34rem){ .place-actions a{grid-template-columns:9rem minmax(0,1fr);align-items:baseline} }
-.place-actions a:hover{background:var(--raised);padding-inline:.75rem}
-.place-actions .ann{color:var(--ink-soft)}
-.place-actions a > span:nth-child(2){color:var(--ink-soft);font-size:.9375rem}
-.place-actions .path-do{margin-top:.35rem}
-@media (min-width:34rem){ .place-actions .path-do{grid-column:2} }
-
-/* ── contact ───────────────────────────────────────────────── */
-.contact{background:var(--sunk)}
-.contact .grid{display:grid;gap:clamp(2rem,4vw,3.5rem)}
-@media (min-width:58rem){ .contact .grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end} }
-.reach{display:grid;gap:.5rem}
-.reach a{
-  font-family:var(--serif);font-weight:400;
-  font-size:clamp(1.5rem,1.15rem + 1.5vw,2.25rem);line-height:1.1;
-  text-decoration:none;color:var(--navy);display:inline-flex;align-items:center;gap:.6rem;
-  width:max-content;max-width:100%;border-bottom:1px solid var(--rule);padding-bottom:.3rem;
-  transition:border-color .22s var(--ease),color .22s var(--ease);
-}
-.reach a:hover{border-bottom-color:var(--gold-ink);color:var(--blue)}
-.reach a .arw{font-size:.5em;transition:transform .22s var(--ease)}
-.reach a:hover .arw{transform:translateX(4px)}
-.reach small{color:var(--ink-soft);font-family:var(--mono);font-size:.6875rem;letter-spacing:.13em;text-transform:uppercase;margin-top:.55rem}
-
-/* ── colophon ──────────────────────────────────────────────── */
-.colophon{background:var(--navy-deep);color:var(--on-navy);padding-block:clamp(2.5rem,5vw,3.5rem);font-size:.8125rem}
-.colophon .grid{display:grid;gap:1.5rem}
-@media (min-width:52rem){ .colophon .grid{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)} }
-.colophon b{color:var(--page);font-weight:500}
-.colophon p{margin:0 0 .5rem;max-width:38rem}
-.colophon a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(231,200,112,.35)}
-.brokerage-mark{display:block;width:auto;height:2.6rem;margin-bottom:1.1rem}
-
-@media (prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important}
-  .ticker-run{transform:none}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/crawford.css">
 </head>
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="masthead">
-  <div class="wrap">
-    <a class="mark" href="./"><span class="dot" aria-hidden="true"></span><b>Crawford</b><i>Living</i></a>
-    <nav class="sitenav" aria-label="Primary">
+<header class="head" id="head">
+  <div class="shell">
+    <a class="brand" href="./">
+      <span class="wordmark">Crawford Living</span>
+      <span class="brandline">Real Estate . . . <em>Considered</em></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
       <a href="buy.html">Buy</a>
       <a href="sell.html">Sell</a>
       <a href="#new-construction">New Construction</a>
-      <a href="#probate">Probate &amp; Estates</a>
+      <a href="probate.html">Probate &amp; Estates</a>
       <a href="communities.html">Communities</a>
-      <a href="#search">Search Homes</a>
+      <a href="search.html">Search Homes</a>
     </nav>
-    <a class="standing-cta" href="tel:+14078289029">Call 407-828-9029</a>
   </div>
 </header>
 
 <main id="main">
 
-  <section class="hero">
-    <div class="hero-field">
-      <p class="ann hero-eyebrow">Central Florida · Broker-Associate, eXp Realty LLC</p>
-      <h1>Real&nbsp;Estate<span class="dots">&#8202;.&#8202;.&#8202;.</span><span class="tint">Considered</span></h1>
-      <p class="hero-lede">Buying, selling, new construction, and property caught up in an estate — across Central Florida. The same broker works your file personally, from the first conversation through contract.</p>
-      <div class="cta">
-        <a class="btn btn-solid" href="tel:+14078289029">Call 407-828-9029</a>
-        <a class="btn btn-line" href="#paths">See how I can help</a>
+  <div class="hero">
+    <div class="shell">
+      <div>
+        <p class="kicker">Central Florida</p>
+        <h1 class="display"><span style="white-space:nowrap">Real&nbsp;Estate . . .</span> <em>Considered</em></h1>
+        <p class="standfirst"><em>Considered</em> is a philosophy before it is a way of working. It means intentional &mdash; a standard we chose rather than inherited, and it runs as a thread through everything we do.</p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="tel:+14078289029">Call 407-828-9029</a>
+          <a class="btn btn-ghost" href="#ledger">See how we can help</a>
+        </div>
+        <p class="note-fine" style="margin-top:1.6rem">No charge for the first conversation &middot; <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a></p>
       </div>
-      <div class="ann hero-status">
-        <span class="live">No charge for the first conversation</span>
-        <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a>
-      </div>
-    </div>
-
-    <div class="hero-plate">
-      <img src="assets/hero-florida-dusk.jpg"
-           alt="A Central Florida lake at last light — cabbage palms silhouetted along the far shore, mist on still water, a gold horizon under a deep navy sky"
-           width="896" height="1200" fetchpriority="high" decoding="async">
-    </div>
-  </section>
-
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-run">
-      <span>Buying</span><span>Selling</span><span>New Construction</span><span>Probate &amp; Estates</span><span>Orange</span><span>Seminole</span><span>Osceola</span><span>Lake</span><span>Volusia</span>
-      <span>Buying</span><span>Selling</span><span>New Construction</span><span>Probate &amp; Estates</span><span>Orange</span><span>Seminole</span><span>Osceola</span><span>Lake</span><span>Volusia</span>
+      <figure class="hero-figure photo">
+        <img src="assets/homepage-hero-interior.jpg" alt="A bright, uncluttered living room in warm natural light" width="2528" height="1696">
+      </figure>
     </div>
   </div>
 
-  <section class="band" id="paths">
-    <div class="wrap">
-      <span class="ann band-label">Schedule of work</span>
-      <h2>Four ways&nbsp;in.</h2>
-      <p class="lede">Different jobs, but the same practice and the same person on the other end of the phone.</p>
+  <div class="shell">
 
-      <ul class="schedule">
-        <li><a class="path" id="buy" href="buy.html">
-          <span class="ann">Buy</span>
-          <span><h3>Buying a home</h3><p>From working out what you&rsquo;re actually looking for through evaluating properties, negotiating, and getting to closing without surprises.</p></span>
-          <span class="path-do">See how I work with buyers <span class="arw" aria-hidden="true">→</span></span>
+    <section class="sec" id="ledger">
+      <div class="sec-head">
+        <h2>Most people arrive with a question. Here is how we take it from&nbsp;there.</h2>
+      </div>
+      <ul class="paths">
+        <li><a class="path" href="buy.html">
+          <span class="idx">01</span>
+          <h3>Buying a home</h3>
+          <p><em>&ldquo;What am I actually buying?&rdquo;</em> We find out what the house actually is, not what the listing says. We do it while you can still change your mind.</p>
+          <span class="go">See how we work with buyers <span class="arw" aria-hidden="true">&rarr;</span></span>
         </a></li>
-        <li><a class="path" id="sell" href="sell.html">
-          <span class="ann">Sell</span>
-          <span><h3>Selling a home</h3><p>Preparing, pricing and positioning a property — market knowledge paired with a practical read on what the house itself needs first.</p></span>
-          <span class="path-do">See how I work with sellers <span class="arw" aria-hidden="true">→</span></span>
+        <li><a class="path" href="sell.html">
+          <span class="idx">02</span>
+          <h3>Selling a home</h3>
+          <p><em>&ldquo;What&rsquo;s it actually worth, and what happens next?&rdquo;</em> A number backed by real recent sales, then a plan for pricing, marketing, and reporting while it&rsquo;s live.</p>
+          <span class="go">See how we work with sellers <span class="arw" aria-hidden="true">&rarr;</span></span>
         </a></li>
-        <li><a class="path" id="new-construction" href="#contact">
-          <span class="ann">New Construction</span>
-          <span><h3>New construction</h3><p>Buyer representation from someone who coordinated residential construction. I know what a builder&rsquo;s contract commits to, and what it quietly doesn&rsquo;t.</p></span>
-          <span class="path-do">Start a conversation <span class="arw" aria-hidden="true">→</span></span>
+        <li><a class="path" href="#new-construction">
+          <span class="idx">03</span>
+          <h3>New construction</h3>
+          <p><em>&ldquo;Is this contract fair to me?&rdquo;</em> The builder writes their own contract. We read it with you, and tell you what it does and doesn&rsquo;t commit you to.</p>
+          <span class="go">Start a conversation <span class="arw" aria-hidden="true">&rarr;</span></span>
         </a></li>
-        <li><a class="path" id="probate" href="probate.html">
-          <span class="ann">Probate &amp; Estates</span>
-          <span><h3>Probate &amp; estates</h3><p>Practical help when a property is tied up in an estate, deferred maintenance, or a family that needs to reach one decision together.</p></span>
-          <span class="path-do">Read the guide <span class="arw" aria-hidden="true">→</span></span>
+        <li><a class="path" href="probate.html">
+          <span class="idx">04</span>
+          <h3>Probate &amp; estates</h3>
+          <p>For personal representatives holding a house they did not choose, and for the attorneys advising them. We work to the attorney&rsquo;s timeline, not ahead of it.</p>
+          <span class="go">Read the guide <span class="arw" aria-hidden="true">&rarr;</span></span>
+        </a></li>
+        <li><a class="path" href="communities.html">
+          <span class="idx">05</span>
+          <h3>Communities</h3>
+          <p><em>&ldquo;Where should I even be looking?&rdquo;</em> A few communities we know well enough to describe honestly, starting with Lake Nona &mdash; more as there&rsquo;s something real to say.</p>
+          <span class="go">See Lake Nona <span class="arw" aria-hidden="true">&rarr;</span></span>
+        </a></li>
+        <li><a class="path" href="search.html">
+          <span class="idx">06</span>
+          <h3>Search homes</h3>
+          <p><em>&ldquo;Can I just look at listings?&rdquo;</em> Search it yourself through our branded app, or tell us what you want and we&rsquo;ll set up something curated.</p>
+          <span class="go">Search homes <span class="arw" aria-hidden="true">&rarr;</span></span>
         </a></li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <section class="band">
-    <div class="wrap">
-      <span class="ann band-label">Why this is different</span>
-      <h2>Advice you can act on, not just an&nbsp;opinion.</h2>
-      <p class="lede">Plenty of agents can tell you what a house is worth. The harder question is what to do about it — and that depends on the property, the timing, and the people involved.</p>
-      <div class="positions">
-        <article><span class="ann">Sequencing</span><h3>A plan before a listing</h3><p>Some properties need sequencing, coordination and a few decisions made in the right order before a sale makes sense. Working out that order is part of the job, not an extra.</p></article>
-        <article><span class="ann">Numbers</span><h3>Repair or sell as-is, with numbers</h3><p>A cost-and-return comparison for the specific property, built on real contractor quotes, so the decision is yours to make on facts. Sometimes the answer is to do nothing.</p></article>
-        <article><span class="ann">Negotiation</span><h3>A certified negotiator</h3><p>NAR Real Estate Negotiation Expert. A fair amount of this work is helping people who don&rsquo;t fully agree arrive at a decision they can each live with.</p></article>
+    <figure class="hero-figure photo" style="margin:0 0 clamp(3rem,6vw,4.5rem)">
+      <img src="assets/homepage-exterior-break.jpg" alt="A well-kept single-story Central Florida home in warm afternoon light, with a paver walkway and tidy landscaping" width="2528" height="1696">
+    </figure>
+
+    <section class="spread" id="representation">
+      <div>
+        <h2>Different situations. The same&nbsp;representation.</h2>
+        <p class="lede">The standard doesn&rsquo;t change depending on which door you came in through &mdash; buying, selling, new construction, or a property caught up in an estate.</p>
       </div>
-    </div>
-  </section>
+      <ul class="items items-plain">
+        <li>The same broker works your file from the first conversation through contract.</li>
+        <li>At contract, it moves to a transaction coordinator &mdash; not a call center, and not dropped.</li>
+        <li>The standard doesn&rsquo;t change based on price point or how complicated the situation is.</li>
+      </ul>
+    </section>
 
-  <section class="band standard">
-    <div class="wrap">
-      <span class="ann band-label">Direct representation</span>
-      <div class="grid">
-        <div>
-          <h2>Different situations. The same&nbsp;representation.</h2>
-          <p class="lede">The standard doesn&rsquo;t change depending on which door you came in through &mdash; buying, selling, new construction, or a property caught up in an estate.</p>
-        </div>
-        <ul class="assurances">
-          <li><span class="pip" aria-hidden="true"></span><span>The same broker works your file from the first conversation through contract.</span></li>
-          <li><span class="pip" aria-hidden="true"></span><span>At contract, it moves to a transaction coordinator &mdash; not a call center, and not dropped.</span></li>
-          <li><span class="pip" aria-hidden="true"></span><span>The standard doesn&rsquo;t change based on price point or how complicated the situation is.</span></li>
-        </ul>
+    <section class="rail">
+      <p class="label">Where we work</p>
+      <div>
+        <h2>Orlando, and the communities around&nbsp;it.</h2>
+        <p>A deliberate boundary, because local knowledge stops being worth much when it&rsquo;s stretched too thin.</p>
+        <p>All five sit inside Stellar MLS, so the whole footprint is one market to work rather than five separate ones. Ask about somewhere just outside it, and we&rsquo;ll tell you plainly whether it&rsquo;s ours to help with.</p>
+        <figure class="plate">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 480" role="img" aria-labelledby="map-t map-d">
+            <title id="map-t">The five Central Florida counties served</title>
+            <desc id="map-d">A simplified map, traced from actual county boundaries, showing Lake to the west, Volusia to the northeast on the Atlantic coast, Seminole above Orange in the centre, and Osceola to the south. Orlando is marked in Orange County.</desc>
+
+            <defs>
+              <clipPath id="county-clip-home">
+                <path d="M96.2 269.9 L66.0 266.8 L40.0 270.3 L40.8 169.0 L40.6 139.4 L61.4 139.5 L61.6 139.2 L95.9 139.4 L99.6 117.5 L99.3 102.9 L99.1 72.0 L104.6 87.7 L119.8 93.3 L125.2 110.1 L152.8 134.3 L150.5 156.6 L150.5 156.8 L150.5 157.2 L150.6 157.6 L150.5 157.9 L150.2 158.0 L150.0 158.5 L149.5 158.8 L149.3 158.6 L148.8 159.5 L149.0 160.0 L141.6 176.7 L108.2 176.5 L102.3 176.5 L96.0 198.5 L96.2 226.1 Z"/>
+                <path d="M179.8 173.0 L182.6 175.1 L184.9 174.0 L185.7 177.4 L199.3 167.4 L221.5 213.3 L158.0 213.9 L157.8 213.7 L157.7 207.7 L157.2 207.7 L152.2 207.7 L150.8 207.5 L133.5 207.5 L133.2 207.5 L133.1 206.6 L141.6 176.7 L149.0 160.0 L148.8 159.5 L149.3 158.6 L149.5 158.8 L150.0 158.5 L150.2 158.0 L150.5 157.9 L150.6 157.6 L150.5 157.2 L150.5 156.8 L150.5 156.6 L172.4 166.5 L176.1 166.6 L176.9 166.6 L177.4 167.8 L177.1 168.8 L178.7 170.4 L178.7 171.7 Z"/>
+                <path d="M96.2 226.1 L96.0 198.5 L102.3 176.5 L108.2 176.5 L141.6 176.7 L133.1 206.6 L133.2 207.5 L133.5 207.5 L150.8 207.5 L152.2 207.7 L157.2 207.7 L157.7 207.7 L157.8 213.7 L158.0 213.9 L221.5 213.3 L241.4 236.6 L244.8 269.9 L161.2 269.7 L123.0 269.9 L119.6 269.9 L96.2 269.9 Z"/>
+                <path d="M244.8 269.9 L243.7 381.6 L242.9 420.0 L192.5 419.8 L194.5 418.5 L180.2 381.9 L162.7 373.2 L161.4 360.5 L148.3 341.3 L148.9 325.7 L134.0 325.7 L133.9 313.4 L121.1 313.4 L121.1 301.0 L116.0 290.8 L96.2 288.6 L96.2 269.9 L119.6 269.9 L123.0 269.9 L161.2 269.7 Z"/>
+                <path d="M185.7 177.4 L184.9 174.0 L182.6 175.1 L179.8 173.0 L178.7 171.7 L178.7 170.4 L177.1 168.8 L177.4 167.8 L176.9 166.6 L176.1 166.6 L172.4 166.5 L150.5 156.6 L152.8 134.3 L125.2 110.1 L119.8 93.3 L104.6 87.7 L99.1 72.0 L97.8 69.1 L96.5 67.1 L94.2 66.7 L92.8 64.8 L91.8 61.9 L114.2 56.0 L118.0 55.0 L121.5 53.8 L122.2 53.9 L124.1 53.3 L134.8 50.3 L137.9 46.1 L141.1 75.3 L191.1 74.3 L190.0 43.4 L200.1 40.0 L210.4 65.4 L220.0 87.1 L225.5 99.4 L229.5 107.3 L236.5 117.2 L239.0 123.2 L241.9 128.7 L259.0 157.5 L269.2 175.4 L225.1 175.6 L225.8 213.3 L221.5 213.3 L199.3 167.4 Z"/>
+              </clipPath>
+            </defs>
+
+            <g font-family="'Archivo',sans-serif">
+              <g stroke="#5E6470" stroke-width="1.2" fill="none" opacity=".45" stroke-linecap="round">
+                <path d="M320 62 q10 -7 20 0 t20 0"/>
+                <path d="M312 92 q10 -7 20 0 t20 0"/>
+                <path d="M300 122 q10 -7 20 0 t20 0"/>
+                <path d="M292 152 q10 -7 20 0 t20 0"/>
+              </g>
+              <text x="370" y="196" text-anchor="end" font-size="11" letter-spacing="2.4" fill="#5E6470" opacity=".65">ATLANTIC</text>
+
+              <image href="assets/county-map-texture.jpg" x="18" y="28" width="256" height="404" preserveAspectRatio="xMidYMid slice" clip-path="url(#county-clip-home)"/>
+
+              <g fill="none" stroke="#1A202C" stroke-width="1.8" stroke-linejoin="round">
+                <path d="M96.2 269.9 L66.0 266.8 L40.0 270.3 L40.8 169.0 L40.6 139.4 L61.4 139.5 L61.6 139.2 L95.9 139.4 L99.6 117.5 L99.3 102.9 L99.1 72.0 L104.6 87.7 L119.8 93.3 L125.2 110.1 L152.8 134.3 L150.5 156.6 L150.5 156.8 L150.5 157.2 L150.6 157.6 L150.5 157.9 L150.2 158.0 L150.0 158.5 L149.5 158.8 L149.3 158.6 L148.8 159.5 L149.0 160.0 L141.6 176.7 L108.2 176.5 L102.3 176.5 L96.0 198.5 L96.2 226.1 Z"/>
+                <path d="M179.8 173.0 L182.6 175.1 L184.9 174.0 L185.7 177.4 L199.3 167.4 L221.5 213.3 L158.0 213.9 L157.8 213.7 L157.7 207.7 L157.2 207.7 L152.2 207.7 L150.8 207.5 L133.5 207.5 L133.2 207.5 L133.1 206.6 L141.6 176.7 L149.0 160.0 L148.8 159.5 L149.3 158.6 L149.5 158.8 L150.0 158.5 L150.2 158.0 L150.5 157.9 L150.6 157.6 L150.5 157.2 L150.5 156.8 L150.5 156.6 L172.4 166.5 L176.1 166.6 L176.9 166.6 L177.4 167.8 L177.1 168.8 L178.7 170.4 L178.7 171.7 Z"/>
+                <path d="M96.2 226.1 L96.0 198.5 L102.3 176.5 L108.2 176.5 L141.6 176.7 L133.1 206.6 L133.2 207.5 L133.5 207.5 L150.8 207.5 L152.2 207.7 L157.2 207.7 L157.7 207.7 L157.8 213.7 L158.0 213.9 L221.5 213.3 L241.4 236.6 L244.8 269.9 L161.2 269.7 L123.0 269.9 L119.6 269.9 L96.2 269.9 Z"/>
+                <path d="M244.8 269.9 L243.7 381.6 L242.9 420.0 L192.5 419.8 L194.5 418.5 L180.2 381.9 L162.7 373.2 L161.4 360.5 L148.3 341.3 L148.9 325.7 L134.0 325.7 L133.9 313.4 L121.1 313.4 L121.1 301.0 L116.0 290.8 L96.2 288.6 L96.2 269.9 L119.6 269.9 L123.0 269.9 L161.2 269.7 Z"/>
+                <path d="M185.7 177.4 L184.9 174.0 L182.6 175.1 L179.8 173.0 L178.7 171.7 L178.7 170.4 L177.1 168.8 L177.4 167.8 L176.9 166.6 L176.1 166.6 L172.4 166.5 L150.5 156.6 L152.8 134.3 L125.2 110.1 L119.8 93.3 L104.6 87.7 L99.1 72.0 L97.8 69.1 L96.5 67.1 L94.2 66.7 L92.8 64.8 L91.8 61.9 L114.2 56.0 L118.0 55.0 L121.5 53.8 L122.2 53.9 L124.1 53.3 L134.8 50.3 L137.9 46.1 L141.1 75.3 L191.1 74.3 L190.0 43.4 L200.1 40.0 L210.4 65.4 L220.0 87.1 L225.5 99.4 L229.5 107.3 L236.5 117.2 L239.0 123.2 L241.9 128.7 L259.0 157.5 L269.2 175.4 L225.1 175.6 L225.8 213.3 L221.5 213.3 L199.3 167.4 Z"/>
+              </g>
+
+              <g font-size="15" font-weight="700" letter-spacing="2.6" fill="#1A202C" text-anchor="middle" stroke="#FAF9F6" stroke-width="4" stroke-linejoin="round" paint-order="stroke fill">
+                <text x="86" y="186">LAKE</text>
+                <text x="185" y="123">VOLUSIA</text>
+                <text x="174" y="195">SEMINOLE</text>
+                <text x="200" y="255">ORANGE</text>
+                <text x="192" y="335">OSCEOLA</text>
+              </g>
+
+              <g>
+                <circle cx="148.3" cy="229.2" r="12" fill="none" stroke="#A8813C" stroke-width="1.6" opacity=".9"/>
+                <circle cx="148.3" cy="229.2" r="4.6" fill="#A8813C" stroke="#FAF9F6" stroke-width="1.2"/>
+                <text x="168.3" y="234.2" font-size="13.5" fill="#1A202C" font-style="italic" font-family="Archivo,sans-serif" stroke="#FAF9F6" stroke-width="4" stroke-linejoin="round" paint-order="stroke fill">Orlando</text>
+              </g>
+
+              <g transform="translate(500,410)" stroke="#5E6470" fill="#5E6470">
+                <path d="M0 -26 L6 0 L0 -6 L-6 0 Z" stroke-width="1"/>
+                <text x="0" y="18" font-size="11" letter-spacing="1.6" text-anchor="middle" stroke="none">N</text>
+              </g>
+            </g>
+          </svg>
+          <figcaption>The five counties served, traced from actual county boundaries. Not a survey map &mdash; labels are positioned for clarity.</figcaption>
+        </figure>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="band">
-    <div class="wrap">
-      <span class="ann band-label">Where I work</span>
-      <div class="where">
-        <div>
-          <h2>Orlando, and the communities around&nbsp;it.</h2>
-          <p class="lede">A deliberate boundary, because local knowledge stops being worth much when it&rsquo;s stretched too thin.</p>
-          <p class="county-row"><span>Orange</span><span>Seminole</span><span>Osceola</span><span>Lake</span><span>Volusia</span></p>
+  </div>
 
-          <ul class="place-actions">
-            <li><a id="communities" href="communities.html">
-              <span class="ann">Communities</span>
-              <span>The places I actually work, and what it&rsquo;s like to live in them.</span>
-              <span class="path-do">See Lake Nona <span class="arw" aria-hidden="true">→</span></span>
-            </a></li>
-            <li><a id="search" href="search.html">
-              <span class="ann">Search Homes</span>
-              <span>A straightforward way to see what&rsquo;s available across the five counties. I&rsquo;m building this properly rather than bolting on something clumsy.</span>
-              <span class="path-do" data-state="pending">Coming soon</span>
-            </a></li>
-          </ul>
-        </div>
-
-        <svg class="parcel" viewBox="0 0 460 292" role="img" aria-labelledby="parcel-t parcel-d">
-          <title id="parcel-t">The five counties served, drawn as one parcel</title>
-          <desc id="parcel-d">An abstract plat: five adjoining lots labelled Lake, Seminole, Volusia, Orange and Osceola, enclosed by a single boundary, with Orlando marked as a monument in Orange County.</desc>
-          <defs>
-            <pattern id="hatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="0" x2="0" y2="7" stroke="#8A6D2F" stroke-width="1" opacity=".38"/>
-            </pattern>
-          </defs>
-
-          <g>
-            <path class="tick" d="M404 34v-22"/>
-            <path d="M404 8l4.5 9h-9z" fill="#0E2A57"/>
-            <text class="note" x="404" y="44" text-anchor="middle">N</text>
-            <line class="dim" x1="40" y1="24" x2="420" y2="24"/>
-            <path class="tick" d="M40 19v10M420 19v10"/>
-            <text class="note" x="230" y="17" text-anchor="middle">Boundary — deliberate</text>
-          </g>
-
-          <g>
-            <rect class="lot" x="40"  y="40"  width="110" height="210"/>
-            <rect class="lot" x="150" y="40"  width="130" height="60"/>
-            <rect class="lot" x="280" y="40"  width="140" height="140"/>
-            <rect class="lot" x="150" y="100" width="130" height="80"/>
-            <rect class="lot" x="150" y="180" width="270" height="70"/>
-          </g>
-          <rect x="150" y="100" width="130" height="80" fill="url(#hatch)"/>
-
-          <g class="tick">
-            <path d="M40 40h13M40 40v13"/>
-            <path d="M420 40h-13M420 40v13"/>
-            <path d="M40 250h13M40 250v-13"/>
-            <path d="M420 250h-13M420 250v-13"/>
-          </g>
-
-          <g>
-            <text class="cty" x="52"  y="60">Lake</text>
-            <text class="cty" x="162" y="60">Seminole</text>
-            <text class="cty" x="292" y="60">Volusia</text>
-            <text class="cty" x="162" y="120">Orange</text>
-            <text class="cty" x="162" y="200">Osceola</text>
-            <circle cx="196" cy="146" r="3.2" fill="#0E2A57"/>
-            <path class="tick" d="M196 146h26"/>
-            <text class="note" x="226" y="149">Orlando</text>
-            <text class="note" x="40" y="272">Five counties</text>
-            <text class="note" x="420" y="272" text-anchor="end">One practice</text>
-          </g>
-        </svg>
+  <section class="contact" id="contact">
+    <div class="shell">
+      <div>
+        <p class="label">Getting in touch</p>
+        <h2>A phone call, and usually not a long&nbsp;one.</h2>
+        <p>Tell us where things stand, we&rsquo;ll tell you what to expect, and you decide whether it&rsquo;s worth going further. No charge for that conversation, and nothing attached to it.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="band contact" id="contact">
-    <div class="wrap">
-      <span class="ann band-label">Getting in touch</span>
-      <div class="grid">
-        <div>
-          <h2>A phone call, and usually not a long&nbsp;one.</h2>
-          <p class="lede">Tell me where things stand, I&rsquo;ll tell you what I&rsquo;d expect the property to need, and you decide whether it&rsquo;s worth going further. No charge for that conversation and nothing attached to it.</p>
-        </div>
-        <div class="reach">
-          <a href="tel:+14078289029">407-828-9029 <span class="arw" aria-hidden="true">→</span></a>
-          <a href="mailto:mdc@crawfordliving.com" style="font-size:clamp(1.05rem,.9rem + .7vw,1.4rem)">mdc@crawfordliving.com <span class="arw" aria-hidden="true">→</span></a>
-          <small>Both get a personal response.</small>
-        </div>
+      <div class="reach-card">
+        <p class="label">Direct line</p>
+        <p class="lines">
+          <a href="tel:+14078289029">407-828-9029</a><br>
+          <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a>
+        </p>
+        <p class="reach-note">Both get a personal response.</p>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="colophon">
-  <div class="wrap">
-    <div class="grid">
-      <div>
-        <img class="brokerage-mark" src="assets/exp-realty-logo-white.svg" alt="eXp Realty" width="277" height="144">
-        <p><b>Michael Crawford, RENE</b> — Licensed Real Estate Broker-Associate, Florida License&nbsp;#BK3074190</p>
-        <p>eXp Realty LLC · 10752 Deerwood Park Blvd., Suite 100, Jacksonville, FL 32256</p>
-        <p class="ann" style="margin-top:.9rem">Michael Crawford is a Broker-Associate with eXp Realty LLC. All advertising carries the brokerage name.</p>
+<footer class="foot">
+  <div class="shell">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="wordmark">Crawford Living</span>
+        <span class="foot-cred">Realty, LLC · Fla Lic RE Broker</span>
       </div>
-      <div>
-        <p><a href="tel:+14078289029">407-828-9029</a> · <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a></p>
-        <p class="ann">&copy; 2026 Michael Crawford. All rights reserved.</p>
-      </div>
+      <ul class="foot-nav">
+        <li><a href="communities.html">Communities</a></li>
+        <li><a href="probate.html">Probate &amp; Estates</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="search.html">Search Homes</a></li>
+        <li><a href="tel:+14078289029">407-828-9029</a></li>
+      </ul>
+    </div>
+    <div class="foot-legal">
+      <p>Michael Crawford, RENE, CPRES — Florida-licensed real estate broker · License&nbsp;#BK3074190</p>
+      <p>407-828-9029 · <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a></p>
+      <p class="legal">&copy; 2026 Michael Crawford. All rights reserved.</p>
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var head=document.getElementById('head');
+  if(!head)return;
+  var s=function(){head.classList.toggle('is-stuck',window.scrollY>8)};s();
+  window.addEventListener('scroll',s,{passive:true});
+})();
+</script>
 
 </body>
 </html>
