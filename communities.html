@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Communities — Crawford Living</title>
+<meta name="description" content="A few Central Florida communities, described honestly — not every one nearby.">
+<link rel="canonical" href="https://crawfordliving.com/communities.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/crawford.css">
+<style>
+  /* page-scoped: single-entry community list, not the 3-up .paths grid */
+  .clist{list-style:none;margin:2.2rem 0 0;padding:0;display:grid;gap:1.25rem;max-width:44rem}
+  .clist a{
+    display:flex;flex-direction:column;gap:.5rem;padding:1.9rem 2rem;
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+    text-decoration:none;color:inherit;position:relative;overflow:hidden;
+    transition:transform .3s var(--ease), box-shadow .3s var(--ease);
+  }
+  .clist a::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:var(--accent);transform:scaleY(0);transform-origin:top;transition:transform .4s var(--ease);
+  }
+  .clist a:hover,.clist a:focus-visible{transform:translateY(-3px);box-shadow:var(--lift-lg);border-color:transparent}
+  .clist a:hover::before,.clist a:focus-visible::before{transform:scaleY(1)}
+  .clist .ann{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .clist h3{margin:0}
+  .clist p{margin:0;color:var(--muted);max-width:none}
+  .clist .go{
+    margin-top:.35rem;display:inline-flex;align-items:center;gap:.45rem;
+    font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);
+  }
+  .clist .go .arw{transition:transform .3s var(--ease)}
+  .clist a:hover .go .arw{transform:translateX(5px)}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="head" id="head">
+  <div class="shell">
+    <a class="brand" href="./">
+      <span class="wordmark">Crawford Living</span>
+      <span class="brandline">Real Estate . . . <em>Considered</em></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="buy.html">Buy</a>
+      <a href="sell.html">Sell</a>
+      <a href="./#new-construction">New Construction</a>
+      <a href="probate.html">Probate &amp; Estates</a>
+      <a href="communities.html" aria-current="page">Communities</a>
+      <a href="search.html">Search Homes</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="hero solo">
+    <div class="shell">
+      <div>
+        <p class="kicker">Communities</p>
+        <h1 class="display">A few communities. Not every one nearby.</h1>
+        <p class="standfirst">Ask about a place that isn&rsquo;t listed here, and we&rsquo;ll tell you what we actually know.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="shell">
+
+    <section class="rail">
+      <p class="label">Where I actually know</p>
+      <div>
+        <p>This list grows as there&rsquo;s something real to say about a place — not on a schedule, and not to look complete.</p>
+        <ul class="clist">
+          <li><a href="community-lake-nona.html">
+            <span class="ann">Orange County</span>
+            <h3>Lake Nona</h3>
+            <p>New construction, HOA-run common areas, and easy access to the Medical City job corridor — the trade-off is mature trees and an established block.</p>
+            <span class="go">Read about Lake Nona <span class="arw" aria-hidden="true">→</span></span>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="rail" id="get-in-touch">
+      <p class="label">Somewhere else in mind</p>
+      <div>
+        <h2>Ask, and we&rsquo;ll say plainly whether we know it.</h2>
+        <p>Central Florida is larger than this list. If you&rsquo;re looking at a place that isn&rsquo;t written up yet, call or send a note &mdash; we&rsquo;ll tell you honestly whether it&rsquo;s one we can speak to.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <section class="reach">
+    <div class="shell">
+      <div>
+        <p class="label">Direct line</p>
+        <h2>A phone call, and usually not a long one.</h2>
+        <p>No charge for the first conversation.</p>
+      </div>
+      <div class="reach-card">
+        <p class="label">Reach us directly</p>
+        <p class="lines">
+          <a href="tel:+14078289029">407-828-9029</a><br>
+          <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="shell">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="wordmark">Crawford Living</span>
+        <span class="foot-cred">Realty, LLC · Fla Lic RE Broker</span>
+      </div>
+      <ul class="foot-nav">
+        <li><a href="./">Home</a></li>
+        <li><a href="probate.html">Probate &amp; Estates</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="search.html">Search Homes</a></li>
+        <li><a href="tel:+14078289029">407-828-9029</a></li>
+      </ul>
+    </div>
+    <div class="foot-legal">
+      <p>Michael Crawford, RENE, CPRES — Florida-licensed real estate broker · License&nbsp;#BK3074190</p>
+      <p>407-828-9029 · <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a></p>
+      <p class="legal">&copy; 2026 Michael Crawford. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var head=document.getElementById('head');
+  if(!head)return;
+  var s=function(){head.classList.toggle('is-stuck',window.scrollY>8)};s();
+  window.addEventListener('scroll',s,{passive:true});
+})();
+</script>
+
+</body>
+</html>
