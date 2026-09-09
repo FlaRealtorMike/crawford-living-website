@@ -1,0 +1,17 @@
+{
+  "community": "Lake Nona",
+  "generated_at": "2026-09-08",
+  "source": {
+    "name": "Redfin",
+    "url": "https://www.redfin.com/neighborhood/72457/FL/Orlando/Lake-Nona/housing-market",
+    "window": "trailing 3 months"
+  },
+  "median_sale_price_usd": 710000,
+  "median_days_on_market": 48,
+  "yoy_price_change_pct": -11.1,
+  "prior_year_median_days_on_market": 50,
+  "flagged_for_review": false,
+  "methodology_note": "Figures are pulled from one fixed source (Redfin's Lake Nona neighborhood page) each quarter, not averaged across providers. Other public sources (Realtor.com, Orchard, RPR-based agent reports) show different numbers for the same period because they use different geographic boundaries (all of Lake Nona vs. a single zip code vs. one sub-neighborhood), different time windows (30-day vs. trailing 3-month vs. trailing 12-month), and different underlying data (public estimate vs. MLS-sourced). This is disclosed on the page, not smoothed over.",
+  "disclaimer": "Market context only. Not an appraisal, and not a guarantee of price, timeline, or outcome for any specific home.",
+  "last_updated_by": "manual seed, 2026-09-08 (scheduled task takes over from here)"
+}
