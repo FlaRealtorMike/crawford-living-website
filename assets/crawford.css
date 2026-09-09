@@ -231,7 +231,10 @@ strong{color:var(--ink);font-weight:600}
 .hero.on-dark h1 em,.hero.on-dark .display em{color:var(--on-dark-muted)}
 .hero.on-dark .lede,.hero.on-dark .hero-lede,.hero.on-dark .standfirst{color:var(--on-dark-muted)}
 .hero.on-dark .portrait figcaption{color:var(--on-dark-muted)}
-.hero.on-dark .shell{padding-top:clamp(4rem,8vw,6.5rem);padding-bottom:clamp(3.5rem,7vw,5.5rem)}
+/* NOTE: an on-dark .shell padding-top/bottom override used to live here,
+   stacking on top of .hero's own padding above -- doubling the vertical
+   space. Removed 2026-09-09; .hero's own clamp() values are enough on
+   their own, on-dark or not. */
 .hero .grid-lines{
   position:absolute;inset:0;z-index:0;pointer-events:none;
   background-image:linear-gradient(rgba(250,249,246,.05) 1px, transparent 1px),
