@@ -47,6 +47,26 @@ Build work happens **here**. The brand repo holds decisions and studies, not shi
 A file in its `drafts/` is reference — never a second website. If a draft disagrees with this
 repo, this repo wins.
 
+## ✅ RESOLVED 2026-09-09 — the site is one design system, no more seams
+
+**`index.html` is rebuilt onto `crawford.css`.** The last holdout — the bespoke navy "Hybrid"
+system this section spent three updates describing — is gone. All eight pages (`index.html`,
+`about.html`, `probate.html`, `attorneys.html`, `search.html`, `buy.html`, `sell.html`,
+`communities.html`, `community-lake-nona.html`) now share `assets/crawford.css`, the settled
+palette, Archivo + IBM Plex Mono, and the same six-item nav. eXp attribution dropped from the
+homepage's title/meta/footer to match the other seven.
+
+**`assets/site.css` and `assets/site-v2.css` are now safe to delete** — nothing references
+them. Left in place for one more session in case anything was missed; delete on the next
+pass through this repo if still unused.
+
+The type-scale and nav-taxonomy decision this section used to say was blocking the homepage
+rebuild: **decided 2026-09-09 — migrate onto `crawford.css` as-is, rather than inventing a
+new scale first.** `crawford.css`'s own header still notes type scale and radius are
+"carried over, not a system" — that remains true and unresolved, but it's no longer gating
+anything. The rest of this section (below) is the pre-2026-09-09 record of how the site got
+here; keep it for history, don't action anything in it.
+
 ## ⚠️ The site is currently split across THREE design systems
 
 > ## ✅ Updated 2026-09-03 — four of five pages consolidated onto ONE system
@@ -165,12 +185,16 @@ server-side fetching, caching and scheduled sync, which Pages cannot do at any p
 ## Pages
 
 ```
-index.html       Home — the umbrella. Six paths: Buy, Sell, New Construction,
-                 Probate & Estates, Communities, Search Homes
-probate.html     For personal representatives. Gentle, plain, no calendar, no urgency
-attorneys.html   For probate attorneys. Short and direct. noindex, nofollow
-about.html       Background — 20 years, construction coordination, RENE
-search.html      Honest placeholder. Says "not ready yet" rather than faking an IDX
+index.html                Home — the umbrella. Six paths: Buy, Sell, New Construction,
+                          Probate & Estates, Communities, Search Homes
+buy.html                  Conversational and educational — timing, what to watch for
+sell.html                 Analytical and confident — pricing, marketing, reporting
+probate.html              For personal representatives. Gentle, plain, no calendar, no urgency
+attorneys.html            For probate attorneys. Short and direct. noindex, nofollow
+about.html                Background — 20+ years, construction coordination, RENE, CPRES
+communities.html          Index — lists only the communities actually written up so far
+community-lake-nona.html  The pilot community page — the template for the rest
+search.html               Real launch pad: the branded app + a curated intake form
 ```
 
 `attorneys.html` stays **out of the nav and out of search** — it is reached from the printed
@@ -329,12 +353,19 @@ of `DESIGN.md`. The two that matter most:
 
 ## Known gaps
 
-- **Two design systems** — see the top of this file.
+- ✅ **Two design systems — RESOLVED 2026-09-09.** See the top of this file.
 - 🟡 **New Construction — deferred to Phase 2 (Mike, 2026-09-04).** The launch ("Phase 1")
   site is **Buy, Sell, and Probate** — enough for a robust site. New Construction stays a
   homepage path/anchor only, with no standalone page until Phase 2. When built, it remains
   the **only** home for the construction-coordination story (`page-patterns.md`).
-- **Communities** is a homepage panel with no page and no photography behind it.
+- ✅ **Communities — BUILT 2026-09-09.** `communities.html` (index) and
+  `community-lake-nona.html` (the pilot detail page) are live, with generated imagery
+  following `image-style.md`. Only Lake Nona is written up so far — the index deliberately
+  doesn't pad out the other named places until there's something real to say about them.
+  A quarterly scheduled task refreshes the market-snapshot data from a single fixed source
+  (Redfin) into `data/community-lake-nona-market.json`; it commits locally but never
+  auto-pushes. No safety/crime content anywhere on these pages — Mike's call, 2026-09-08,
+  recorded in the brand-editor skill's `page-patterns.md`.
 - 🟢 **Search Homes — BUILT 2026-09-06.** `search.html` is now a real launch-pad page, not the
   honest placeholder (superseding the 2026-09-01 "do not build it" call below, which applied to
   a full public IDX grid, not this model). Two paths: **Search it yourself** (the MLS-Touch
