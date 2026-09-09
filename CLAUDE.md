@@ -251,9 +251,17 @@ eXp's stock red. Keep it that way.
   process knowledge, not structural expertise; anything technical goes to a licensed inspector
   or engineer.
 - **Boutique — neither one-man-show nor corporate.** Never imply staff who do not exist; never
-  read as a solo operator either. The lever is *standard*, not headcount: "takes on fewer
-  transactions than it could, by design." Retired: "deliberately small", "one person by
-  choice", "you work with me, not a team". See `../crawford-living-brand/copy-inventory.md`.
+  read as a solo operator either. The lever is *standard*, not headcount. 🔴 **"Takes on fewer
+  transactions than it could, by design" / "By design, not by default" is RETIRED, 2026-09-09,
+  Mike's call** — previously the approved lever, now reclassified as scale-by-implication even
+  without a literal size word. No replacement phrase is approved; don't invent one, cut the
+  volume-framing sentence instead. Also retired: "deliberately small", "one person by choice",
+  "you work with me, not a team", any "reaches me directly" / "not an assistant" / "not a
+  gatekeeper" claim (a receptionist answers first), and any claim of sole execution through
+  closing. A 2026-09-09 sweep found several of these live on `index.html`, `about.html`, and
+  `attorneys.html` (including a recurrence of the separately-retired "400 homes a year" figure)
+  — all fixed same day. See `../crawford-living-brand/copy-inventory.md` and that skill's
+  `anti-examples.md` for the full, current list.
 - **No urgency, scarcity, testimonials, counts, or ratings.** Tone is the product, and that
   category of claim is what made the page this site replaced a compliance exposure.
 
