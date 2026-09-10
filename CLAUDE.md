@@ -358,14 +358,18 @@ of `DESIGN.md`. The two that matter most:
   site is **Buy, Sell, and Probate** — enough for a robust site. New Construction stays a
   homepage path/anchor only, with no standalone page until Phase 2. When built, it remains
   the **only** home for the construction-coordination story (`page-patterns.md`).
-- ✅ **Communities — BUILT 2026-09-09.** `communities.html` (index) and
-  `community-lake-nona.html` (the pilot detail page) are live, with generated imagery
-  following `image-style.md`. Only Lake Nona is written up so far — the index deliberately
-  doesn't pad out the other named places until there's something real to say about them.
-  A quarterly scheduled task refreshes the market-snapshot data from a single fixed source
-  (Redfin) into `data/community-lake-nona-market.json`; it commits locally but never
-  auto-pushes. No safety/crime content anywhere on these pages — Mike's call, 2026-09-08,
-  recorded in the brand-editor skill's `page-patterns.md`.
+- ✅ **Communities — BUILT 2026-09-09, second entry added 2026-09-10.** `communities.html`
+  (index), `community-lake-nona.html` (the pilot detail page), and `community-windermere.html`
+  are live, with generated imagery following `image-style.md`. Windermere's page leads with
+  the incorporated-town-vs-broader-area distinction (the ~3,030-person town vs. the much
+  larger 34786 real-estate area) the way Lake Nona's leads with its build-out age range. Only
+  these two are written up so far — the index deliberately doesn't pad out the other named
+  places (see `crawford-living-brand/loose-ends.md` for the full list) until there's something
+  real to say about them. A quarterly scheduled task per community refreshes its
+  market-snapshot data from a single fixed source (Redfin) into
+  `data/community-<name>-market.json` (`lake-nona-market-stats`, `windermere-market-stats`);
+  each commits locally but never auto-pushes. No safety/crime content anywhere on these pages
+  — Mike's call, 2026-09-08, recorded in the brand-editor skill's `page-patterns.md`.
 - 🟢 **Search Homes — BUILT 2026-09-06.** `search.html` is now a real launch-pad page, not the
   honest placeholder (superseding the 2026-09-01 "do not build it" call below, which applied to
   a full public IDX grid, not this model). Two paths: **Search it yourself** (the MLS-Touch

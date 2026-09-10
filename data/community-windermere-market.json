@@ -1,0 +1,17 @@
+{
+  "community": "Windermere",
+  "generated_at": "2026-09-09",
+  "source": {
+    "name": "Redfin",
+    "url": "https://www.redfin.com/city/19688/FL/Windermere/housing-market",
+    "window": "trailing 3 months"
+  },
+  "median_sale_price_usd": 1199399,
+  "median_days_on_market": 25,
+  "yoy_price_change_pct": 6.1,
+  "prior_year_median_days_on_market": 42,
+  "flagged_for_review": false,
+  "methodology_note": "Figures are pulled from one fixed source (Redfin's Windermere city housing-market page) each quarter, not averaged across providers. This page covers the broader real-estate area known as Windermere (essentially zip code 34786) -- not just the roughly 3,000 residents inside the incorporated town's actual boundary. Other public sources (Stellar MLS/ORRA reports, other portals) show different numbers for the same period because they draw on different boundaries, time windows, and underlying data. This is disclosed on the page, not smoothed over.",
+  "disclaimer": "Market context only. Not an appraisal, and not a guarantee of price, timeline, or outcome for any specific home.",
+  "last_updated_by": "manual seed, 2026-09-09 (scheduled task takes over from here)"
+}
