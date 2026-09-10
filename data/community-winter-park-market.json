@@ -1,0 +1,17 @@
+{
+  "community": "Winter Park",
+  "generated_at": "2026-09-10",
+  "source": {
+    "name": "Redfin",
+    "url": "https://www.redfin.com/city/19743/FL/Winter-Park/housing-market",
+    "window": "trailing 3 months"
+  },
+  "median_sale_price_usd": 880809,
+  "median_days_on_market": 37,
+  "yoy_price_change_pct": 18.5,
+  "prior_year_median_days_on_market": 33,
+  "flagged_for_review": false,
+  "methodology_note": "Figures are pulled from one fixed source (Redfin's Winter Park city housing-market page) each quarter, not averaged across providers. This page covers the whole city of Winter Park (32789 and 32792) -- not just 32789, the zip code inside the actual city limits that most buyers mean when they say 'Winter Park.' Much of 32792 carries a Winter Park mailing address but sits in unincorporated Orange or Seminole County, outside city limits and city schools. Other public sources show different numbers for the same period because they draw on different boundaries, time windows, and underlying data. This is disclosed on the page, not smoothed over.",
+  "disclaimer": "Market context only. Not an appraisal, and not a guarantee of price, timeline, or outcome for any specific home.",
+  "last_updated_by": "manual seed, 2026-09-10 (scheduled task takes over from here)"
+}
