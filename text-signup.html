@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Text Crawford Living</title>
+<meta name="description" content="Start a text conversation with Crawford Living.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/crawford.css">
+<style>
+  body{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:2rem;
+  }
+  .signup-card{
+    max-width:30rem;
+    text-align:center;
+  }
+  .signup-card .wordmark{
+    display:block;
+    font-size:1.3rem;
+    font-weight:600;
+    letter-spacing:-.02em;
+    margin-bottom:1.5rem;
+  }
+  .signup-card .rule{
+    width:2.5rem;
+    height:2px;
+    background:var(--accent);
+    margin:0 auto 1.5rem;
+    border:0;
+  }
+  .signup-card h1{
+    font-size:clamp(1.6rem,4vw,2.1rem);
+    margin-bottom:.9rem;
+  }
+  .signup-card p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .signup-card .hint{
+    font-family:var(--mono);
+    font-size:.8rem;
+    color:var(--muted);
+    margin-top:1.5rem;
+    margin-bottom:0;
+  }
+</style>
+</head>
+<body>
+
+  <div class="signup-card">
+    <span class="wordmark">Crawford Living</span>
+    <hr class="rule">
+    <h1>Text us a real estate question</h1>
+    <p>Buying, selling, or working through probate — use the chat button in the corner of this page to start a text conversation with our office. We'll respond as soon as we can.</p>
+    <p class="hint">This page starts a text conversation. Nothing else here.</p>
+  </div>
+
+  <!-- LeadConnector chat widget - the only element on this page that collects a phone number -->
+  <script src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6aa2ecd19639fc2c918fab0b"
+          data-source="WEB_USER"></script>
+</body>
+</html>
