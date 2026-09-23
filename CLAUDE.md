@@ -292,8 +292,8 @@ eXp's stock red. Keep it that way.
   **Two false claims are live or drafted right now:** `probate.html:64` *"I've been through the
   process enough times to know what tends to come next"*, and on the 2026-08 canvas
   *"estate property is a regular part of the work rather than an occasional one."* Both must come
-  out. **CPRES is not held either.** What is true, and is enough: 20+ years a licensed broker,
-  RENE, and the construction-coordination background — the house in an estate is the part he has
+  out. **CPRES is held (as of 2026-09-02, confirmed by Mike 2026-09-23).** What is true, and is enough:
+  20+ years a licensed broker, RENE, CPRES, and the construction-coordination background — the house in an estate is the part he has
   actually been doing for two decades, and the legal part belongs to the attorney anyway. Full
   inventory of true / false / unverified claims:
   `../crawford-living-brand/.claude/skills/crawford-living-brand-editor/proof-points.md`.
