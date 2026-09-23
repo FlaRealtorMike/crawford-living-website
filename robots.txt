@@ -1,0 +1,7 @@
+# crawfordliving.com
+# Search engines and AI assistants are welcome to read this site.
+# (attorneys.html and text-signup.html stay out of search via their own noindex tags.)
+User-agent: *
+Allow: /
+
+Sitemap: https://crawfordliving.com/sitemap.xml
