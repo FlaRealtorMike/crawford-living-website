@@ -26,7 +26,10 @@
       <span class="wordmark">Crawford Living</span>
       <span class="brandline">Real Estate . . . <em>Considered</em></span>
     </a>
-    <nav class="nav" aria-label="Primary">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="nav" id="primary-nav" aria-label="Primary">
       <a href="buy.html">Buy</a>
       <a href="sell.html">Sell</a>
       <a href="./#new-construction">New Construction</a>
@@ -36,6 +39,16 @@
     </nav>
   </div>
 </header>
+<script>
+(function(){
+  var head=document.getElementById('head'),btn=head&&head.querySelector('.nav-toggle');
+  if(!btn)return;
+  function set(open){head.classList.toggle('nav-open',open);btn.setAttribute('aria-expanded',open);btn.setAttribute('aria-label',open?'Close menu':'Open menu')}
+  btn.addEventListener('click',function(){set(!head.classList.contains('nav-open'))});
+  head.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){set(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+})();
+</script>
 
 <main id="main">
 

@@ -166,6 +166,14 @@ strong{color:var(--ink);font-weight:600}
 .nav a:hover::after,.nav a:focus-visible::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
 .nav a[aria-current="page"]{color:var(--ink)}
 
+/* ── mobile menu toggle — hidden on desktop ─────────── */
+.nav-toggle{display:none;margin-left:auto;width:2.75rem;height:2.75rem;padding:0;border:1px solid var(--line);border-radius:4px;background:transparent;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.nav-toggle-bar{display:block;width:1.3rem;height:2px;background:var(--ink);transition:transform .25s var(--ease),opacity .2s var(--ease)}
+.nav-open .nav-toggle-bar:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-open .nav-toggle-bar:nth-child(2){opacity:0}
+.nav-open .nav-toggle-bar:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
 /* ── buttons — ink fill; brass is never a button ────── */
 .btn,.btn-gold{
   display:inline-flex;align-items:center;gap:.55rem;
@@ -504,7 +512,12 @@ a:focus-visible,.btn:focus-visible,.btn-gold:focus-visible{outline:2px solid var
 @media (max-width:52rem){
   .head{position:static}
   .head .shell{min-height:0;flex-wrap:wrap;padding-top:1rem;padding-bottom:1rem;gap:.85rem 1.5rem}
-  .nav{margin-left:0;width:100%;gap:.7rem 1.25rem;justify-content:flex-start;row-gap:.5rem}
+  .head .shell{flex-wrap:wrap;align-items:center}
+  .nav-toggle{display:flex}
+  .nav{display:none;margin-left:0;width:100%;flex-direction:column;align-items:stretch;gap:0;border-top:1px solid var(--line)}
+  .nav-open .nav{display:flex}
+  .nav a{padding:.95rem 0;border-bottom:1px solid var(--line)}
+  .nav a::after{display:none}
   .hero .shell,.hero.with-portrait .shell{grid-template-columns:minmax(0,1fr);gap:2.4rem}
   .rail{grid-template-columns:minmax(0,1fr);gap:1.4rem}
   .rail > .label{position:static;border-top:0;border-bottom:1px solid var(--line);padding:0 0 .8rem;color:var(--muted)}
