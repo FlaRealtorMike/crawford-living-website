@@ -469,3 +469,9 @@ of `DESIGN.md`. The two that matter most:
 - Record decisions with reasoning and date, in the repo they belong to, **as they are made**.
 - Update this file when a structural fact changes: hosting, branch state, page inventory,
   repo roles, design-system state.
+
+## To-do list (Mike's standing rule, 2026-09-26)
+Mike's single active to-do list is Claude memory `/areas/loose-ends.md`. Whenever work turns up something to
+revisit, follow up on, or decide later, add it there and tell Mike in one line; remove items once he confirms
+they're done. If this session has no memory tools, add it to the **Inbox** at the top of
+`crawford-living-brand/loose-ends.md` instead (that file is otherwise history only).
