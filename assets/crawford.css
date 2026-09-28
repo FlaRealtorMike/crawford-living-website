@@ -450,12 +450,12 @@ section:last-of-type{border-bottom:0}
   font-size:.86rem;color:var(--on-dark-muted);margin:1.2rem 0 0 !important;
   padding-top:1rem;border-top:1px solid var(--line-on-dark);
 }
-.reach .lines,.contact-lines{font-size:1.35rem;line-height:1.8;margin-top:1.4rem}
-.reach .lines a,.contact-lines a{
+.reach .lines,.contact .lines,.contact-lines{font-size:1.35rem;line-height:1.8;margin-top:1.4rem}
+.reach .lines a,.contact .lines a,.contact-lines a{
   color:var(--on-dark);text-decoration:none;border-bottom:1px solid var(--accent);
   transition:border-color .25s var(--ease),color .25s var(--ease);
 }
-.reach .lines a:hover,.contact-lines a:hover{color:#fff;border-bottom-color:var(--on-dark)}
+.reach .lines a:hover,.contact .lines a:hover,.contact-lines a:hover{color:#fff;border-bottom-color:var(--on-dark)}
 
 /* ── footer — Crawford Black ground, wordmark lockup ── */
 .foot{background:var(--ink);color:var(--on-dark-muted);padding:3.25rem 0 3rem;font-size:.84rem;line-height:1.7}
