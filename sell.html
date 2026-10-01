@@ -15,6 +15,16 @@
 /* full-width image, a calm beat between sections */
 .band-figure{margin:clamp(3rem,6vw,4.5rem) 0 0}
 .band-figure img{display:block;width:100%;height:clamp(240px,32vw,420px);object-fit:cover;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--lift-lg)}
+/* home value — the RPR estimate appears here only after the lead form is submitted */
+.hero-cta{margin:1.8rem 0 0}
+.avm{margin-top:1.75rem;padding-top:1.5rem;border-top:2px solid var(--ink)}
+.avm-status{margin:0 0 1rem;font-weight:600;color:var(--ink)}
+.avm-confirm label{display:block;font-size:.95rem;color:var(--ink);margin-bottom:.6rem}
+.avm-confirm-row{display:flex;flex-wrap:wrap;gap:.75rem}
+.avm-confirm input{flex:1 1 16rem;min-width:0;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--muted);border-radius:var(--r);padding:.7rem .85rem}
+.avm-confirm input:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+#avm-widget{margin-top:1rem;max-width:100%;overflow-x:auto}
+.avm-disclosure{margin:1.25rem 0 0}
 </style>
 </head>
 <body>
@@ -59,6 +69,7 @@
         <p class="kicker">For sellers</p>
         <h1 class="display">See the number clearly, and list it <em>once</em>.</h1>
         <p class="standfirst">A sale has three parties: you, the buyer, and the market. I start with your goals, weigh them against what the market will support, and build the plan, price included, from both.</p>
+        <p class="hero-cta"><a class="btn btn-ghost" href="#home-value">What's your home worth? <span class="arw" aria-hidden="true">&#8594;</span></a></p>
       </div>
       <figure class="hero-figure photo">
         <img src="assets/sell-hero-entry.jpg" alt="The covered stone entry of a well-kept Central Florida home in warm afternoon light, with a deep navy front door, brass hardware and lantern, and lush potted ferns and flowers along a paver walkway" width="1800" height="1207">
@@ -82,6 +93,50 @@
         <h2>A number you can defend, not a number that sounds good</h2>
         <p>The market decides what a house is worth &mdash; not us, not you, and not the buyer. We read what it's saying from closed sales near you over the last few months, adjusted for the real differences between those houses and yours: size, condition, lot, updates. A comp from a year ago is already stale in a market that moves, so we price you from what's actually current.</p>
         <p>Overprice it and the market tells you before you want to hear it: the listing sits, the price gets cut, and buyers start asking what's wrong with it. Underprice it and you've left money on the table before the first showing. The goal is a number that's right the first time, so the only negotiating left is the good kind.</p>
+      </div>
+    </section>
+
+    <section class="rail" id="home-value">
+      <p class="label">What's your home worth?</p>
+      <div class="form-panel">
+        <h2>A different way to sell your home starts with an honest first number</h2>
+        <p>Tell me where the house is and how to reach you, and you'll see an estimated value, a likely range, and how it's moved, right here on this page. Then, if you'd like, we'll turn it into a number you can defend.</p>
+
+        <iframe
+            src="https://api.leadconnectorhq.com/widget/form/TYv8dkbcKMjwfmgXJdB2"
+            style="width:100%;height:100%;border:none;border-radius:8px"
+            id="inline-TYv8dkbcKMjwfmgXJdB2"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Website — Home Value"
+            data-height="900"
+            data-layout-iframe-id="inline-TYv8dkbcKMjwfmgXJdB2"
+            data-form-id="TYv8dkbcKMjwfmgXJdB2"
+            data-cookie-consent="true"
+            data-cookie-consent-provider="auto"
+            title="Website — Home Value"
+        >
+        </iframe>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+        <div class="avm" id="avm" hidden>
+          <p class="avm-status" id="avm-status" role="status" aria-live="polite">Your estimate</p>
+          <form class="avm-confirm" id="avm-confirm" hidden>
+            <label for="avm-address">Confirm the property address to see the estimate</label>
+            <div class="avm-confirm-row">
+              <input id="avm-address" name="address" type="text" autocomplete="street-address" placeholder="Street, city, state, ZIP" required>
+              <button class="btn" type="submit">Show the estimate</button>
+            </div>
+          </form>
+          <div id="avm-widget"></div>
+        </div>
+
+        <p class="note-fine avm-disclosure">This is an automated estimate, not an appraisal, powered by RPR (Realtors Property Resource). It's a starting point. The number we'd list at comes from walking the house and reading the sales around it.</p>
       </div>
     </section>
 
@@ -226,6 +281,76 @@
   window.addEventListener('scroll',s,{passive:true});
 })();
 
+/* Home value: the GHL form captures the lead; on submit its iframe posts the submitted
+   contact back to this page ("set-sticky-contacts"). We read the address from that and
+   hand it to RPR's AVM widget. If no address comes through, ask for it once. */
+(function(){
+  var FORM_ID='TYv8dkbcKMjwfmgXJdB2';
+  var RPR={Token:'F2E3BB56-66CD-4F07-82C0-3CCD7E094F13',CoBrandCode:'btscrawfordlivingrealty'};
+  var frame=document.getElementById('inline-'+FORM_ID),
+      box=document.getElementById('avm'),
+      status=document.getElementById('avm-status'),
+      confirmForm=document.getElementById('avm-confirm'),
+      input=document.getElementById('avm-address'),
+      widget=document.getElementById('avm-widget'),
+      shown=false;
+  if(!frame||!box)return;
+
+  function pick(o,keys){for(var i=0;i<keys.length;i++){var v=o[keys[i]];if(v&&typeof v==='string'&&v.trim())return v.trim()}return ''}
+  function addressFrom(o){
+    var street=pick(o,['address1','address','street_address','streetAddress','full_address']);
+    if(!street)return '';
+    var parts=[street,pick(o,['city']),[pick(o,['state'])||'FL',pick(o,['postal_code','postalCode','zip','zip_code'])].join(' ').trim()];
+    return parts.filter(Boolean).join(', ');
+  }
+
+  function showEstimate(address){
+    box.hidden=false;confirmForm.hidden=true;
+    status.textContent='Estimated value for '+address;
+    widget.innerHTML='';
+    window.rprAvmWidgetOptions={
+      Token:RPR.Token,
+      Query:encodeURIComponent(address),
+      CoBrandCode:RPR.CoBrandCode,
+      ShowRprLinks:true,showRprLinks:true, /* RPR's script reads the lowercase key */
+      ContainerSelector:'#avm-widget'
+    };
+    window.rprAvmWidgetCompleteCallback=function(code){
+      if(code!==0){
+        widget.innerHTML='';
+        status.textContent="I couldn't pull an automated estimate for that address. I have your details and I'll run the numbers myself, then follow up.";
+      }
+    };
+    var s=document.createElement('script');
+    s.src='https://www.narrpr.com/widgets/avm-widget/widget.ashx/script';
+    document.body.appendChild(s);
+    box.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+
+  function askForAddress(){
+    box.hidden=false;confirmForm.hidden=false;
+    status.textContent='Thank you. One more step';
+    input.focus();
+  }
+
+  confirmForm.addEventListener('submit',function(e){
+    e.preventDefault();
+    var a=input.value.trim();
+    if(a)showEstimate(a);
+  });
+
+  window.addEventListener('message',function(e){
+    if(shown||e.source!==frame.contentWindow)return;
+    var d=e.data;
+    if(!Array.isArray(d)||d[0]!=='set-sticky-contacts')return;
+    var contact=null;
+    try{contact=typeof d[2]==='string'?JSON.parse(d[2]):d[2]}catch(err){return}
+    if(!contact||typeof contact!=='object')return;
+    shown=true;
+    var address=addressFrom(contact);
+    if(address)showEstimate(address);else askForAddress();
+  });
+})();
 </script>
 
 </body>
