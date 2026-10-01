@@ -293,7 +293,12 @@
       confirmForm=document.getElementById('avm-confirm'),
       input=document.getElementById('avm-address'),
       widget=document.getElementById('avm-widget'),
+      leadEmail='',
       shown=false;
+  /* Cloudflare Worker "home-value-relay" forwards the figures to GHL workflow
+     "Website — Home Value RPR Capture" (contact fields RPR Estimate / Range / Confidence /
+     Estimate Date), for Mike's reference only. The GHL address stays in the Worker. */
+  var RELAY='https://home-value-relay.mdc-e37.workers.dev';
   if(!frame||!box)return;
 
   function pick(o,keys){for(var i=0;i<keys.length;i++){var v=o[keys[i]];if(v&&typeof v==='string'&&v.trim())return v.trim()}return ''}
@@ -302,6 +307,23 @@
     if(!street)return '';
     var parts=[street,pick(o,['city']),[pick(o,['state'])||'FL',pick(o,['postal_code','postalCode','zip','zip_code'])].join(' ').trim()];
     return parts.filter(Boolean).join(', ');
+  }
+
+  /* Read the rendered widget's figures and record them. Best effort: if RPR changes its
+     layout and no dollar figure is found, nothing is sent and the visitor sees no change. */
+  function captureEstimate(address){
+    if(!leadEmail)return;
+    var t=widget.innerText||'',
+        est=(t.match(/\$[\d,]{5,}/)||[''])[0],
+        range=((t.match(/Est\.\s*Range:\s*([^\n]+)/)||['',''])[1]).trim(),
+        asOf=(t.match(/as of\s*([\d\/]+)/)||['',''])[1],
+        conf=(t.match(/Confidence:[^\n]*/)||[''])[0];
+    if(!est)return;
+    conf=conf?(conf.split('★').length-1)+' of 5':'';
+    try{
+      fetch(RELAY,{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,
+        body:JSON.stringify({email:leadEmail,address:address,estimate:est,range:range,confidence:conf,as_of:asOf})}).catch(function(){});
+    }catch(err){}
   }
 
   function showEstimate(address){
@@ -319,7 +341,9 @@
       if(code!==0){
         widget.innerHTML='';
         status.textContent="I couldn't pull an automated estimate for that address. I have your details and I'll run the numbers myself, then follow up.";
+        return;
       }
+      setTimeout(function(){captureEstimate(address)},500);
     };
     var s=document.createElement('script');
     s.src='https://www.narrpr.com/widgets/avm-widget/widget.ashx/script';
@@ -347,6 +371,7 @@
     try{contact=typeof d[2]==='string'?JSON.parse(d[2]):d[2]}catch(err){return}
     if(!contact||typeof contact!=='object')return;
     shown=true;
+    leadEmail=pick(contact,['email']);
     var address=addressFrom(contact);
     if(address)showEstimate(address);else askForAddress();
   });
