@@ -16,6 +16,18 @@
 .band-figure{margin:clamp(3rem,6vw,4.5rem) 0 0}
 .band-figure img{display:block;width:100%;height:clamp(240px,32vw,420px);object-fit:cover;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--lift-lg)}
 
+/* home value — the RPR estimate appears here only after the lead form is submitted */
+.hero-cta{margin:1.8rem 0 0}
+.avm{margin-top:1.75rem;padding-top:1.5rem;border-top:2px solid var(--ink)}
+.avm-status{margin:0 0 1rem;font-weight:600;color:var(--ink)}
+.avm-confirm label{display:block;font-size:.95rem;color:var(--ink);margin-bottom:.6rem}
+.avm-confirm-row{display:flex;flex-wrap:wrap;gap:.75rem}
+.avm-confirm input{flex:1 1 16rem;min-width:0;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--muted);border-radius:var(--r);padding:.7rem .85rem}
+.avm-confirm input:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+#avm-widget{margin-top:1rem;max-width:100%;overflow-x:auto}
+.avm-disclosure{margin:1.25rem 0 0}
+/* once submitted, the GHL frame keeps its full form height; hide it so the estimate sits under the intro */
+#home-value .hv-done{display:none!important}
 </style>
 </head>
 <body>
@@ -60,6 +72,7 @@
         <p class="kicker">For buyers</p>
         <h1 class="display">See the house clearly, and decide without <em>pressure</em>.</h1>
         <p class="standfirst">Buying a home is a handful of big decisions, most of them on a deadline. I help you see a house for what it really is, act at the right moments, and get to closing without the expensive surprises — with your interests the only ones I'm looking after.</p>
+        <p class="hero-cta"><a class="btn btn-ghost" href="#home-value">Selling a home first? See what it's worth <span class="arw" aria-hidden="true">&#8594;</span></a></p>
       </div>
       <figure class="hero-figure photo">
         <img src="assets/buy-hero-porch.jpg" alt="A welcoming covered front porch in warm afternoon light with two cushioned rocking chairs, potted ferns and flowers, and a classic wood front door" width="1800" height="1208">
@@ -92,6 +105,50 @@
         <h2>What the listing doesn't tell you</h2>
         <p>A listing is a sales document. Part of our job is to read past it &mdash; the condition the photos flatter, the work a house will likely need, and the questions worth asking before you fall for it.</p>
         <p>We can give you a practical read on what a house looks like it needs and roughly what that tends to cost, so the inspection confirms things instead of blindsiding you. That's process knowledge, not an inspection. For anything structural or technical you want a licensed inspector or engineer, and we'll tell you which one to call.</p>
+      </div>
+    </section>
+
+    <section class="rail" id="home-value">
+      <p class="label">Selling first?</p>
+      <div class="form-panel">
+        <h2>If there's a house to sell first, start with what it's worth</h2>
+        <p>When you already own, the next purchase usually rests on a number you don't have yet: what the current house will bring. Tell me where it is and how to reach you, and you'll see an estimated value, a likely range, and how it's moved, right here on this page. It's a starting point for the budget conversation, not the last word on it.</p>
+
+        <iframe
+            src="https://api.leadconnectorhq.com/widget/form/t6eILwWgsuS8SRZtC6cp"
+            style="width:100%;height:100%;border:none;border-radius:8px"
+            id="inline-t6eILwWgsuS8SRZtC6cp"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Website — Buy Page Home Value"
+            data-height="900"
+            data-layout-iframe-id="inline-t6eILwWgsuS8SRZtC6cp"
+            data-form-id="t6eILwWgsuS8SRZtC6cp"
+            data-cookie-consent="true"
+            data-cookie-consent-provider="auto"
+            title="Website — Buy Page Home Value"
+        >
+        </iframe>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+        <div class="avm" id="avm" hidden>
+          <p class="avm-status" id="avm-status" role="status" aria-live="polite">Your estimate</p>
+          <form class="avm-confirm" id="avm-confirm" hidden>
+            <label for="avm-address">Confirm the property address to see the estimate</label>
+            <div class="avm-confirm-row">
+              <input id="avm-address" name="address" type="text" autocomplete="street-address" placeholder="Street, city, state, ZIP" required>
+              <button class="btn" type="submit">Show the estimate</button>
+            </div>
+          </form>
+          <div id="avm-widget"></div>
+        </div>
+
+        <p class="note-fine avm-disclosure">This is an automated estimate, not an appraisal, powered by RPR (Realtors Property Resource). It's a starting point. The number we'd list at comes from walking the house and reading the sales around it.</p>
       </div>
     </section>
 
@@ -258,6 +315,103 @@
   if(!head)return;
   var s=function(){head.classList.toggle('is-stuck',window.scrollY>8)};s();
   window.addEventListener('scroll',s,{passive:true});
+})();
+
+/* Home value: the GHL form captures the lead; on submit its iframe posts the submitted
+   contact back to this page ("set-sticky-contacts"). We read the address from that and
+   hand it to RPR's AVM widget. If no address comes through, ask for it once. */
+(function(){
+  var FORM_ID='t6eILwWgsuS8SRZtC6cp';
+  var RPR={Token:'F2E3BB56-66CD-4F07-82C0-3CCD7E094F13',CoBrandCode:'btscrawfordlivingrealty'};
+  var frame=document.getElementById('inline-'+FORM_ID),
+      box=document.getElementById('avm'),
+      status=document.getElementById('avm-status'),
+      confirmForm=document.getElementById('avm-confirm'),
+      input=document.getElementById('avm-address'),
+      widget=document.getElementById('avm-widget'),
+      leadEmail='',
+      shown=false;
+  /* Cloudflare Worker "home-value-relay" forwards the figures to GHL workflow
+     "Website — Home Value RPR Capture" (contact fields RPR Estimate / Range / Confidence /
+     Estimate Date), for Mike's reference only. The GHL address stays in the Worker. */
+  var RELAY='https://home-value-relay.mdc-e37.workers.dev';
+  if(!frame||!box)return;
+
+  function pick(o,keys){for(var i=0;i<keys.length;i++){var v=o[keys[i]];if(v&&typeof v==='string'&&v.trim())return v.trim()}return ''}
+  function addressFrom(o){
+    var street=pick(o,['address1','address','street_address','streetAddress','full_address']);
+    if(!street)return '';
+    var parts=[street,pick(o,['city']),[pick(o,['state'])||'FL',pick(o,['postal_code','postalCode','zip','zip_code'])].join(' ').trim()];
+    return parts.filter(Boolean).join(', ');
+  }
+
+  /* Read the rendered widget's figures and record them. Best effort: if RPR changes its
+     layout and no dollar figure is found, nothing is sent and the visitor sees no change. */
+  function captureEstimate(address){
+    if(!leadEmail)return;
+    var t=widget.innerText||'',
+        est=(t.match(/\$[\d,]{5,}/)||[''])[0],
+        range=((t.match(/Est\.\s*Range:\s*([^\n]+)/)||['',''])[1]).trim(),
+        asOf=(t.match(/as of\s*([\d\/]+)/)||['',''])[1],
+        conf=(t.match(/Confidence:[^\n]*/)||[''])[0];
+    if(!est)return;
+    conf=conf?(conf.split('★').length-1)+' of 5':'';
+    try{
+      fetch(RELAY,{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,
+        body:JSON.stringify({email:leadEmail,address:address,estimate:est,range:range,confidence:conf,as_of:asOf})}).catch(function(){});
+    }catch(err){}
+  }
+
+  function showEstimate(address){
+    box.hidden=false;confirmForm.hidden=true;
+    status.textContent='Thank you. Estimated value for '+address;
+    widget.innerHTML='';
+    window.rprAvmWidgetOptions={
+      Token:RPR.Token,
+      Query:encodeURIComponent(address),
+      CoBrandCode:RPR.CoBrandCode,
+      ShowRprLinks:true,showRprLinks:true, /* RPR's script reads the lowercase key */
+      ContainerSelector:'#avm-widget'
+    };
+    window.rprAvmWidgetCompleteCallback=function(code){
+      if(code!==0){
+        widget.innerHTML='';
+        status.textContent="I couldn't pull an automated estimate for that address. I have your details and I'll run the numbers myself, then follow up.";
+        return;
+      }
+      setTimeout(function(){captureEstimate(address)},500);
+    };
+    var s=document.createElement('script');
+    s.src='https://www.narrpr.com/widgets/avm-widget/widget.ashx/script';
+    document.body.appendChild(s);
+    box.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+
+  function askForAddress(){
+    box.hidden=false;confirmForm.hidden=false;
+    status.textContent='Thank you. One more step';
+    input.focus();
+  }
+
+  confirmForm.addEventListener('submit',function(e){
+    e.preventDefault();
+    var a=input.value.trim();
+    if(a)showEstimate(a);
+  });
+
+  window.addEventListener('message',function(e){
+    if(shown||e.source!==frame.contentWindow)return;
+    var d=e.data;
+    if(!Array.isArray(d)||d[0]!=='set-sticky-contacts')return;
+    var contact=null;
+    try{contact=typeof d[2]==='string'?JSON.parse(d[2]):d[2]}catch(err){return}
+    if(!contact||typeof contact!=='object')return;
+    shown=true;
+    leadEmail=pick(contact,['email']);
+    (frame.closest('.ep-wrapper')||frame).classList.add('hv-done');
+    var address=addressFrom(contact);
+    if(address)showEstimate(address);else askForAddress();
+  });
 })();
 </script>
 
