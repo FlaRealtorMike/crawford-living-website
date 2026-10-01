@@ -25,6 +25,8 @@
 .avm-confirm input:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 #avm-widget{margin-top:1rem;max-width:100%;overflow-x:auto}
 .avm-disclosure{margin:1.25rem 0 0}
+/* once submitted, the GHL frame keeps its full form height; hide it so the estimate sits under the intro */
+#home-value .hv-done{display:none!important}
 </style>
 </head>
 <body>
@@ -328,7 +330,7 @@
 
   function showEstimate(address){
     box.hidden=false;confirmForm.hidden=true;
-    status.textContent='Estimated value for '+address;
+    status.textContent='Thank you. Estimated value for '+address;
     widget.innerHTML='';
     window.rprAvmWidgetOptions={
       Token:RPR.Token,
@@ -372,6 +374,7 @@
     if(!contact||typeof contact!=='object')return;
     shown=true;
     leadEmail=pick(contact,['email']);
+    (frame.closest('.ep-wrapper')||frame).classList.add('hv-done');
     var address=addressFrom(contact);
     if(address)showEstimate(address);else askForAddress();
   });
