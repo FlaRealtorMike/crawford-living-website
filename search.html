@@ -29,6 +29,11 @@
 <style>
 /* page-scoped: the two-path CTA row */
 .app-cta{display:flex;flex-wrap:wrap;gap:.85rem;margin:1.8rem 0 0}
+/* app link is revealed only after the GHL form is submitted */
+.app-thanks{margin-top:1.8rem;padding-top:1.5rem;border-top:2px solid var(--ink)}
+.app-thanks h3{margin-top:0}
+#app-gate{margin-top:1.8rem}
+#app-gate h3{margin-top:0}
 </style>
 </head>
 <body>
@@ -95,8 +100,39 @@
         <h2>The app, branded to Crawford Living</h2>
         <p>This is Stellar MLS's own consumer app, MLS-Touch, personalized with the Crawford Living name. It searches the same Matrix listings agents work from &mdash; filter by area, price and the basics, and save the ones worth a second look. If you reach out afterward, we'll already have a sense of what you've been drawn to, instead of starting from zero.</p>
 
-        <div class="app-cta">
-          <a class="btn" href="https://mls-client.com/0C1C5F73">Open the app <span class="arw" aria-hidden="true">&#8594;</span></a>
+        <div class="form-panel" id="app-gate">
+          <h3>Where should I send the link?</h3>
+          <p>Your name, email and phone, and I'll send the app link right away.</p>
+
+          <iframe
+              src="https://api.leadconnectorhq.com/widget/form/vjaU7NzSNVWofhnMqLms"
+              style="width:100%;height:100%;border:none;border-radius:8px"
+              id="inline-vjaU7NzSNVWofhnMqLms"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Website — MLS-Touch App"
+              data-height="560"
+              data-layout-iframe-id="inline-vjaU7NzSNVWofhnMqLms"
+              data-form-id="vjaU7NzSNVWofhnMqLms"
+              data-cookie-consent="true"
+              data-cookie-consent-provider="auto"
+              title="Website — MLS-Touch App"
+          >
+          </iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+        </div>
+
+        <div class="app-thanks" id="app-thanks" role="status" aria-live="polite" hidden>
+          <h3>Thank you. The app is ready.</h3>
+          <p>I've emailed you the same link. If there's something specific you're looking for, just reply to that email and tell me.</p>
+          <div class="app-cta">
+            <a class="btn" href="https://mls-client.com/0C1C5F73">Open the app <span class="arw" aria-hidden="true">&#8594;</span></a>
+          </div>
         </div>
       </div>
     </section>
@@ -183,6 +219,26 @@
   if(!head)return;
   var s=function(){head.classList.toggle('is-stuck',window.scrollY>8)};s();
   window.addEventListener('scroll',s,{passive:true});
+})();
+</script>
+
+<script>
+/* MLS-Touch app gate: the GHL form captures the lead; when its iframe reports the submitted
+   contact ("set-sticky-contacts") we swap the form for the thank-you and the app link. */
+(function(){
+  var frame=document.getElementById('inline-vjaU7NzSNVWofhnMqLms'),
+      gate=document.getElementById('app-gate'),
+      thanks=document.getElementById('app-thanks'),
+      done=false;
+  if(!frame||!gate||!thanks)return;
+  window.addEventListener('message',function(e){
+    if(done||e.source!==frame.contentWindow)return;
+    var d=e.data;
+    if(!Array.isArray(d)||d[0]!=='set-sticky-contacts')return;
+    done=true;
+    gate.hidden=true;thanks.hidden=false;
+    thanks.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
 })();
 </script>
 
