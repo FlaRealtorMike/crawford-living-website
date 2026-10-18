@@ -225,8 +225,8 @@ Tells Bing and other IndexNow search engines about new/updated pages right after
 - **Rule for new pages (including blog posts):** add a `<url>` line to `sitemap.xml` in the same
   commit. Skip noindex pages (`attorneys`, `text-signup`, `out-of-state-owners`). The ping can only
   announce URLs the sitemap lists.
-- Not yet confirmed: that the ping auto-fires on a normal push (the first deploy predated the
-  workflow). Check Actions after the next push.
+- Verified 2026-10-18: a normal push auto-runs the ping and it returns 200 (the manual test returned 202). (A `workflow_run`
+  trigger on the Pages deploy never fired, hence the push trigger.)
 
 ## Pages
 
