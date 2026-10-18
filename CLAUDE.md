@@ -218,8 +218,8 @@ Tells Bing and other IndexNow search engines about new/updated pages right after
 - **Key:** `7b87339a695d90ffe81df5a3e8266759` (public by design). Key file
   `7b87339a695d90ffe81df5a3e8266759.txt` sits in the repo root and is served at
   `https://crawfordliving.com/7b87339a695d90ffe81df5a3e8266759.txt`. Do not delete or edit it.
-- **Ping:** `.github/workflows/indexnow.yml` runs after the "pages build and deployment" run
-  succeeds on `main`. It reads the live `sitemap.xml` and sends every URL to
+- **Ping:** `.github/workflows/indexnow.yml` runs on every push to `main`, waits for the "pages build and deployment" run
+  to succeed, then reads the live `sitemap.xml` and sends every URL to
   `https://api.indexnow.org/indexnow`. Only 200/202 counts as success. Manual run: GitHub >
   Actions > IndexNow ping > Run workflow. First manual test 2026-10-18 returned 202.
 - **Rule for new pages (including blog posts):** add a `<url>` line to `sitemap.xml` in the same

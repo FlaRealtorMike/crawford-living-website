@@ -1,23 +1,41 @@
 # Tells Bing and other IndexNow search engines about the site's pages.
-# Runs only AFTER GitHub Pages has finished deploying, so the pages are live when pinged.
+# Runs on every push to main, but waits for the GitHub Pages deploy to finish first,
+# so the pages are live when pinged.
 # Can also be run by hand: GitHub > Actions > IndexNow ping > Run workflow.
 name: IndexNow ping
 
 on:
-  workflow_run:
-    workflows: ["pages build and deployment"]
-    types: [completed]
+  push:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  actions: read
+  contents: read
+
 jobs:
   ping:
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     env:
       HOST: crawfordliving.com
       KEY: 7b87339a695d90ffe81df5a3e8266759
     steps:
+      - name: Wait for the GitHub Pages deploy of this commit to finish
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 60); do
+            result=$(gh run list -R "$GITHUB_REPOSITORY" --workflow pages-build-deployment \
+              --commit "$GITHUB_SHA" --json status,conclusion -q '.[0] | "\(.status) \(.conclusion)"' || true)
+            echo "Pages deploy: ${result:-not started yet}"
+            case "$result" in
+              "completed success") exit 0 ;;
+              "completed "*) echo "Pages deploy did not succeed; skipping ping"; exit 1 ;;
+            esac
+            sleep 15
+          done
+          echo "Timed out waiting for Pages deploy"; exit 1
       - name: Send every sitemap URL to IndexNow
         run: |
           set -euo pipefail
