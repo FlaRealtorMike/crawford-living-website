@@ -211,6 +211,23 @@ server-side rendering, a database), that's a hosting decision to make *then*, at
 something actually needs it — not a reason to avoid using Pages today, and not a reason to
 under-build a static page now on the assumption Pages won't last.
 
+### IndexNow (added 2026-10-18)
+
+Tells Bing and other IndexNow search engines about new/updated pages right after each deploy.
+
+- **Key:** `7b87339a695d90ffe81df5a3e8266759` (public by design). Key file
+  `7b87339a695d90ffe81df5a3e8266759.txt` sits in the repo root and is served at
+  `https://crawfordliving.com/7b87339a695d90ffe81df5a3e8266759.txt`. Do not delete or edit it.
+- **Ping:** `.github/workflows/indexnow.yml` runs after the "pages build and deployment" run
+  succeeds on `main`. It reads the live `sitemap.xml` and sends every URL to
+  `https://api.indexnow.org/indexnow`. Only 200/202 counts as success. Manual run: GitHub >
+  Actions > IndexNow ping > Run workflow. First manual test 2026-10-18 returned 202.
+- **Rule for new pages (including blog posts):** add a `<url>` line to `sitemap.xml` in the same
+  commit. Skip noindex pages (`attorneys`, `text-signup`, `out-of-state-owners`). The ping can only
+  announce URLs the sitemap lists.
+- Not yet confirmed: that the ping auto-fires on a normal push (the first deploy predated the
+  workflow). Check Actions after the next push.
+
 ## Pages
 
 ```
