@@ -43,6 +43,14 @@
 .avm-disclosure{margin:1.25rem 0 0}
 /* once submitted, the GHL frame keeps its full form height; hide it so the estimate sits under the intro */
 #home-value .hv-done{display:none!important}
+
+/* download the buyer guide */
+.download{display:flex;flex-wrap:wrap;align-items:center;gap:1.5rem 2rem;background:var(--subtle);border-left:4px solid var(--accent);border-radius:0 var(--r) var(--r) 0;padding:1.9rem 2.1rem;margin:1.6rem 0 0;max-width:52rem}
+.download .dl-text{flex:1 1 20rem}
+.download .dl-text .note-lead{margin:0 0 .5rem}
+.download .dl-text h3{margin:0 0 .3rem}
+.download .dl-text p{margin:0;font-size:.95rem;color:var(--muted)}
+.download .btn{flex:none}
 </style>
 </head>
 <body>
@@ -241,6 +249,22 @@
         <h2>Fewer surprises between contract and keys</h2>
         <p>Most of what goes wrong between contract and closing is a date missed, a document late, or a question raised too close to the end. The transaction coordinator keeps that moving; my part is catching the judgment calls early enough that closing day is quiet, not the day something surprises you.</p>
         <p>If something does come up, you'll hear it from me early, with what it means and the options in front of you, not the afternoon before closing.</p>
+      </div>
+    </section>
+
+    <section class="rail" id="relocation-guide">
+      <p class="label">Moving to Orlando?</p>
+      <div>
+        <h2>A guide for buyers relocating to Central Florida</h2>
+        <p>Neighborhoods, costs, the Florida buying process and what to expect at closing, written for people making the move from somewhere else.</p>
+        <div class="download">
+          <div class="dl-text">
+            <p class="note-lead">The complete guide</p>
+            <h3>The Orlando Relocation &amp; Home Buying Guide</h3>
+            <p>A PDF to keep or share.</p>
+          </div>
+          <a class="btn" href="assets/orlando-relocation-home-buying-guide.pdf" download>Download the guide (PDF) <span class="arw" aria-hidden="true">&#8594;</span></a>
+        </div>
       </div>
     </section>
 
