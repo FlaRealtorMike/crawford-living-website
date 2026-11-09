@@ -17,8 +17,28 @@
 
 - [Home](https://crawfordliving.com/): overview of the practice
 - [Selling a home](https://crawfordliving.com/sell.html): pricing, marketing and reporting for sellers
-- [Buying a home](https://crawfordliving.com/buy.html): timing and what to watch for as a buyer
+- [Buying a home](https://crawfordliving.com/buy.html): timing, contract deadlines and what to watch for as a buyer
+- [New construction](https://crawfordliving.com/new-construction.html): why to bring your own broker when buying from a builder
 - [When an estate includes a home](https://crawfordliving.com/probate.html): for personal representatives selling a home in probate
-- [Communities](https://crawfordliving.com/communities.html): Lake Nona, Windermere and Winter Park guides
+- [Inherited a house in Orlando](https://crawfordliving.com/inherited-house-orlando.html): plain-language first steps, who can sign, and probate in Orange, Seminole, Osceola, Lake and Volusia counties
+- [Florida Amendment 3 homestead exemption](https://crawfordliving.com/amendment-3-homestead-exemption.html): what the new exemption means for property taxes and how to file
 - [Search homes](https://crawfordliving.com/search.html): home search app and curated search request
 - [About Mike Crawford](https://crawfordliving.com/about.html): background and credentials
+
+## Community guides
+
+- [All communities](https://crawfordliving.com/communities.html): index of the guides below
+- [Baldwin Park](https://crawfordliving.com/community-baldwin-park.html): neighborhood guide with a video, price ranges and what to check before buying or selling
+- [Celebration](https://crawfordliving.com/community-celebration.html): neighborhood guide with a video, price ranges and what to check before buying or selling
+- [College Park](https://crawfordliving.com/community-college-park.html): neighborhood guide with a video, price ranges and what to check before buying or selling
+- [Dr. Phillips](https://crawfordliving.com/community-dr-phillips.html): neighborhood guide with a video, price ranges and what to check before buying or selling
+- [Horizon West and Winter Garden](https://crawfordliving.com/community-horizon-west-winter-garden.html): neighborhood guide with a video, price ranges and what to check before buying or selling
+- [Lake Mary](https://crawfordliving.com/community-lake-mary.html): neighborhood guide with a video, price ranges and what to check before buying or selling
+- [Lake Nona](https://crawfordliving.com/community-lake-nona.html): neighborhood guide with a video, price ranges and what to check before buying or selling
+- [Oviedo](https://crawfordliving.com/community-oviedo.html): neighborhood guide with a video, price ranges and what to check before buying or selling
+- [Windermere](https://crawfordliving.com/community-windermere.html): neighborhood guide with a video, price ranges and what to check before buying or selling
+- [Winter Park](https://crawfordliving.com/community-winter-park.html): neighborhood guide with a video, price ranges and what to check before buying or selling
+
+## Video
+
+- [Crawford Living on YouTube](https://www.youtube.com/@CrawfordLivingRealty): Central Florida neighborhood guides and buying and selling explainers by Mike Crawford
