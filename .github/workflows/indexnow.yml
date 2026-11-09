@@ -21,6 +21,7 @@ jobs:
       KEY: 7b87339a695d90ffe81df5a3e8266759
     steps:
       - name: Wait for the GitHub Pages deploy of this commit to finish
+        id: wait
         if: github.event_name == 'push'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -31,12 +32,14 @@ jobs:
             echo "Pages deploy: ${result:-not started yet}"
             case "$result" in
               "completed success") exit 0 ;;
+              "completed cancelled") echo "Pages deploy was superseded by a newer push; the newer run will ping"; echo "skip=true" >> "$GITHUB_OUTPUT"; exit 0 ;;
               "completed "*) echo "Pages deploy did not succeed; skipping ping"; exit 1 ;;
             esac
             sleep 15
           done
           echo "Timed out waiting for Pages deploy"; exit 1
       - name: Send every sitemap URL to IndexNow
+        if: steps.wait.outputs.skip != 'true'
         run: |
           set -euo pipefail
           curl -fsS "https://$HOST/sitemap.xml" -o sitemap.xml
