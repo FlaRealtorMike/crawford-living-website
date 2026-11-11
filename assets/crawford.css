@@ -535,3 +535,48 @@ a:focus-visible,.btn:focus-visible,.btn-gold:focus-visible{outline:2px solid var
   .timeline li{grid-template-columns:2.2rem 1fr;gap:1rem}
   .timeline .step{width:2.2rem;height:2.2rem;font-size:.9rem}
 }
+
+/* ── home-value nav button + mobile contact bar (2026-11-11) ── */
+.nav a.nav-cta{background:var(--ink);color:var(--surface);padding:.6rem 1rem;border-radius:3px;font-weight:600}
+.nav a.nav-cta::after{display:none}
+.nav a.nav-cta:hover,.nav a.nav-cta:focus-visible{background:#000;color:var(--surface)}
+@media (min-width:64.01rem){.nav{gap:1rem;flex-wrap:nowrap}.nav a{font-size:.76rem;letter-spacing:.07em}.head .shell{gap:1.5rem}}
+@media (min-width:64.01rem) and (max-width:72rem){.brand .wordmark{font-size:1.8rem}.nav{gap:.7rem}.nav a{font-size:.68rem}.nav a.nav-cta{padding:.5rem .7rem}}
+.mbar{display:none}
+@media (max-width:52rem){
+  .nav a.nav-cta{margin-top:1rem;text-align:center;padding:1rem;border-bottom:0}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--ink);border-top:1px solid rgba(250,249,246,.15);padding:0 env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+  .mbar a{display:flex;align-items:center;justify-content:center;min-height:3.4rem;color:var(--surface);text-decoration:none;font-weight:600;font-size:.95rem;letter-spacing:.03em}
+  .mbar a.mbar-book{background:var(--surface);color:var(--ink)}
+  body{padding-bottom:calc(3.4rem + env(safe-area-inset-bottom,0px))}
+}
+
+/* ── warm refresh to match the 2026-11 homepage ─────────
+   Linen ground, warm sand panels, bold uppercase headings,
+   Archivo labels in place of mono. Crawford Black bands stay. */
+:root{--subtle:#EFE6DA;--line:#E4DACB;--line-soft:#EDE5D9}
+body{background:#F6F1EA}
+.head{background:rgba(246,241,234,.92)}
+main h1,main h2{text-transform:uppercase;font-weight:700;letter-spacing:-.012em;line-height:1.06;text-wrap:balance}
+main h1 em,main h2 em{font-style:normal}
+main h2{font-size:clamp(1.55rem,2.5vw,2.25rem)}
+main h1{font-size:clamp(2.1rem,3.8vw,3.2rem)}
+.eyebrow,.kicker,.label{font-family:var(--font);font-weight:600;font-size:.76rem;letter-spacing:.18em;color:#6b5a45}
+.on-dark .eyebrow,.on-dark .kicker,.on-dark .label{color:#C9B48F}
+.label{border-bottom-color:var(--ink)}
+.nav a{font-family:var(--font);font-weight:500}
+
+/* hamburger up to 64rem now that the nav carries a button */
+@media (max-width:64rem){
+  .head{position:static}
+  .head .shell{min-height:0;flex-wrap:wrap;padding-top:1rem;padding-bottom:1rem;gap:.85rem 1.5rem;align-items:center}
+  .nav-toggle{display:flex}
+  .nav{display:none;margin-left:0;width:100%;flex-direction:column;align-items:stretch;gap:0;border-top:1px solid var(--line)}
+  .nav-open .nav{display:flex}
+  .nav a{padding:.95rem 0;border-bottom:1px solid var(--line);font-size:.9rem}
+  .nav a::after{display:none}
+  .nav a.nav-cta{margin-top:1rem;text-align:center;padding:1rem;border-bottom:0}
+}
+/* labels, buttons and footer move from IBM Plex Mono to Archivo, as on the homepage */
+:root{--mono:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.btn,.btn-gold{font-weight:600}
