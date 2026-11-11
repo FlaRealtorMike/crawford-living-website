@@ -173,6 +173,14 @@ body{background:var(--linen)}
 .g-dark .formbox{border:0;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
 .head{border-bottom:3px solid var(--ink)}
 .g-card h3{border-top:1.5px solid var(--ink);padding-top:.9rem}
+
+.g-where{align-items:start}
+.g-where-ph{border-radius:4px;overflow:hidden;aspect-ratio:4/5;background:var(--wall)}
+.g-where-ph img{width:100%;height:100%;object-fit:cover;display:block}
+.g-counties{list-style:none;margin:1.6rem 0 0;padding:0}
+.g-counties li{font-size:clamp(1.4rem,2.2vw,1.9rem);font-weight:700;text-transform:uppercase;letter-spacing:.02em;padding:.55rem 0;border-bottom:1px solid rgba(26,32,44,.2);display:flex;justify-content:space-between;align-items:baseline}
+.g-counties li::after{content:"County";font-size:.75rem;font-weight:600;letter-spacing:.16em;color:var(--muted)}
+@media (max-width:860px){.g-where-ph{aspect-ratio:4/3}}
 </style>
 <meta name="robots" content="noindex">
 </head>
@@ -279,66 +287,14 @@ body{background:var(--linen)}
 
   <section class="g-sec" id="where">
     <div class="shell g-where">
-      <figure class="plate">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 480" role="img" aria-labelledby="map-t map-d">
-            <title id="map-t">The five Central Florida counties served</title>
-            <desc id="map-d">A simplified map, traced from actual county boundaries, showing Lake to the west, Volusia to the northeast on the Atlantic coast, Seminole above Orange in the centre, and Osceola to the south. Orlando is marked in Orange County.</desc>
-
-            <defs>
-              <clipPath id="county-clip-home">
-                <path d="M96.2 269.9 L66.0 266.8 L40.0 270.3 L40.8 169.0 L40.6 139.4 L61.4 139.5 L61.6 139.2 L95.9 139.4 L99.6 117.5 L99.3 102.9 L99.1 72.0 L104.6 87.7 L119.8 93.3 L125.2 110.1 L152.8 134.3 L150.5 156.6 L150.5 156.8 L150.5 157.2 L150.6 157.6 L150.5 157.9 L150.2 158.0 L150.0 158.5 L149.5 158.8 L149.3 158.6 L148.8 159.5 L149.0 160.0 L141.6 176.7 L108.2 176.5 L102.3 176.5 L96.0 198.5 L96.2 226.1 Z"/>
-                <path d="M179.8 173.0 L182.6 175.1 L184.9 174.0 L185.7 177.4 L199.3 167.4 L221.5 213.3 L158.0 213.9 L157.8 213.7 L157.7 207.7 L157.2 207.7 L152.2 207.7 L150.8 207.5 L133.5 207.5 L133.2 207.5 L133.1 206.6 L141.6 176.7 L149.0 160.0 L148.8 159.5 L149.3 158.6 L149.5 158.8 L150.0 158.5 L150.2 158.0 L150.5 157.9 L150.6 157.6 L150.5 157.2 L150.5 156.8 L150.5 156.6 L172.4 166.5 L176.1 166.6 L176.9 166.6 L177.4 167.8 L177.1 168.8 L178.7 170.4 L178.7 171.7 Z"/>
-                <path d="M96.2 226.1 L96.0 198.5 L102.3 176.5 L108.2 176.5 L141.6 176.7 L133.1 206.6 L133.2 207.5 L133.5 207.5 L150.8 207.5 L152.2 207.7 L157.2 207.7 L157.7 207.7 L157.8 213.7 L158.0 213.9 L221.5 213.3 L241.4 236.6 L244.8 269.9 L161.2 269.7 L123.0 269.9 L119.6 269.9 L96.2 269.9 Z"/>
-                <path d="M244.8 269.9 L243.7 381.6 L242.9 420.0 L192.5 419.8 L194.5 418.5 L180.2 381.9 L162.7 373.2 L161.4 360.5 L148.3 341.3 L148.9 325.7 L134.0 325.7 L133.9 313.4 L121.1 313.4 L121.1 301.0 L116.0 290.8 L96.2 288.6 L96.2 269.9 L119.6 269.9 L123.0 269.9 L161.2 269.7 Z"/>
-                <path d="M185.7 177.4 L184.9 174.0 L182.6 175.1 L179.8 173.0 L178.7 171.7 L178.7 170.4 L177.1 168.8 L177.4 167.8 L176.9 166.6 L176.1 166.6 L172.4 166.5 L150.5 156.6 L152.8 134.3 L125.2 110.1 L119.8 93.3 L104.6 87.7 L99.1 72.0 L97.8 69.1 L96.5 67.1 L94.2 66.7 L92.8 64.8 L91.8 61.9 L114.2 56.0 L118.0 55.0 L121.5 53.8 L122.2 53.9 L124.1 53.3 L134.8 50.3 L137.9 46.1 L141.1 75.3 L191.1 74.3 L190.0 43.4 L200.1 40.0 L210.4 65.4 L220.0 87.1 L225.5 99.4 L229.5 107.3 L236.5 117.2 L239.0 123.2 L241.9 128.7 L259.0 157.5 L269.2 175.4 L225.1 175.6 L225.8 213.3 L221.5 213.3 L199.3 167.4 Z"/>
-              </clipPath>
-            </defs>
-
-            <g font-family="'Archivo',sans-serif">
-              <g stroke="#5E6470" stroke-width="1.2" fill="none" opacity=".45" stroke-linecap="round">
-                <path d="M320 62 q10 -7 20 0 t20 0"/>
-                <path d="M312 92 q10 -7 20 0 t20 0"/>
-                <path d="M300 122 q10 -7 20 0 t20 0"/>
-                <path d="M292 152 q10 -7 20 0 t20 0"/>
-              </g>
-              <text x="370" y="196" text-anchor="end" font-size="11" letter-spacing="2.4" fill="#5E6470" opacity=".65">ATLANTIC</text>
-
-              <image href="assets/county-map-texture.jpg" x="18" y="28" width="256" height="404" preserveAspectRatio="xMidYMid slice" clip-path="url(#county-clip-home)"/>
-
-              <g fill="none" stroke="#1A202C" stroke-width="1.8" stroke-linejoin="round">
-                <path d="M96.2 269.9 L66.0 266.8 L40.0 270.3 L40.8 169.0 L40.6 139.4 L61.4 139.5 L61.6 139.2 L95.9 139.4 L99.6 117.5 L99.3 102.9 L99.1 72.0 L104.6 87.7 L119.8 93.3 L125.2 110.1 L152.8 134.3 L150.5 156.6 L150.5 156.8 L150.5 157.2 L150.6 157.6 L150.5 157.9 L150.2 158.0 L150.0 158.5 L149.5 158.8 L149.3 158.6 L148.8 159.5 L149.0 160.0 L141.6 176.7 L108.2 176.5 L102.3 176.5 L96.0 198.5 L96.2 226.1 Z"/>
-                <path d="M179.8 173.0 L182.6 175.1 L184.9 174.0 L185.7 177.4 L199.3 167.4 L221.5 213.3 L158.0 213.9 L157.8 213.7 L157.7 207.7 L157.2 207.7 L152.2 207.7 L150.8 207.5 L133.5 207.5 L133.2 207.5 L133.1 206.6 L141.6 176.7 L149.0 160.0 L148.8 159.5 L149.3 158.6 L149.5 158.8 L150.0 158.5 L150.2 158.0 L150.5 157.9 L150.6 157.6 L150.5 157.2 L150.5 156.8 L150.5 156.6 L172.4 166.5 L176.1 166.6 L176.9 166.6 L177.4 167.8 L177.1 168.8 L178.7 170.4 L178.7 171.7 Z"/>
-                <path d="M96.2 226.1 L96.0 198.5 L102.3 176.5 L108.2 176.5 L141.6 176.7 L133.1 206.6 L133.2 207.5 L133.5 207.5 L150.8 207.5 L152.2 207.7 L157.2 207.7 L157.7 207.7 L157.8 213.7 L158.0 213.9 L221.5 213.3 L241.4 236.6 L244.8 269.9 L161.2 269.7 L123.0 269.9 L119.6 269.9 L96.2 269.9 Z"/>
-                <path d="M244.8 269.9 L243.7 381.6 L242.9 420.0 L192.5 419.8 L194.5 418.5 L180.2 381.9 L162.7 373.2 L161.4 360.5 L148.3 341.3 L148.9 325.7 L134.0 325.7 L133.9 313.4 L121.1 313.4 L121.1 301.0 L116.0 290.8 L96.2 288.6 L96.2 269.9 L119.6 269.9 L123.0 269.9 L161.2 269.7 Z"/>
-                <path d="M185.7 177.4 L184.9 174.0 L182.6 175.1 L179.8 173.0 L178.7 171.7 L178.7 170.4 L177.1 168.8 L177.4 167.8 L176.9 166.6 L176.1 166.6 L172.4 166.5 L150.5 156.6 L152.8 134.3 L125.2 110.1 L119.8 93.3 L104.6 87.7 L99.1 72.0 L97.8 69.1 L96.5 67.1 L94.2 66.7 L92.8 64.8 L91.8 61.9 L114.2 56.0 L118.0 55.0 L121.5 53.8 L122.2 53.9 L124.1 53.3 L134.8 50.3 L137.9 46.1 L141.1 75.3 L191.1 74.3 L190.0 43.4 L200.1 40.0 L210.4 65.4 L220.0 87.1 L225.5 99.4 L229.5 107.3 L236.5 117.2 L239.0 123.2 L241.9 128.7 L259.0 157.5 L269.2 175.4 L225.1 175.6 L225.8 213.3 L221.5 213.3 L199.3 167.4 Z"/>
-              </g>
-
-              <g font-size="15" font-weight="700" letter-spacing="2.6" fill="#1A202C" text-anchor="middle" stroke="#FAF9F6" stroke-width="4" stroke-linejoin="round" paint-order="stroke fill">
-                <text x="86" y="186">LAKE</text>
-                <text x="185" y="123">VOLUSIA</text>
-                <text x="174" y="195">SEMINOLE</text>
-                <text x="200" y="255">ORANGE</text>
-                <text x="192" y="335">OSCEOLA</text>
-              </g>
-
-              <g>
-                <circle cx="148.3" cy="229.2" r="12" fill="none" stroke="#A8813C" stroke-width="1.6" opacity=".9"/>
-                <circle cx="148.3" cy="229.2" r="4.6" fill="#A8813C" stroke="#FAF9F6" stroke-width="1.2"/>
-                <text x="168.3" y="234.2" font-size="13.5" fill="#1A202C" font-style="italic" font-family="Archivo,sans-serif" stroke="#FAF9F6" stroke-width="4" stroke-linejoin="round" paint-order="stroke fill">Orlando</text>
-              </g>
-
-              <g transform="translate(500,410)" stroke="#5E6470" fill="#5E6470">
-                <path d="M0 -26 L6 0 L0 -6 L-6 0 Z" stroke-width="1"/>
-                <text x="0" y="18" font-size="11" letter-spacing="1.6" text-anchor="middle" stroke="none">N</text>
-              </g>
-            </g>
-          </svg>
-          
-        </figure>
+      <div class="g-where-ph"><img src="assets/home-oak-street.webp" alt="A red-brick street under live oaks and Spanish moss in an established Central Florida neighborhood" width="960" height="1200" loading="lazy" decoding="async"></div>
       <div>
         <span class="g-kick">Where we work</span>
         <h2 class="g-h">Orlando and the five counties around&nbsp;it.</h2>
-        <p>Orange, Seminole, Osceola, Lake and Volusia. All one market in Stellar MLS, and close enough to know well.</p>
+        <ul class="g-counties">
+          <li>Orange</li><li>Seminole</li><li>Osceola</li><li>Lake</li><li>Volusia</li>
+        </ul>
+        <p>One market, close enough to know well. Explore a few of the neighborhoods:</p>
         <div class="g-chips">
           <a href="community-baldwin-park.html">Baldwin Park</a>
           <a href="community-celebration.html">Celebration</a>
