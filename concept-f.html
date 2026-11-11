@@ -70,11 +70,15 @@
 .cf{position:relative;padding:0;min-height:min(82vh,760px);display:flex;align-items:center;overflow:hidden;background:#efe6da;border-bottom:1px solid var(--line)}
 .cf-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom}
 .cf .shell{position:relative;width:100%}
-.cf-copy{max-width:30rem;padding:2.4rem 0;border-top:1.5px solid rgba(26,32,44,.85);border-bottom:1.5px solid rgba(26,32,44,.85);margin-bottom:8vh}
-.cf h1{font-size:clamp(2.2rem,4vw,3.4rem);line-height:1.04;letter-spacing:-.015em;text-transform:uppercase;font-weight:700;color:var(--ink);margin:0}
-.cf .sub{font-size:clamp(1.02rem,1.3vw,1.15rem);color:#2b3240;margin:1rem 0 1.8rem;max-width:30ch}
+.cf-copy{max-width:30rem;padding:2rem 0;border-top:1.5px solid rgba(26,32,44,.85);border-bottom:1.5px solid rgba(26,32,44,.85);margin-bottom:5vh}
+.cf h1{font-size:clamp(2.1rem,3.6vw,3.1rem);line-height:1.04;letter-spacing:-.015em;text-transform:uppercase;font-weight:700;color:var(--ink);margin:0}
+.cf .sub{font-size:clamp(1.02rem,1.3vw,1.15rem);color:#2b3240;margin:1rem 0 1.5rem;max-width:30ch}
 .cf .go{display:inline-flex;align-items:center;gap:.6rem;background:var(--ink);color:var(--surface);text-decoration:none;font-weight:600;font-size:.92rem;letter-spacing:.06em;text-transform:uppercase;padding:1rem 1.5rem;border-radius:3px;box-shadow:0 12px 28px -14px rgba(26,32,44,.6);transition:transform .25s,background .25s}
 .cf .go:hover{background:#000;color:var(--surface);transform:translateY(-2px)}
+.cf-btns{display:flex;flex-direction:column;align-items:flex-start;gap:.65rem}
+.cf-btns .go{min-width:19rem;justify-content:space-between}
+.cf .go.ghost{background:rgba(250,249,246,.55);color:var(--ink);border:1.5px solid var(--ink);box-shadow:none;backdrop-filter:blur(2px)}
+.cf .go.ghost:hover{background:var(--ink);color:var(--surface)}
 .cf .alt{display:block;margin-top:1rem;font-size:.94rem;color:#3a4150}
 .cf .alt a{color:var(--ink);text-underline-offset:3px}
 @media (max-width:860px){
@@ -87,6 +91,8 @@
 .cf-mh{font-size:1.9rem;line-height:1.05;text-transform:uppercase;font-weight:700;letter-spacing:-.01em;margin:0 0 .8rem;padding-top:1.2rem;border-top:1.5px solid var(--ink)}
 .cf-mob .sub{font-size:1.04rem;color:var(--muted);margin:0 0 1.2rem}
 .cf-mob .go{display:flex;justify-content:center;background:var(--ink);color:var(--surface);text-decoration:none;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:1rem;border-radius:3px}
+.cf-mob .go+.go{margin-top:.6rem}
+.cf-mob .go.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
 .cf-mob .alt{display:block;margin-top:1rem;font-size:.94rem;color:var(--muted)}
 </style>
 <meta name="robots" content="noindex">
@@ -133,8 +139,12 @@
       <div class="cf-copy">
         <h1>Real Estate&hellip;<br>Considered</h1>
         <p class="sub">Buying, selling, and estate homes across Central Florida, handled with care from first call to closing.</p>
-        <a class="go" href="sell.html#home-value">What&rsquo;s my home worth? <span aria-hidden="true">&rarr;</span></a>
-        <span class="alt">Buying instead? <a href="search.html">Start your search</a> &middot; or <a href="book.html">book a 15-minute call</a></span>
+        <div class="cf-btns">
+          <a class="go" href="sell.html#home-value">What&rsquo;s my home worth? <span aria-hidden="true">&rarr;</span></a>
+          <a class="go ghost" href="search.html">Explore homes for sale <span aria-hidden="true">&rarr;</span></a>
+          <a class="go ghost" href="probate.html">Inherited a house? <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <span class="alt">Not sure where to start? <a href="book.html">Book a 15-minute call</a></span>
       </div>
     </div>
   </section>
@@ -142,7 +152,9 @@
     <p class="cf-mh" aria-hidden="true">Real Estate&hellip;<br>Considered</p>
     <p class="sub">Buying, selling, and estate homes across Central Florida, handled with care from first call to closing.</p>
     <a class="go" href="sell.html#home-value">What&rsquo;s my home worth? &rarr;</a>
-    <span class="alt">Buying instead? <a href="search.html">Start your search</a> &middot; <a href="book.html">Book a 15-minute call</a></span>
+    <a class="go ghost" href="search.html">Explore homes for sale &rarr;</a>
+    <a class="go ghost" href="probate.html">Inherited a house? &rarr;</a>
+    <span class="alt">Not sure where to start? <a href="book.html">Book a 15-minute call</a></span>
   </div>
   <script>(function(){var r={'1':'room-chair','2':'room-foyer-lanai','3':'room-window-palms'}[new URLSearchParams(location.search).get('room')];if(r)document.getElementById('cf-bg').src='assets/'+r+'.webp'})();</script>
 
