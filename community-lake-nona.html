@@ -157,7 +157,7 @@
           <dt>Year over year, price</dt>
           <dd id="ms-yoy">-11.1%</dd>
         </dl>
-        <p class="note-fine" style="margin-top:1rem">As of <span id="ms-asof">September 2026</span>. Source: <a id="ms-source" href="https://www.redfin.com/neighborhood/72457/FL/Orlando/Lake-Nona/housing-market" target="_blank" rel="noopener">Redfin</a>, trailing 3 months.</p>
+        <p class="note-fine" style="margin-top:1rem">As of <span id="ms-asof">September 2026</span>. Source: <span id="ms-source">Redfin</span>, trailing 3 months.</p>
         <div class="note">
           <p class="note-lead">Read this carefully</p>
           <p>These figures come from one fixed source, checked each quarter, not averaged across providers. Other public sources report different numbers for the same period &mdash; they use different boundaries (all of Lake Nona vs. a single zip code vs. one sub-neighborhood), different time windows, and different underlying data. That&rsquo;s disclosed here, not smoothed over.</p>
@@ -166,6 +166,37 @@
       </div>
     </section>
 
+
+    <section class="rail" id="free-guides">
+      <p class="label">Free guides</p>
+      <div class="form-panel">
+        <h2>Take the details with you.</h2>
+        <p>Pick a free guide: the Orlando Relocation &amp; Home Buying Guide, a Seller Net Sheet, or the Inherited Home Checklist. We&rsquo;ll send it in one email. If you&rsquo;d like to talk it through afterward, reply to it or call 321-488-5542.</p>
+
+        <iframe
+            src="https://api.leadconnectorhq.com/widget/form/FGghRMb4j3Zx0tnGgMdQ?youtube_video=community-lake-nona"
+            style="width:100%;height:100%;border:none;border-radius:8px"
+            id="inline-FGghRMb4j3Zx0tnGgMdQ"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="YouTube — Free Guides"
+            data-height="900"
+            data-layout-iframe-id="inline-FGghRMb4j3Zx0tnGgMdQ"
+            data-form-id="FGghRMb4j3Zx0tnGgMdQ"
+            data-cookie-consent="true"
+            data-cookie-consent-provider="auto"
+            title="Free Guides"
+            loading="lazy"
+        >
+        </iframe>
+        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+      </div>
+    </section>
 
     <section class="rail" id="search-homes">
       <p class="label">Search homes</p>
@@ -264,7 +295,7 @@
       }
     }
     if(source && d.source && d.source.url){
-      source.href=d.source.url;
+      // Source is shown as plain text, not a link.
       if(d.source.name) source.textContent=d.source.name;
     }
   }).catch(function(){
