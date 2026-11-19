@@ -30,6 +30,20 @@
 - [Search homes](https://crawfordliving.com/search.html): home search app and curated search request
 - [About Mike Crawford](https://crawfordliving.com/about.html): background and credentials
 
+## Buying and selling guides (each with a video, FAQ and transcript)
+
+- [All video guides](https://crawfordliving.com/videos.html): index of the guides below
+- [How Much House Can I Afford in Orlando?](https://crawfordliving.com/how-much-house-can-i-afford-orlando.html): Work out a comfortable home price in Orlando from the monthly payment up: the 28/36 rule, what's in a payment, Florida taxes, insurance and CDD fees, and a worked $100,000-income example.
+- [How Mortgage Rates Actually Work](https://crawfordliving.com/how-mortgage-rates-work.html): Why the Fed doesn't set mortgage rates, the five things that move your rate, rate vs APR, points and buy-downs, and why not to buy counting on a refinance.
+- [Florida Property Taxes: Homestead, Save Our Homes and Portability](https://crawfordliving.com/florida-property-taxes-homestead.html): How a Florida property tax bill is built, why the seller's bill isn't yours, the homestead exemption (file by March 1), the Save Our Homes cap, and portability.
+- [FHA vs VA Loans: Which One Fits You?](https://crawfordliving.com/fha-vs-va-loans.html): FHA and VA loans side by side: down payment, mortgage insurance, the VA funding fee, who qualifies, and how to compare them with a conventional loan.
+- [First-Time Buyer Programs in Florida](https://crawfordliving.com/first-time-home-buyer-programs-florida.html): Where down payment and closing cost help comes from in Central Florida, how assistance is usually repaid, common rules, Hometown Heroes, and Orange County and Orlando programs.
+- [Home Inspections in Florida](https://crawfordliving.com/home-inspections-florida.html): What a general home inspection covers, Florida add-ons (4-point, wind mitigation, WDO/termite, pool), the as-is contract inspection window, and how to negotiate repairs or credits.
+- [Is the Housing Market Going to Crash?](https://crawfordliving.com/housing-market-crash-orlando.html): What caused the 2008 crash, what's different today, crash vs correction, how buyers and sellers in Central Florida can decide well either way, and the local numbers to watch.
+- [What's My Home Really Worth?](https://crawfordliving.com/whats-my-home-worth.html): Why online home value estimates miss, the four things that set value, online estimate vs assessed value vs market valuation, what Central Florida buyers look at, and why the starting price matters.
+- [How to Buy a House in Orlando, Step by Step](https://crawfordliving.com/how-to-buy-a-house-orlando.html): The six steps to buying a home in Central Florida: budget and pre-approval, the buyer agreement, the search and Florida checks, the offer, inspections and underwriting, and closing day.
+- [What It Really Costs to Sell a Home in Florida](https://crawfordliving.com/cost-to-sell-a-home-florida.html): Seller costs in Florida: commission after the 2024 changes, documentary stamp tax, owner's title policy, payoffs and prorations, prep costs, and a $400,000 example of your net.
+
 ## Community guides
 
 - [All communities](https://crawfordliving.com/communities.html): index of the guides below
