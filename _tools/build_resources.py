@@ -92,8 +92,12 @@ def load(path):
     src = re.search(r'<ol class="sources">(.*?)</ol>', page, re.S)
     cites = []
     if src:
-        for a in re.finditer(r'<a href="([^"]+)"[^>]*>(.*?)</a>', src.group(1), re.S):
-            name = html.unescape(re.sub(r"<[^>]+>", "", a.group(2))).strip()
+        for li in re.finditer(r"<li[^>]*>(.*?)</li>", src.group(1), re.S):
+            a = re.search(r'<a href="([^"]+)"', li.group(1))
+            if not a:
+                continue
+            name = html.unescape(re.sub(r"<[^>]+>", "", li.group(1)))
+            name = re.sub(r"\s+", " ", name).strip()
             cites.append({"@type": "CreativeWork", "name": name, "url": a.group(1)})
     if not cites:
         problems.append("no sources listed in <ol class=\"sources\">")
