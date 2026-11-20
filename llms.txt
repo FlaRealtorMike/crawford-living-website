@@ -17,6 +17,7 @@
 
 - [Home](https://crawfordliving.com/): overview of the practice
 - [Selling a home](https://crawfordliving.com/sell.html): pricing, marketing and reporting for sellers
+- [Home value estimate](https://crawfordliving.com/home-value.html): free automated estimate of an Orlando or Central Florida home's value, shown on the page
 - [Buying a home](https://crawfordliving.com/buy.html): timing, contract deadlines and what to watch for as a buyer
 - [New construction](https://crawfordliving.com/new-construction.html): why to bring your own broker when buying from a builder
 - [When an estate includes a home](https://crawfordliving.com/probate.html): for personal representatives selling a home in probate
