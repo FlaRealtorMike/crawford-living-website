@@ -6,7 +6,15 @@
     <atom:link href="https://crawfordliving.com/resources/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Articles by Michael Crawford, broker of Crawford Living Realty, LLC, on selling a home, inherited homes and probate, and the Central Florida market.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Nov 2026 12:55:35 +0000</lastBuildDate>
-
+    <lastBuildDate>Fri, 20 Nov 2026 08:00:00 -0500</lastBuildDate>
+    <item>
+      <title>Can You Sell an Inherited House Before Probate Is Finished in Orange County, Florida?</title>
+      <link>https://crawfordliving.com/resources/sell-inherited-house-before-probate-orange-county.html</link>
+      <guid isPermaLink="true">https://crawfordliving.com/resources/sell-inherited-house-before-probate-orange-county.html</guid>
+      <pubDate>Fri, 20 Nov 2026 08:00:00 -0500</pubDate>
+      <dc:creator>Michael Crawford</dc:creator>
+      <category>Probate &amp; inherited homes</category>
+      <description>Often, yes. Who can sign the deed in an Orange County, Florida probate depends on how the house was titled, the will, and homestead status. Here is how it works.</description>
+    </item>
   </channel>
 </rss>
