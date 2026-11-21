@@ -1,8 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-  <rect width="48" height="48" rx="8" fill="#0E2A57"/>
-  <g fill="none" stroke="#FCF8EC" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M11 26.8 L24 15 L37 26.8"/>
-    <path d="M15 26.4 V36 H33 V26.4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Crawford Living">
+  <!-- The pause mark: the tagline's three spaced periods as circles, 1 : 1.25 dot-to-gap,
+       Old Brass #A8813C on a circular Crawford Black #1A202C container. Drawn 2026-11-20. -->
+  <circle cx="24" cy="24" r="24" fill="#1A202C"/>
+  <g fill="#A8813C">
+    <circle cx="10.5" cy="24" r="3"/>
+    <circle cx="24" cy="24" r="3"/>
+    <circle cx="37.5" cy="24" r="3"/>
   </g>
-  <path d="M21 36 v-6.4 h6 V36" fill="none" stroke="#E7C870" stroke-width="2.2" stroke-linejoin="round"/>
 </svg>
