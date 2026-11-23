@@ -181,6 +181,31 @@ body{background:var(--linen)}
 .g-counties li{font-size:clamp(1.4rem,2.2vw,1.9rem);font-weight:700;text-transform:uppercase;letter-spacing:.02em;padding:.55rem 0;border-bottom:1px solid rgba(26,32,44,.2);display:flex;justify-content:space-between;align-items:baseline}
 .g-counties li::after{content:"County";font-size:.75rem;font-weight:600;letter-spacing:.16em;color:var(--muted)}
 @media (max-width:860px){.g-where-ph{aspect-ratio:4/3}}
+/* ── note from Mike + Google reviews (2026-11-22) ── */
+.g-note{padding:clamp(4rem,8vw,6.5rem) 0;background:var(--linen)}
+.g-note-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2rem,5vw,5rem);align-items:center}
+.g-note-ph{margin:0;border-radius:6px;overflow:hidden;aspect-ratio:4/5;background:var(--wall)}
+.g-note-ph img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+.g-note-copy p{font-size:1.15rem;line-height:1.65;color:#2b3240;margin:1.2rem 0 0;max-width:36rem}
+.g-note-copy .lede{font-size:1.3rem;color:var(--ink)}
+.g-note-sign{display:flex;align-items:flex-end;gap:1rem;margin:1.6rem 0 1.8rem}
+.g-note-sign img{width:150px;height:auto}
+.g-note-sign span{font-size:.9rem;color:var(--muted);line-height:1.4;padding-bottom:.6rem}
+.g-note .row{display:flex;flex-wrap:wrap;gap:.6rem}
+.g-revs{margin-top:clamp(3.5rem,6vw,5rem);padding-top:2rem;border-top:1px solid rgba(26,32,44,.18)}
+.g-revs-top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.6rem 2rem;margin-bottom:1.8rem}
+.g-stars{font-size:1rem;font-weight:600;letter-spacing:.04em;color:var(--ink)}
+.g-stars b{color:#A8813C;letter-spacing:.12em;margin-right:.5rem}
+.g-revs-top a{color:var(--ink);font-weight:600;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;text-underline-offset:3px}
+.g-quotes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem}
+.g-quotes li{background:var(--sand);border-radius:6px;padding:1.6rem 1.5rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.2rem}
+.g-quotes blockquote{margin:0;font-size:1.05rem;line-height:1.6;color:var(--ink)}
+.g-quotes cite{font-style:normal;font-size:.85rem;color:var(--muted);letter-spacing:.03em}
+@media (max-width:860px){
+  .g-note-grid{grid-template-columns:1fr}
+  .g-note-ph{max-width:22rem;aspect-ratio:1/1}
+  .g-quotes{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -243,6 +268,35 @@ body{background:var(--linen)}
     <a class="g-btn ghost" href="probate.html">Inherited a house? <span aria-hidden="true">&rarr;</span></a>
     <span class="alt">Not sure where to start? <a href="book.html">Book a 15-minute call</a></span>
   </div>
+
+  <section class="g-note" id="meet-mike">
+    <div class="shell">
+      <div class="g-note-grid">
+        <figure class="g-note-ph"><img src="assets/mike-crawford.jpg" alt="Mike Crawford, broker and owner of Crawford Living Realty" width="896" height="1088" loading="lazy" decoding="async"></figure>
+        <div class="g-note-copy">
+          <span class="g-kick">A note from Mike</span>
+          <h2 class="g-h">Glad you&rsquo;re&nbsp;here.</h2>
+          <p class="lede">I&rsquo;m Mike Crawford. I&rsquo;ve helped people buy and sell homes in Central Florida since 2004, and I came into real estate from coordinating residential construction.</p>
+          <p>Whether you&rsquo;re buying your first place, selling the house you raised your family in, or sorting out a parent&rsquo;s home, it starts the same way: you tell me where things stand, and I tell you plainly what to expect. No pitch, no pressure.</p>
+          <div class="g-note-sign"><img src="assets/email/signature-michael.png" alt="Michael" width="368" height="173" loading="lazy"><span>Broker &amp; owner,<br>Crawford Living Realty</span></div>
+          <div class="row">
+            <a class="g-btn" href="tel:+13214885542">Call or text 321-488-5542</a>
+            <a class="g-btn ghost" href="book.html">Book a 15-minute call <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="g-revs">
+        <div class="g-revs-top">
+          <p class="g-stars" style="margin:0"><b aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</b>5.0 on Google &middot; 5 reviews</p>
+          <a href="https://www.google.com/maps?cid=14430832077422550720" rel="noopener" target="_blank">Read them on Google</a>
+        </div>
+        <ul class="g-quotes">
+          <li><blockquote>&ldquo;He is very knowledgeable and has a variety of helpful resources available to ensure a smooth process. Mike is attentive and responsive. His guidance is helpful and not intrusive. This was our fourth home purchase experience, and by far, the best.&rdquo;</blockquote><cite>Tish S., buyer &middot; Google review</cite></li>
+          <li><blockquote>&ldquo;Michael is great to work with! His expertise in construction is a great tool in his bag to assist buyers look for a property. Would work with him again!&rdquo;</blockquote><cite>Enzo C. &middot; Google review</cite></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <section class="g-sec" id="help">
     <div class="shell">
