@@ -232,6 +232,7 @@ strong{color:var(--ink);font-weight:600}
 .hero h1{max-width:18ch}
 .hero-lede{margin-top:1.8rem;max-width:46ch}
 .hero-cta{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:2.3rem}
+.hero-note{margin-top:.8rem;font-size:.95rem;color:var(--muted);max-width:40ch}
 
 /* dark hero — flat Crawford Black, no gradient blobs, no colour */
 .hero.on-dark{background:var(--ink);color:var(--on-dark);border-bottom:0}
