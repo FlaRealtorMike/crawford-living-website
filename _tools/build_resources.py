@@ -109,7 +109,7 @@ def load(path):
 
 def write_article(path, page, ld):
     pub, mod = ld["datePublished"], ld["dateModified"]
-    line = '<p class="byline">By <a href="/about.html">Michael Crawford</a>, RENE, CPRES · Central Florida real estate broker: buying, selling &amp; probate · Crawford Living Realty, LLC<br>' \
+    line = '<p class="byline">By <a href="/about.html">Michael Crawford</a>, RENE, CPRES · Central Florida Real Estate Broker: Buying, Selling &amp; Probate · Crawford Living Realty, LLC<br>' \
            'Published <time datetime="%s">%s</time>' % (pub, nice_date(pub))
     if mod != pub:
         line += ' &middot; Updated <time datetime="%s">%s</time>' % (mod, nice_date(mod))
