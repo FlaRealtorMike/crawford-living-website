@@ -38,13 +38,24 @@
 .hv-page{padding-top:clamp(2.5rem,6vw,4.5rem);padding-bottom:clamp(3rem,7vw,5rem)}
 .hv-intro{max-width:46rem}
 .hv-intro h1{margin:.4rem 0 .9rem}
-.hv-steps{list-style:none;counter-reset:hv;margin:1.6rem 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;max-width:46rem}
-.hv-steps li{counter-increment:hv;background:var(--subtle);border-radius:var(--r);padding:1rem 1.1rem 1.1rem;color:var(--ink);line-height:1.45}
-.hv-steps li::before{content:counter(hv);display:flex;align-items:center;justify-content:center;width:1.9rem;height:1.9rem;border-radius:50%;background:var(--ink);color:var(--surface);font-weight:700;margin-bottom:.6rem}
-.hv-steps strong{display:block;margin-bottom:.2rem}
+.hv-steps{list-style:none;counter-reset:hv;margin:1.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem 1.6rem}
+.hv-steps li{counter-increment:hv;display:flex;align-items:center;gap:.55rem;font-weight:600;color:var(--ink)}
+.hv-steps li::before{content:counter(hv);display:flex;align-items:center;justify-content:center;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--ink);color:var(--surface);font-weight:700;font-size:.85rem;flex:none}
+.hv-cols{display:grid;grid-template-columns:minmax(0,46rem) minmax(0,19rem);gap:clamp(1.5rem,4vw,3.5rem);align-items:start;margin-top:1.6rem}
+.hv-cols .hv-form{margin-top:0}
+.hv-side{position:sticky;top:8rem}
+.hv-side img{width:100%;max-width:19rem;height:auto;aspect-ratio:4/4.4;object-fit:cover;object-position:center 15%;border-radius:var(--r);display:block}
+.hv-side h2{font-size:1.5rem;margin:1.1rem 0 .5rem}
+.hv-side p{margin:0 0 .8rem;color:var(--muted);line-height:1.55}
+.hv-side .hv-cred{color:var(--ink);font-weight:600;font-size:.92rem}
+.hv-rev{margin:1.3rem 0 0;padding-top:1.1rem;border-top:1px solid var(--ink)}
+.hv-rev blockquote{margin:0 0 .5rem;font-size:1.05rem;line-height:1.4;font-weight:500;color:var(--ink)}
+.hv-rev figcaption{font-size:.85rem;color:var(--muted)}
+.hv-side .hv-estate{margin-top:1.3rem;font-size:.92rem}
+@media (max-width:980px){.hv-cols{grid-template-columns:minmax(0,1fr)}.hv-side{position:static;display:grid;grid-template-columns:7rem 1fr;gap:0 1.1rem;align-items:start}.hv-side img{grid-row:span 3}.hv-side h2{margin-top:0}.hv-rev,.hv-side .hv-estate{grid-column:1/-1}}
 .hv-form{margin-top:2rem;max-width:46rem}
 .hv-next{margin-top:2.5rem;max-width:46rem}
-@media (max-width:760px){.hv-steps{grid-template-columns:minmax(0,1fr)}}
+
 /* home value — the RPR estimate appears here only after the lead form is submitted */
 .hero-cta{margin:1.8rem 0 0}
 .avm{margin-top:1.75rem;padding-top:1.5rem;border-top:2px solid var(--ink)}
@@ -104,11 +115,12 @@
     </section>
 
     <ol class="hv-steps" aria-label="How it works">
-      <li><strong>Fill in the form below</strong>Your name, phone, email and the home&rsquo;s street address.</li>
-      <li><strong>Press &ldquo;Show my home&rsquo;s value&rdquo;</strong>The blue button at the bottom of the form.</li>
-      <li><strong>See your estimate</strong>The estimated value, likely range and recent trend appear on this page.</li>
+      <li>Fill in the form</li>
+      <li>Press &ldquo;Show my home&rsquo;s value&rdquo;</li>
+      <li>See your estimate on this page</li>
     </ol>
 
+    <div class="hv-cols">
     <section class="hv-form form-panel" id="home-value">
         <iframe
             src="https://api.leadconnectorhq.com/widget/form/TYv8dkbcKMjwfmgXJdB2"
@@ -146,6 +158,20 @@
 
         <p class="note-fine avm-disclosure">This is an automated estimate, not an appraisal, powered by RPR (Realtors Property Resource). It's a starting point. The number we'd list at comes from walking the house and reading the sales around it.</p>
     </section>
+
+
+    <aside class="hv-side">
+      <img src="assets/mike-crawford.jpg" alt="Mike Crawford" width="896" height="1088">
+      <h2>Hi, I&rsquo;m Mike.</h2>
+      <p>The estimate is a starting point, and it&rsquo;s yours to keep. If you&rsquo;d like to go further, I&rsquo;ll send a fuller analysis from current MLS sales. No pressure either way.</p>
+      <p class="hv-cred">Mike Crawford, RENE, CPRES<br>Florida broker since 2004</p>
+      <figure class="hv-rev">
+        <blockquote>&ldquo;Mike is attentive and responsive. His guidance is helpful and not intrusive.&rdquo;</blockquote>
+        <figcaption>Tish S., buyer &middot; <a href="about.html">5.0 on Google</a></figcaption>
+      </figure>
+      <p class="hv-estate">Is this an inherited home? <a href="probate-guide.html">Get the free probate guide</a> as well.</p>
+    </aside>
+    </div>
 
     <section class="hv-next">
       <h2>Want a number you can list at?</h2>
