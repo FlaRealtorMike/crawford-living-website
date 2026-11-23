@@ -8,7 +8,16 @@
 <meta http-equiv="refresh" content="0; url=https://api.leadconnectorhq.com/widget/booking/JY8I29wOkBH1JI67tCKx">
 <link rel="canonical" href="https://crawfordliving.com/book">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<script>window.location.replace("https://api.leadconnectorhq.com/widget/booking/JY8I29wOkBH1JI67tCKx");</script>
+<script>
+/* Tag the booking with the page the visitor came from, so GoHighLevel records which page
+   produced the call (utm_content = that page's path). No personal data. */
+(function(){
+  var u="https://api.leadconnectorhq.com/widget/booking/JY8I29wOkBH1JI67tCKx",from="";
+  try{var r=document.referrer?new URL(document.referrer):null;if(r&&r.hostname===location.hostname)from=r.pathname}catch(e){}
+  u+="?utm_source=crawfordliving.com&utm_medium=website&utm_campaign=book-a-call"+(from?"&utm_content="+encodeURIComponent(from):"");
+  window.location.replace(u);
+})();
+</script>
 </head>
 <body style="font-family:Archivo,Arial,sans-serif;padding:2rem;text-align:center;">
 <p>Taking you to the Crawford Living calendar&hellip;</p>
