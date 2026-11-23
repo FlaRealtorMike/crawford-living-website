@@ -249,13 +249,16 @@
     var lead={kind:'guide',first_name:val('first_name'),last_name:val('last_name'),email:val('email'),phone:val('phone'),address:val('address')};
     if(!lead.first_name||!lead.last_name||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(lead.email)){
       err.textContent='Please add your first name, last name and a valid email.';err.hidden=false;return}
+    /* visit source from assets/track.js (no personal data): page, landing page, referrer, UTM tags */
+    try{var src=window.clSource?window.clSource():{};['page','landing_page','first_referrer','first_seen','utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){if(src&&src[k])lead[k]=String(src[k])})}catch(x){}
     var btn=form.querySelector('button');btn.disabled=true;
     post(lead).then(function(ok){
       if(!ok)throw new Error('relay');
       form.hidden=true;done.hidden=false;
       document.getElementById('pg-thanks').textContent='Thank you, '+lead.first_name+'. Your guide is ready.';
       done.focus({preventScroll:true});document.getElementById('get-the-guide').scrollIntoView({behavior:'smooth',block:'start'});
-      if(typeof window.gtag==='function'){try{window.gtag('event','generate_lead',{form_id:'probate-guide',page_path:location.pathname})}catch(x){}}
+      if(window.clTrackLead){try{window.clTrackLead('probate-guide','Probate guide')}catch(x){}}
+      else if(typeof window.gtag==='function'){try{window.gtag('event','generate_lead',{form_id:'probate-guide',page_path:location.pathname})}catch(x){}}
       if(lead.address)showEstimate(lead);
     }).catch(function(){
       btn.disabled=false;
