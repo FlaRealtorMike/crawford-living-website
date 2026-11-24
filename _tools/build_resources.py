@@ -109,7 +109,7 @@ def load(path):
 
 def write_article(path, page, ld):
     pub, mod = ld["datePublished"], ld["dateModified"]
-    line = '<p class="byline">By <a href="/about.html">Michael Crawford</a>, RENE, CPRES · Central Florida Real Estate Broker: Buying, Selling &amp; Probate · Crawford Living Realty, LLC<br>' \
+    line = '<p class="byline">By <a href="/about.html">Michael "Mike" Crawford</a>, RENE, CPRES · Central Florida Real Estate Broker: Buying, Selling &amp; Probate · Crawford Living Realty, LLC<br>' \
            'Published <time datetime="%s">%s</time>' % (pub, nice_date(pub))
     if mod != pub:
         line += ' &middot; Updated <time datetime="%s">%s</time>' % (mod, nice_date(mod))
@@ -180,7 +180,7 @@ def build_feed(arts):
             "      <link>%s</link>\n"
             "      <guid isPermaLink=\"true\">%s</guid>\n"
             "      <pubDate>%s</pubDate>\n"
-            "      <dc:creator>Michael Crawford</dc:creator>\n"
+            "      <dc:creator>Michael &quot;Mike&quot; Crawford</dc:creator>\n"
             "      <category>%s</category>\n"
             "      <description>%s</description>\n"
             "    </item>" % (esc(a["headline"]), a["_url"], a["_url"], rfc(a["datePublished"]),
@@ -192,7 +192,7 @@ def build_feed(arts):
             "    <title>Crawford Living Resources</title>\n"
             "    <link>%s/resources/</link>\n"
             '    <atom:link href="%s/resources/feed.xml" rel="self" type="application/rss+xml"/>\n'
-            "    <description>Articles by Michael Crawford, broker of Crawford Living Realty, LLC, on selling a home, inherited homes and probate, and the Central Florida market.</description>\n"
+            "    <description>Articles by Michael &quot;Mike&quot; Crawford, broker of Crawford Living Realty, LLC, on selling a home, inherited homes and probate, and the Central Florida market.</description>\n"
             "    <language>en-us</language>\n"
             "    <lastBuildDate>%s</lastBuildDate>\n"
             "%s\n"
