@@ -348,6 +348,9 @@ section:last-of-type{border-bottom:0}
 .items p{margin:0;max-width:none}
 /* icon-free variant (attorneys) — a clean typographic list */
 .items-plain li{display:flex;flex-direction:column;gap:.35rem}
+.rail .menu-group{font-size:1.12rem;margin:2.4rem 0 0}
+.rail .menu-group + .items{margin-top:1.2rem}
+.rail .menu-group + p{margin-top:.7rem}
 
 /* boundary callout — the trust core, given full width and weight */
 .boundary{
