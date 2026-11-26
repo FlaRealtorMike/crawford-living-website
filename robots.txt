@@ -1,6 +1,6 @@
 # crawfordliving.com
 # Search engines and AI assistants are welcome to read this site.
-# (attorneys.html and text-signup.html stay out of search via their own noindex tags.)
+# (attorneys.html, text-signup.html and guides-thank-you.html stay out of search via their own noindex tags.)
 User-agent: *
 Allow: /
 

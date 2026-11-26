@@ -128,6 +128,14 @@
           var q=new URLSearchParams(location.search), v=(q.get('video')||'website').replace(/[^a-z0-9-]/gi,'').slice(0,60);
           var f=document.getElementById('inline-FGghRMb4j3Zx0tnGgMdQ');
           if(f){f.src=f.src+(f.src.indexOf('?')<0?'?':'&')+'youtube_video='+encodeURIComponent(v);}
+          // After a submit the form shows a short thank-you note but keeps its full height,
+          // leaving a large blank area. Shrink it so the note sits under the heading.
+          // (If the form is set to redirect to guides-thank-you.html, this never matters.)
+          window.addEventListener('message',function(e){
+            var d=e.data;
+            if(!f||e.source!==f.contentWindow||!Array.isArray(d)||d[0]!=='set-sticky-contacts')return;
+            setTimeout(function(){f.style.setProperty('height','240px','important');f.style.setProperty('min-height','0','important');f.scrollIntoView({block:'center'});},600);
+          });
         })();
         </script>
         <script src="https://link.msgsndr.com/js/form_embed.js"></script>
