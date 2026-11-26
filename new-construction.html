@@ -34,6 +34,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/crawford.css">
+<link rel="stylesheet" href="assets/g.css">
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -73,30 +74,6 @@
         },
         {
           "@type": "Question",
-          "name": "Will I get a better price without a broker?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Builders rarely cut the price for an unrepresented buyer; the margin stays with the builder. What a broker changes is the contract you sign, the credits you capture, and the problems caught before closing."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I have to use the builder's lender?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Builder incentives are often tied to their lender, so the question is whether the incentive outweighs a better rate or lower fees elsewhere. Get both quotes and compare the whole number."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does a new build take?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It depends on the builder, the community, and whether the home is already under way. Quick move-in inventory can close in weeks; a build from the ground up is usually a matter of months. The contract's completion language matters more than the sales office's estimate."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "Should I get an inspection on a brand-new house?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -107,6 +84,13 @@
     }
   ]
 }</script>
+<style>
+.nc-faq{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:2rem 0 0}
+.nc-faq div{background:var(--sand);border-radius:6px;padding:1.4rem 1.3rem}
+.nc-faq h3{font-size:1.05rem;line-height:1.35;margin:0 0 .6rem;color:var(--ink)}
+.nc-faq p{margin:0;font-size:1rem;line-height:1.55;color:#2b3240}
+@media (max-width:860px){.nc-faq{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 
@@ -145,168 +129,95 @@
 
 <main id="main">
 
-  <div class="hero">
+  <section class="cf cf-panel cf-sm">
+    <img class="cf-bg" src="assets/homepage-exterior-break.jpg" alt="A newly built Central Florida home with a covered entry in warm afternoon light" width="2000" height="1342" fetchpriority="high" decoding="async">
     <div class="shell">
-      <div>
-        <p class="kicker">New construction · Orlando and Central Florida</p>
-        <h1 class="display">The builder has a rep. You should <em>too.</em></h1>
-        <p class="standfirst">The friendly person in the model home works for the builder, and does that job well. Bringing your own broker costs you nothing, and it changes who is reading the contract, who is at the walkthroughs, and who is asking the questions you haven't thought of yet.</p>
-        <div class="hero-cta">
-          <a class="btn" href="tel:+13214885542">Call 321-488-5542 <span class="arw" aria-hidden="true">&#8594;</span></a>
-          <a class="btn btn-ghost" href="#start">Tell me what you're looking for</a>
+      <div class="cf-copy">
+        <h1>The builder has a rep. Bring your&nbsp;own.</h1>
+        <p class="sub"><span class="sub-rule" aria-hidden="true"></span>The person in the model home works for the builder. Your own broker costs you nothing in almost every case, and changes who reads the contract.</p>
+        <div class="cf-btns">
+          <a class="g-btn" href="#start">Tell me where you&rsquo;re looking <span aria-hidden="true">&rarr;</span></a>
+          <a class="g-btn ghost" href="tel:+13214885542">Call 321-488-5542</a>
         </div>
+        <span class="alt">Not sure where to start? <a href="book.html">Book a 15-minute call</a></span>
       </div>
-      <figure class="hero-figure photo">
-        <img src="assets/homepage-exterior-break.jpg" alt="A newly built Central Florida home with a covered entry in warm afternoon light" width="2000" height="1342">
-        <figcaption>Illustrative &mdash; not a specific listing.</figcaption>
-      </figure>
     </div>
+  </section>
+  <div class="cf-mob">
+    <p class="cf-mh" aria-hidden="true">The builder has a rep. Bring your&nbsp;own.</p>
+    <p class="sub"><span class="sub-rule" aria-hidden="true"></span>The person in the model home works for the builder. Your own broker costs you nothing in almost every case, and changes who reads the contract.</p>
+    <a class="g-btn" href="#start">Tell me where you&rsquo;re looking <span aria-hidden="true">&rarr;</span></a>
+    <a class="g-btn ghost" href="tel:+13214885542">Call 321-488-5542</a>
+    <span class="alt">Not sure where to start? <a href="book.html">Book a 15-minute call</a></span>
   </div>
 
-  <div class="shell">
+  <section class="g-sec" id="first-visit">
+    <div class="shell g-split">
+      <figure class="g-split-ph"><img src="assets/about-reach.jpg" alt="A leather portfolio, a pen and a cup of coffee on a wooden table in warm afternoon light" width="1264" height="848" loading="lazy" decoding="async"></figure>
+      <div>
+        <span class="g-kick">Before your first visit</span>
+        <h2 class="g-h">Register your broker before you walk&nbsp;in.</h2>
+        <p>Most builders only recognize your broker if you register them on your first visit, or before you contact the sales office. Sign the guest book alone, and you may count as unrepresented there from then on.</p>
+        <p>Tell me where you want to look, and we go together or I register you first. Early and only browsing is the best time to call.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="rail">
-      <p class="label">Why the first visit matters</p>
+  <section class="g-sec" id="what-you-get" style="padding-top:0">
+    <div class="shell">
+      <span class="g-kick">What a new build hides</span>
+      <h2 class="g-h">You&rsquo;re buying a lot, a plan and a&nbsp;promise.</h2>
+      <p class="g-lede">The contract is the builder&rsquo;s, written for the builder. What you walk away with:</p>
+      <ul class="g-ticks">
+        <li><b>A contract you understand before signing:</b> deposits, change orders, delays, and what happens if financing falls through.</li>
+        <li><b>The all-in number, both ways.</b> Builder incentives usually come tied to their lender. You see whether one beats a better rate elsewhere.</li>
+        <li><b>A lot with no surprises:</b> drainage, what gets built behind you, and where future phases go.</li>
+        <li><b>The real monthly cost,</b> including any CDD on the tax bill on top of the HOA, which the model-home estimate may leave out.</li>
+        <li><b>The credits you were promised,</b> checked line by line on the settlement statement.</li>
+      </ul>
+      <p class="g-aside"><b>Where this comes from, and where it stops:</b> my background is coordinating residential construction: scheduling trades and holding subcontractors to dates. That&rsquo;s process knowledge, not structural expertise. For anything technical, you want a licensed inspector or engineer, and I&rsquo;ll tell you who to call.</p>
+    </div>
+  </section>
+
+  <section class="g-sec g-band" id="how">
+    <div class="shell">
+      <div class="ph"><img src="assets/newbuild-kitchen.webp" alt="The bright, finished kitchen and great room of a new Central Florida home, with a quartz island, brass pendant lights and fresh hydrangeas" width="1800" height="1207" loading="lazy" decoding="async"></div>
       <div>
-        <h2>Why the first visit matters more than you'd think</h2>
-        <p>Most builders will only recognize your broker if you register them on your first visit to the community, or before you contact the sales office. Walk in alone, sign the guest book, and the builder may treat you as unrepresented for that community from then on. The fix is simple: tell me where you want to look, and we go together, or I register you ahead of time.</p>
-        <p>That is also the reason this page exists. If you are early, and just browsing, that is the best possible time to call.</p>
+        <span class="g-kick">How it goes</span>
+        <h2 class="g-h">Model home to&nbsp;keys.</h2>
+        <ol class="g-steps">
+          <li><b>01</b><span>We narrow it to a handful of communities worth your Saturday.</span></li>
+          <li><b>02</b><span>I come along on the first visit, or register you before it.</span></li>
+          <li><b>03</b><span>We read the builder&rsquo;s contract together before you sign.</span></li>
+          <li><b>04</b><span>Site visits as it goes up, and an independent inspection before drywall.</span></li>
+          <li><b>05</b><span>A second inspection before closing, and a punch list the builder actually completes.</span></li>
+          <li><b>06</b><span>A reminder before the one-year warranty walk, so small things get fixed on the builder&rsquo;s dime.</span></li>
+        </ol>
       </div>
-    </section>
-    <section class="rail">
-      <p class="label">What a new build hides</p>
+    </div>
+  </section>
+
+  <section class="g-sec" id="questions">
+    <div class="shell">
+      <span class="g-kick">Common questions</span>
+      <h2 class="g-h">Before you visit a model&nbsp;home.</h2>
+      <div class="nc-faq">
+        <div><h3>Does using my own broker cost me anything?</h3><p>In almost every case, no. Builders budget for broker co-operation and pay it from their side. Ask me about any community where that is not the case before we visit.</p></div>
+        <div><h3>Should I get an inspection on a brand-new house?</h3><p>Yes. Twice, ideally: before drywall and before closing. New does not mean finished correctly, and the county inspector is checking code, not craftsmanship.</p></div>
+      </div>
+      <p class="g-more">Community guides: <a href="community-lake-nona.html">Lake Nona</a> <a href="community-horizon-west-winter-garden.html">Horizon West</a> <a href="community-windermere.html">Windermere</a> <a href="community-lake-mary.html">Lake Mary</a> <a href="community-oviedo.html">Oviedo</a> <a href="sell.html">Selling first?</a></p>
+    </div>
+  </section>
+
+  <section class="g-sec g-dark" id="start">
+    <div class="shell g-write">
       <div>
-        <h2>What a new build hides that a resale doesn't</h2>
-        <p>With a resale, you can see the house. With a new build, you are buying a lot, a floor plan, a set of selections, and a builder's promise, and the contract is the builder's, written for the builder. A few places where a second set of eyes earns its keep:</p>
-<ul class="items items-plain">
-  <li>
-    <h3>The contract</h3>
-    <p>Builder purchase agreements are long, non-negotiable in places, and different from the standard Florida resale contract. Deposits, change orders, delay language, and what happens if your financing falls through all deserve a careful read before you sign.</p>
-  </li>
-  <li>
-    <h3>The incentives</h3>
-    <p>&ldquo;Closing costs paid&rdquo; and rate buy-downs are usually tied to the builder's preferred lender and title company. Sometimes that is the best deal available. Sometimes it isn't. You should know the all-in number both ways before choosing.</p>
-  </li>
-  <li>
-    <h3>The lot</h3>
-    <p>Lot premiums, what will be built behind you, drainage, the pond you can see on the plat but not yet on the ground, and where the community's future phases go.</p>
-  </li>
-  <li>
-    <h3>The carrying costs</h3>
-    <p>Many new communities sit in a CDD (Community Development District), which adds a line to the tax bill on top of the HOA. The model-home payment estimate may not show it. Ask for the full picture.</p>
-  </li>
-  <li>
-    <h3>The inspections</h3>
-    <p>The county inspects for code. Nobody inspects for workmanship unless you hire someone. An independent inspection before drywall goes up, and again before closing, is money well spent on a house nobody has lived in.</p>
-  </li>
-</ul>
+        <span class="g-kick">Start here</span>
+        <h2 class="g-h">Tell me where you want to&nbsp;be.</h2>
+        <p>Roughly where, your timeline, and whether there&rsquo;s a house to sell first. You&rsquo;ll get a short list of communities worth a look. Already visited one on your own? Say which, and we&rsquo;ll sort out where things stand.</p>
+        <p style="margin-top:1.6rem"><a class="g-btn ghost" style="color:#F6F1EA;border-color:rgba(246,241,234,.6)" href="tel:+13214885542">Call or text 321-488-5542</a></p>
       </div>
-    </section>
-    <section class="rail">
-      <p class="label">From model home to keys</p>
-      <div>
-        <h2>How it goes, from model home to keys</h2>
-<ul class="items items-plain">
-  <li>
-    <h3>1. Narrow the list</h3>
-    <p>We talk about budget, commute, schools, and timeline, then pick a handful of communities worth your Saturday. New construction is spread across every direction from Orlando, and the right area depends on where your life happens.</p>
-  </li>
-  <li>
-    <h3>2. Visit, with questions ready</h3>
-    <p>I come along, or register you first. We ask about build times, what's included versus upgraded, lot availability, and what the builder is doing for buyers this month.</p>
-  </li>
-  <li>
-    <h3>3. Read the contract before you sign it</h3>
-    <p>Deposits, selections, change-order rules, the estimated completion date and what it really commits the builder to.</p>
-  </li>
-  <li>
-    <h3>4. Keep an eye on the build</h3>
-    <p>Site visits as the house goes up, an independent pre-drywall inspection, and a running list of anything that needs fixing before it is covered up.</p>
-  </li>
-  <li>
-    <h3>5. Final walkthrough and closing</h3>
-    <p>A second independent inspection, a punch list the builder actually completes, and a close read of the settlement statement so the credits you were promised are the credits you get.</p>
-  </li>
-  <li>
-    <h3>6. After you move in</h3>
-    <p>Builder warranties have deadlines. I'll remind you about the ones that matter, including the one-year walk, so small things get fixed on the builder's dime.</p>
-  </li>
-</ul>
-      </div>
-    </section>
-    <section class="rail">
-      <p class="label">Where homes are going up</p>
-      <div>
-        <h2>Where new homes are going up around Orlando</h2>
-        <p>These are the areas where most of the new-construction activity is right now. Each has a different feel, a different commute, and a different price point. I'll tell you plainly which ones I know well.</p>
-<ul class="items items-plain">
-  <li>
-    <h3>Lake Nona and southeast Orlando</h3>
-    <p>Master-planned, newer, close to the airport and the medical city. <a href="community-lake-nona.html">Our Lake Nona guide</a>.</p>
-  </li>
-  <li>
-    <h3>Horizon West, Winter Garden and Windermere</h3>
-    <p>The fastest-growing corner of west Orange County, village by village. <a href="community-horizon-west-winter-garden.html">Our Horizon West guide</a> and <a href="community-windermere.html">our Windermere guide</a>.</p>
-  </li>
-  <li>
-    <h3>St. Cloud, Harmony and Kissimmee</h3>
-    <p>Osceola County communities with more house for the money, and longer commutes.</p>
-  </li>
-  <li>
-    <h3>Clermont and Minneola</h3>
-    <p>Lake County hills, newer communities, and the turnpike into town.</p>
-  </li>
-  <li>
-    <h3>Apopka and the Wekiva corridor</h3>
-    <p>Northwest Orange County, with new neighborhoods opening along the 429.</p>
-  </li>
-  <li>
-    <h3>Sanford, Lake Mary and Oviedo</h3>
-    <p>Seminole County, where infill and the last large tracts are being built out. <a href="community-lake-mary.html">Lake Mary</a> and <a href="community-oviedo.html">Oviedo</a> guides.</p>
-  </li>
-  <li>
-    <h3>Davenport and Haines City</h3>
-    <p>Polk County, just over the line, with a heavy mix of vacation-rental communities. Worth knowing which is which.</p>
-  </li>
-  <li>
-    <h3>Deltona, DeLand and Daytona's west side</h3>
-    <p>Volusia County, farther out, with new communities along I-4 and SR 44.</p>
-  </li>
-</ul>
-      </div>
-    </section>
-    <section class="rail">
-      <p class="label">Search new homes</p>
-      <div>
-        <h2>Search new homes</h2>
-        <p>Builder inventory moves differently from the resale market, and some of it never shows on the MLS. Start with the search below, then call and I'll tell you what else is coming to the communities you like.</p>
-        <p><a class="btn" href="search.html">Search Central Florida homes <span class="arw" aria-hidden="true">&#8594;</span></a></p>
-        <div class="note">
-          <p><strong>Selling first?</strong> Most buyers moving into a new build have a house to sell, and builders are used to contingent timelines. <a href="sell.html">A different way to sell your home</a> starts with an honest first number.</p>
-        </div>
-      </div>
-    </section>
-    <section class="rail">
-      <p class="label">Common questions</p>
-      <div>
-        <h2>Common questions about buying new construction in Orlando</h2>
-<h3>Does using my own broker cost me anything?</h3>
-<p>In almost every case, no. Builders budget for broker co-operation and pay it from their side. Ask me about any community where that is not the case before we visit.</p>
-<h3>Will I get a better price without a broker?</h3>
-<p>Builders rarely cut the price for an unrepresented buyer; the margin stays with the builder. What a broker changes is the contract you sign, the credits you capture, and the problems caught before closing.</p>
-<h3>Do I have to use the builder's lender?</h3>
-<p>No. Builder incentives are often tied to their lender, so the question is whether the incentive outweighs a better rate or lower fees elsewhere. Get both quotes and compare the whole number.</p>
-<h3>How long does a new build take?</h3>
-<p>It depends on the builder, the community, and whether the home is already under way. Quick move-in inventory can close in weeks; a build from the ground up is usually a matter of months. The contract's completion language matters more than the sales office's estimate.</p>
-<h3>Should I get an inspection on a brand-new house?</h3>
-<p>Yes. Twice, ideally: before drywall and before closing. New does not mean finished correctly, and the county inspector is checking code, not craftsmanship.</p>
-      </div>
-    </section>
-    <section class="rail" id="start">
-      <p class="label">Start here</p>
-      <div class="form-panel">
-        <h2>Start here, and I'll follow up personally</h2>
-        <p>Tell me roughly where you want to be, your timeline, and whether there's a house to sell first. I'll reply with a short list of communities worth a look, and we'll go from there.</p>
+      <div class="formbox">
         <iframe
             src="https://api.leadconnectorhq.com/widget/form/UuJBJMbdkYJ4sQfgAsPr"
             style="width:100%;height:100%;border:none;border-radius:8px"
@@ -328,16 +239,6 @@
         >
         </iframe>
         <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-      </div>
-    </section>
-  </div>
-
-  <section class="reach" id="contact">
-    <div class="shell">
-      <div>
-        <p class="label">How this usually starts</p>
-        <h2>A conversation, before a single model home.</h2>
-        <p>Call <a href="tel:+13214885542">321-488-5542</a> or write to <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a>. If you've already visited a community on your own, tell me which one, and we'll sort out where things stand.</p>
       </div>
     </div>
   </section>

@@ -16,11 +16,22 @@
 ## Pages
 
 - [Home](https://crawfordliving.com/): overview of the practice
-- [Selling a home](https://crawfordliving.com/sell.html): pricing, marketing and reporting for sellers
+- [Selling a home](https://crawfordliving.com/sell.html): overview for sellers: goal, price, prep, marketing, listing to closing
+- [Marketing a home for sale](https://crawfordliving.com/sell-marketing.html): the Marketing Menu: core marketing on every listing plus add-ons the seller chooses, with a written plan
+- [Pricing a home to sell](https://crawfordliving.com/sell-pricing.html): how a list price is built from recent closed sales, and a free home value estimate
+- [Getting a home ready to sell](https://crawfordliving.com/sell-prep.html): what buyers notice first, and deciding between repairing and pricing around it
+- [From listing to closing](https://crawfordliving.com/sell-process.html): updates while listed, weighing offers beyond price, and contract to closing
 - [Home value estimate](https://crawfordliving.com/home-value.html): free automated estimate of an Orlando or Central Florida home's value, shown on the page
 - [Buying a home](https://crawfordliving.com/buy.html): timing, contract deadlines and what to watch for as a buyer
+- [Finding the right house](https://crawfordliving.com/buy-house.html): starting a home search, reading past the listing photos, and what a house will likely need
+- [Offer to keys](https://crawfordliving.com/buy-contract.html): the Florida contract deadlines that protect a buyer, from inspection period to final walkthrough
+- [Buying while you still own a home](https://crawfordliving.com/buy-selling-first.html): start with a free estimate of your current home value to set the budget
 - [New construction](https://crawfordliving.com/new-construction.html): why to bring your own broker when buying from a builder
 - [When an estate includes a home](https://crawfordliving.com/probate.html): for personal representatives selling a home in probate
+- [Who can sign for an inherited home](https://crawfordliving.com/probate-who-signs.html): authority to sell in a Florida estate, how long probate takes, and homestead
+- [Caring for the home while the estate is open](https://crawfordliving.com/probate-home-care.html): insurance, vacancy, upkeep and belongings
+- [Value and choices for an inherited home](https://crawfordliving.com/probate-value-choices.html): date-of-death value vs today, as-is vs repaired, keep, rent or sell
+- [Selling an inherited home](https://crawfordliving.com/probate-selling.html): how the sale works with the estate timeline, title needs, and what a broker does and does not do
 - [Inherited a house in Orlando](https://crawfordliving.com/inherited-house-orlando.html): plain-language first steps, who can sign, and probate in Orange, Seminole, Osceola, Lake and Volusia counties
 - [Inherited a house in Orange County](https://crawfordliving.com/inherited-house-orange-county.html): where probate is filed in Orange County, how to look up the owner and the case, and what to know before selling
 - [Inherited a house in Seminole County](https://crawfordliving.com/inherited-house-seminole-county.html): where probate is filed in Seminole County, how to look up the owner and the case, and what to know before selling

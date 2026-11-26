@@ -34,6 +34,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/crawford.css">
+<link rel="stylesheet" href="assets/g.css">
 <style>
 /* full-width image, a calm beat between sections */
 .band-figure{margin:clamp(3rem,6vw,4.5rem) 0 0}
@@ -68,11 +69,11 @@
       "@id": "https://crawfordliving.com/buy.html#page",
       "url": "https://crawfordliving.com/buy.html",
       "name": "Buy a Home in Orlando & Central Florida",
-      "about": {
-        "@id": "https://crawfordliving.com/buy.html#service"
-      },
       "isPartOf": {
         "@id": "https://crawfordliving.com/#brokerage"
+      },
+      "about": {
+        "@id": "https://crawfordliving.com/buy.html#service"
       }
     },
     {
@@ -163,200 +164,107 @@
 </script>
 
 <main id="main">
-
-  <div class="hero on-dark">
+  <section class="cf cf-panel">
+    <img class="cf-bg" src="assets/buy-hero-porch.jpg" alt="A welcoming covered front porch in warm afternoon light with two cushioned rocking chairs, potted ferns and a classic wood front door" width="1800" height="1208" fetchpriority="high" decoding="async">
     <div class="shell">
-      <div>
-        <p class="kicker">For buyers</p>
-        <h1 class="display">See the house clearly, and decide without <em>pressure</em>.</h1>
-        <p class="standfirst">Buying a home is a handful of big decisions, most of them on a deadline. I help you see a house for what it really is, act at the right moments, and get to closing without the expensive surprises — with your interests the only ones I'm looking after.</p>
-        <p class="hero-cta"><a class="btn btn-ghost" href="#home-value">Selling a home first? See what it's worth <span class="arw" aria-hidden="true">&#8594;</span></a></p>
+      <div class="cf-copy">
+        
+        <h1>Buy a home in Orlando &amp; Central&nbsp;Florida</h1>
+        <p class="sub"><span class="sub-rule" aria-hidden="true"></span>See the house clearly and decide without pressure. The listing agent works for the seller. I work on your side of the table.</p>
+        <div class="cf-btns">
+          <a class="g-btn" href="#tell-me">Tell me what you&rsquo;re looking for <span aria-hidden="true">&rarr;</span></a>
+          <a class="g-btn ghost" href="search.html">Search homes <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <span class="alt">Not sure where to start? <a href="book.html">Book a 15-minute call</a></span>
       </div>
-      <figure class="hero-figure photo">
-        <img src="assets/buy-hero-porch.jpg" alt="A welcoming covered front porch in warm afternoon light with two cushioned rocking chairs, potted ferns and flowers, and a classic wood front door" width="1800" height="1208">
-      </figure>
     </div>
+  </section>
+  <div class="cf-mob">
+    
+    <p class="cf-mh" aria-hidden="true">Buy a home in Orlando &amp; Central&nbsp;Florida</p>
+    <p class="sub"><span class="sub-rule" aria-hidden="true"></span>See the house clearly and decide without pressure. The listing agent works for the seller. I work on your side of the table.</p>
+    <a class="g-btn" href="#tell-me">Tell me what you&rsquo;re looking for <span aria-hidden="true">&rarr;</span></a>
+    <a class="g-btn ghost" href="search.html">Search homes <span aria-hidden="true">&rarr;</span></a>
+    <span class="alt">Not sure where to start? <a href="book.html">Book a 15-minute call</a></span>
   </div>
 
-  <div class="shell">
+  <section class="g-sec" id="topics">
+    <div class="shell">
+      <div class="g-help-top"><h2 class="g-h">What buyers ask about&nbsp;first</h2></div>
+      <ul class="g-cards">
+        <li class="g-card"><a href="buy-house.html">
+          <div class="ph"><img src="assets/buy-walkthrough.webp" alt="View through an open front door into a bright foyer and living room with tall windows onto palms" width="1200" height="800" loading="lazy" decoding="async"></div>
+          <h3>Finding the right house <span aria-hidden="true">&rarr;</span></h3>
+          <p>Get clear on what you want, then read each house past its listing photos.</p>
+        </a></li>
+        <li class="g-card"><a href="buy-contract.html">
+          <div class="ph"><img src="assets/buy-keys.jpg" alt="A set of house keys with a leather fob on a sunlit stone kitchen counter" width="1200" height="800" loading="lazy" decoding="async"></div>
+          <h3>Offer to keys <span aria-hidden="true">&rarr;</span></h3>
+          <p>The contract deadlines that protect you, and how the deal gets to closing.</p>
+        </a></li>
+        <li class="g-card"><a href="buy-selling-first.html">
+          <div class="ph"><img src="assets/buy-selling-first.webp" alt="A well-kept stucco home with a tile roof, a wood front door and a paver walk lined with flowers" width="1200" height="800" loading="lazy" decoding="async"></div>
+          <h3>Selling first? <span aria-hidden="true">&rarr;</span></h3>
+          <p>See what your current house is worth before you set a budget for the next one.</p>
+        </a></li>
+      </ul>
+    </div>
+  </section>
 
-    <section class="rail">
-      <p class="label">How I work with buyers</p>
+  <section class="g-sec g-band" id="how">
+    <div class="shell">
+      <div class="ph"><img src="assets/home-talk-table.webp" alt="Two coffee cups and a notebook on a wood table by a sunny window with palms outside" width="2000" height="1328" loading="lazy" decoding="async"></div>
       <div>
-        <p><strong>Short answer.</strong> When you buy a home in Central Florida, the listing agent works for the seller, so it helps to have someone on your side of the table. I read the house with you, run the numbers, and negotiate for you. After you are under contract, a transaction coordinator keeps the paperwork and dates moving.</p>
-        <p class="dropcap">When you're buying, the listing agent works for the seller. What you want is someone on the other side of that table, whose only job is you: reading the house, running the numbers, and negotiating on your behalf.</p>
-        <p>That part I do with you directly, from the first showing to the closing table. Once you're under contract, a transaction coordinator keeps the paperwork and the dates moving so nothing slips, and I stay on the parts that call for judgment.</p>
+        <span class="g-kick">How it works</span>
+        <h2 class="g-h">From first talk to the&nbsp;keys.</h2>
+        <ol class="g-steps">
+          <li><b>01</b><span>We talk about how you want to live before we look at a single listing.</span></li>
+          <li><b>02</b><span>We read each house past its photos, so the inspection confirms things instead of surprising you.</span></li>
+          <li><b>03</b><span>I negotiate the price and the terms: repairs, credits, and how much room the dates give you.</span></li>
+          <li><b>04</b><span>Under contract, a transaction coordinator keeps the paperwork and dates moving.</span></li>
+          <li><b>05</b><span>Closing: documents signed, funds moved, and the home is yours.</span></li>
+        </ol>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="rail">
-      <p class="label">Where to start</p>
+  <section class="g-sec" id="relocation-guide">
+    <div class="shell g-split">
+      <figure class="g-split-ph"><img src="assets/buy-neighborhood.webp" alt="A quiet Central Florida street at golden hour, with live oaks and Spanish moss over well-kept homes and a lake at the end of the road" width="1800" height="1207" loading="lazy" decoding="async"></figure>
       <div>
-        <h2>Start with what you actually want</h2>
-        <p>Before we look at a single listing, it's worth getting clear on how you want to live, what you'll trade off, and what you won't. The market has a way of talking people into a house that photographs well and lives badly.</p>
-        <p>Some of the most useful early conversations end with &ldquo;not this one, keep looking.&rdquo; That's a good result. The house you buy because the search felt long is the one you end up regretting.</p>
+        <span class="g-kick">Moving to Orlando?</span>
+        <h2 class="g-h">A guide for buyers relocating to Central&nbsp;Florida.</h2>
+        <p>Neighborhoods, costs, the Florida buying process, and what to expect at closing, written for people moving here from somewhere else.</p>
+        <p style="margin-top:1.6rem"><a class="g-btn" href="assets/orlando-relocation-home-buying-guide.pdf" download>Download the guide (PDF) <span aria-hidden="true">&rarr;</span></a></p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="rail">
-      <p class="label">Seeing it clearly</p>
-      <div>
-        <h2>What the listing doesn't tell you</h2>
-        <p>A listing is a sales document. Part of our job is to read past it &mdash; the condition the photos flatter, the work a house will likely need, and the questions worth asking before you fall for it.</p>
-        <p>We can give you a practical read on what a house looks like it needs and roughly what that tends to cost, so the inspection confirms things instead of blindsiding you. That's process knowledge, not an inspection. For anything structural or technical you want a licensed inspector or engineer, and we'll tell you which one to call.</p>
-      </div>
-    </section>
-
-    <section class="rail" id="home-value">
-      <p class="label">Selling first?</p>
-      <div class="form-panel">
-        <h2>If there's a house to sell first, start with what it's worth</h2>
-        <p>When you already own, the next purchase usually rests on a number you don't have yet: what the current house will bring. Tell me where it is and how to reach you, and you'll see an estimated value, a likely range, and how it's moved, right here on this page. It's a starting point for the budget conversation, not the last word on it.</p>
-
-        <iframe
-            src="https://api.leadconnectorhq.com/widget/form/t6eILwWgsuS8SRZtC6cp"
-            style="width:100%;height:100%;border:none;border-radius:8px"
-            id="inline-t6eILwWgsuS8SRZtC6cp"
-            data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Website — Buy Page Home Value"
-            data-height="900"
-            data-layout-iframe-id="inline-t6eILwWgsuS8SRZtC6cp"
-            data-form-id="t6eILwWgsuS8SRZtC6cp"
-            data-cookie-consent="true"
-            data-cookie-consent-provider="auto"
-            title="Website — Buy Page Home Value"
-        >
-        </iframe>
-        <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-
-        <div class="avm" id="avm" hidden>
-          <p class="avm-status" id="avm-status" role="status" aria-live="polite">Your estimate</p>
-          <form class="avm-confirm" id="avm-confirm" hidden>
-            <label for="avm-address">Confirm the property address to see the estimate</label>
-            <div class="avm-confirm-row">
-              <input id="avm-address" name="address" type="text" autocomplete="street-address" placeholder="Street, city, state, ZIP" required>
-              <button class="btn" type="submit">Show the estimate</button>
-            </div>
-          </form>
-          <div id="avm-widget"></div>
+  <section class="g-sec" id="reviews" style="padding-top:0">
+    <div class="shell">
+      <span class="g-kick">What clients say</span>
+      <div class="g-revs" style="margin-top:0;padding-top:0;border-top:0">
+        <div class="g-revs-top">
+          <p class="g-stars" style="margin:0"><b aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</b>5.0 on Google &middot; 5 reviews</p>
+          <a href="https://www.google.com/maps?cid=14430832077422550720" rel="noopener" target="_blank">Read them on Google</a>
         </div>
-
-        <p class="note-fine avm-disclosure">This is an automated estimate, not an appraisal, powered by RPR (Realtors Property Resource). It's a starting point. The number we'd list at comes from walking the house and reading the sales around it.</p>
+        <ul class="g-quotes">
+          <li><blockquote>&ldquo;He is very knowledgeable and has a variety of helpful resources available to ensure a smooth process. Mike is attentive and responsive. His guidance is helpful and not intrusive. This was our fourth home purchase experience, and by far, the best.&rdquo;</blockquote><cite>Tish S., buyer &middot; Google review</cite></li>
+          <li><blockquote>&ldquo;Michael is great to work with! His expertise in construction is a great tool in his bag to assist buyers look for a property. Would work with him again!&rdquo;</blockquote><cite>Enzo C. &middot; Google review</cite></li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <figure class="band-figure">
-      <img src="assets/buy-interior.jpg" alt="A bright, airy kitchen with an island, warm wood cabinetry and natural light in a well-kept home" width="1600" height="1073">
-    </figure>
-
-    <section class="rail" id="deadlines">
-      <p class="label">The deadlines that matter</p>
+  <section class="g-sec g-dark" id="tell-me">
+    <div class="shell g-write">
       <div>
-        <h2>A contract runs on deadlines, and most of them protect you</h2>
-        <p>Once your offer is accepted, the contract sets a series of deadlines &mdash; dated stretches of time to inspect, verify, renegotiate, or step away without losing your deposit. Each one is leverage while it's open. Each one is also enforceable: once the date passes, that right is generally gone, and a missed deadline can cost you the deposit or the position you were counting on.</p>
-        <p>Keeping track of every one of those dates is its own job, and a real part of the value of having representation. Between me and the transaction coordinator on your file, none of them slips &mdash; so a missed deadline is never the thing that costs you.</p>
-
-        <figure class="plate" style="background:transparent;border:0;padding:0">
-          <ol class="timeline">
-            <li>
-              <span class="step" aria-hidden="true"></span>
-              <div class="body">
-                <span class="when">Offer accepted</span>
-                <h3>The clock starts</h3>
-                <p>Your deposit goes into escrow, and the contract's dates begin counting from here.</p>
-              </div>
-            </li>
-            <li class="mark">
-              <span class="step" aria-hidden="true"></span>
-              <div class="body">
-                <span class="when">The inspection period</span>
-                <h3>Your time to look closely</h3>
-                <p>The stretch to examine the house and, if something turns up, renegotiate or walk away with your deposit intact. It's the most important deadline in the contract, and once it passes it doesn't reopen.</p>
-              </div>
-            </li>
-            <li>
-              <span class="step" aria-hidden="true"></span>
-              <div class="body">
-                <span class="when">Financing and appraisal</span>
-                <h3>The lender's checks</h3>
-                <p>Your loan is underwritten and the home is appraised. Contingencies here protect you if the financing or the value doesn't come together.</p>
-              </div>
-            </li>
-            <li>
-              <span class="step" aria-hidden="true"></span>
-              <div class="body">
-                <span class="when">Final walkthrough</span>
-                <h3>One last look</h3>
-                <p>A chance to confirm the house is in the condition you agreed to, before you sign.</p>
-              </div>
-            </li>
-            <li>
-              <span class="step" aria-hidden="true"></span>
-              <div class="body">
-                <span class="when">Closing</span>
-                <h3>The keys</h3>
-                <p>Documents signed, funds moved, and the home is yours.</p>
-              </div>
-            </li>
-          </ol>
-          <figcaption>The exact deadlines are written into your contract, and Florida's standard forms set specific counts. The point isn't the numbers. It's that each date is enforceable, and once it passes it generally doesn't come back.</figcaption>
-        </figure>
+        <span class="g-kick">Tell me what you&rsquo;re looking for</span>
+        <h2 class="g-h">Start with one&nbsp;conversation.</h2>
+        <p>The areas, the price range, and what matters to you, not a guess at MLS filters. We&rsquo;ll also work out whether it&rsquo;s the right time to be looking. No charge for that, and no pressure to move faster than makes sense.</p>
+        <p style="margin-top:1.6rem"><a class="g-btn ghost" style="color:#F6F1EA;border-color:rgba(246,241,234,.6)" href="tel:+13214885542">Call or text 321-488-5542</a></p>
       </div>
-    </section>
-
-    <section class="rail">
-      <p class="label">Negotiation</p>
-      <div>
-        <h2>A deal you'd make again</h2>
-        <p>Price is one part of it. The rest is the terms &mdash; what gets fixed before closing, what credits change hands, how much room the dates give you. A good outcome is one you'd agree to again knowing what you know now.</p>
-        <p>I'm a certified Real Estate Negotiation Expert, and a fair amount of the work is keeping a deal calm and moving when it would otherwise stall over something small.</p>
-      </div>
-    </section>
-
-    <section class="rail">
-      <p class="label">To closing</p>
-      <div>
-        <h2>Fewer surprises between contract and keys</h2>
-        <p>Most of what goes wrong between contract and closing is a date missed, a document late, or a question raised too close to the end. The transaction coordinator keeps that moving; my part is catching the judgment calls early enough that closing day is quiet, not the day something surprises you.</p>
-        <p>If something does come up, you'll hear it from me early, with what it means and the options in front of you, not the afternoon before closing.</p>
-      </div>
-    </section>
-
-    <section class="rail" id="relocation-guide">
-      <p class="label">Moving to Orlando?</p>
-      <div>
-        <h2>A guide for buyers relocating to Central Florida</h2>
-        <p>Neighborhoods, costs, the Florida buying process and what to expect at closing, written for people making the move from somewhere else.</p>
-        <div class="download">
-          <div class="dl-text">
-            <p class="note-lead">The complete guide</p>
-            <h3>The Orlando Relocation &amp; Home Buying Guide</h3>
-            <p>A PDF to keep or share.</p>
-          </div>
-          <a class="btn" href="assets/orlando-relocation-home-buying-guide.pdf" download>Download the guide (PDF) <span class="arw" aria-hidden="true">&#8594;</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="rail" id="app-note">
-      <p class="label">Look around first</p>
-      <div>
-        <p>If you'd rather browse on your own before we talk, there's a search app branded to Crawford Living that runs on Stellar MLS. <a href="search.html#app">Get the link here</a>. Start searching and saving favorites in the app right away. When it asks for your details, please fill them in so I can see what you like.</p>
-      </div>
-    </section>
-
-    <section class="rail" id="tell-me">
-      <p class="label">Tell me what you're looking for</p>
-      <div class="form-panel">
-        <h2>Start here, and I'll follow up personally</h2>
-        <p>The areas, the price range, and what actually matters to you &mdash; not a guess at MLS filters. We'll use it to get a real sense of what you're after before we ever look at a listing together.</p>
-
+      <div class="formbox">
         <iframe
             src="https://api.leadconnectorhq.com/widget/form/UuJBJMbdkYJ4sQfgAsPr"
             style="width:100%;height:100%;border:none;border-radius:8px"
@@ -379,31 +287,9 @@
         </iframe>
         <script src="https://link.msgsndr.com/js/form_embed.js"></script>
       </div>
-    </section>
-
-  </div>
-
-  <section class="reach" id="contact">
-    <div class="shell">
-      <figure class="reach-figure">
-        <img src="assets/buy-keys.jpg" alt="A set of house keys with a leather fob on a sunlit stone kitchen counter in a bright home">
-      </figure>
-      <div>
-        <p class="label">How this starts</p>
-        <h2>A conversation, before a single showing.</h2>
-        <p>Tell us what you're looking for and where you are in the process. We'll tell you what we'd watch for, and we'll work out whether it's even the right time to be looking. No charge for that, and no pressure to move faster than makes sense.</p>
-      </div>
-      <div class="reach-card">
-        <p class="label">Direct line</p>
-        <p class="lines">
-          <a href="tel:+13214885542">321-488-5542</a><br>
-          <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a>
-        </p>
-        <p class="reach-note">A first conversation, not a commitment.</p>
-      </div>
     </div>
   </section>
-
+  <script>(function(){var m={'#home-value':'buy-selling-first.html#home-value','#deadlines':'buy-contract.html#deadlines','#app-note':'buy-house.html#app-note','#contact':'#tell-me'};var t=m[location.hash];if(t)location.replace(t);})();</script>
 </main>
 
 <footer class="foot">

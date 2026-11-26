@@ -27,24 +27,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/crawford.css">
+<link rel="stylesheet" href="assets/g.css">
 <style>
 /* page-scoped: out-of-state owners landing page (QR target for the PR mail campaign) */
-.checklist{list-style:none;margin:1.8rem 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;max-width:52rem}
-.checklist li{background:var(--surface);padding:1.3rem 1.5rem}
-.checklist .n{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.45rem}
-.checklist strong{display:block;color:var(--ink);margin-bottom:.35rem}
-.checklist p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.55}
-.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin:1.8rem 0 0;max-width:60rem}
-.offers .card{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:var(--r);padding:1.5rem 1.5rem 1.6rem}
-.offers h3{margin:0 0 .5rem}
-.offers p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.55}
-.photo-offer{background:var(--subtle);border-left:4px solid var(--accent);border-radius:0 var(--r) var(--r) 0;padding:1.9rem 2.1rem;margin:2.4rem 0 0;max-width:52rem}
-.photo-offer h3{margin:0 0 .5rem}
-.photo-offer p{margin:0;color:var(--muted)}
-.about-brief p{max-width:44rem}
-@media (max-width:52rem){
-  .checklist,.offers{grid-template-columns:minmax(0,1fr)}
-}
+.oos-facts{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1000px){.oos-facts{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.oos-facts{grid-template-columns:1fr}}
+.oos-who{display:grid;grid-template-columns:7.5rem 1fr;gap:1.4rem;align-items:center;margin:2.4rem 0 0;max-width:44rem}
+.oos-who img{width:7.5rem;height:7.5rem;object-fit:cover;object-position:center 25%;border-radius:50%;display:block}
+.oos-who p{margin:0;font-size:1rem;line-height:1.6;color:#2b3240}
+@media (max-width:520px){.oos-who{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -84,70 +76,74 @@
 
 <main id="main">
 
-  <div class="hero on-dark">
+  <section class="cf cf-panel cf-sm">
+    <img class="cf-bg" src="assets/probate-hero-home.webp" alt="A well-kept single-story Central Florida home in warm afternoon light, with a paver walkway and tidy landscaping" width="1400" height="940" fetchpriority="high" decoding="async">
     <div class="shell">
-      <div>
-        <p class="kicker">For families who live out of state</p>
-        <h1 class="display">Your eyes and hands in <em>Central Florida</em>.</h1>
-        <p class="standfirst">When you're responsible for a family home from hundreds of miles away, the small things pile up fast. You don't have to decide anything today about the house. Getting it looked after is a good place to start.</p>
-        <div class="hero-cta">
-          <a class="btn" href="#reach-out">Request a free photo check <span class="arw" aria-hidden="true">&#8594;</span></a>
-          <a class="btn btn-ghost" href="tel:+13214885542">Call 321-488-5542</a>
+      <div class="cf-copy">
+        <h1>Your eyes and hands in Central&nbsp;Florida.</h1>
+        <p class="sub"><span class="sub-rule" aria-hidden="true"></span>Responsible for a family home from out of state? You don&rsquo;t have to decide anything about the house today. Getting it looked after is a good place to start.</p>
+        <div class="cf-btns">
+          <a class="g-btn" href="#reach-out">Request a free photo check <span aria-hidden="true">&rarr;</span></a>
+          <a class="g-btn ghost" href="tel:+13214885542">Call 321-488-5542</a>
         </div>
+        <span class="alt">No charge for the conversation, and nothing attached to it.</span>
       </div>
-      <figure class="hero-figure photo">
-        <img src="assets/probate-hero-home.webp" alt="A well-kept single-story Central Florida home in warm afternoon light, with a paver walkway and tidy landscaping" width="1400" height="940" fetchpriority="high" decoding="async">
-      </figure>
     </div>
+  </section>
+  <div class="cf-mob">
+    <p class="cf-mh" aria-hidden="true">Your eyes and hands in Central&nbsp;Florida.</p>
+    <p class="sub"><span class="sub-rule" aria-hidden="true"></span>Responsible for a family home from out of state? You don&rsquo;t have to decide anything about the house today. Getting it looked after is a good place to start.</p>
+    <a class="g-btn" href="#reach-out">Request a free photo check <span aria-hidden="true">&rarr;</span></a>
+    <a class="g-btn ghost" href="tel:+13214885542">Call 321-488-5542</a>
+    <span class="alt">No charge for the conversation, and nothing attached to it.</span>
   </div>
 
-  <div class="shell">
+  <section class="g-sec" id="checklist">
+    <div class="shell">
+      <span class="g-kick">The out-of-state checklist</span>
+      <h2 class="g-h">Four questions worth answering&nbsp;early.</h2>
+      <p class="g-lede">Most take a phone call to settle. Left alone, any one of them can get expensive.</p>
+      <dl class="g-facts oos-facts">
+        <div><dt>Insurance</dt><dd>Many policies limit coverage once a home sits vacant 30 to 60 days. Call the insurer and ask.</dd></div>
+        <div><dt>Security</dt><dd>Mail piling up and an overgrown yard show a house is empty. A regular check keeps small problems small.</dd></div>
+        <div><dt>Storm season</dt><dd>June through November, someone local should be able to secure shutters, clear gutters, and check for damage afterward.</dd></div>
+        <div><dt>Bills</dt><dd>Keep power and water on so the house stays dry and cool, and keep taxes and HOA dues from lapsing.</dd></div>
+      </dl>
+    </div>
+  </section>
 
-    <section class="rail" id="checklist">
-      <p class="label">The out-of-state checklist</p>
+  <section class="g-sec" id="help" style="padding-top:0">
+    <div class="shell g-split">
+      <figure class="g-split-ph"><img src="assets/oos-entry-keys.webp" alt="A sunlit front entry with a wood console table, yellow flowers, a potted palm and a set of house keys" width="1800" height="1207" loading="lazy" decoding="async"></figure>
       <div>
-        <h2>Four questions worth answering early</h2>
-        <p>Most of these take a phone call to settle. Left alone, any one of them can get expensive.</p>
-        <ul class="checklist">
-          <li><span class="n">01 · Insurance</span><strong>Does the policy still fit an empty house?</strong><p>Many homeowners policies limit coverage once a home has been vacant 30 to 60 days. Call the insurer and ask.</p></li>
-          <li><span class="n">02 · Security</span><strong>Who's checking on it?</strong><p>An empty house shows it: mail piling up, an overgrown yard, no lights at night. A regular check keeps small problems small.</p></li>
-          <li><span class="n">03 · Weather</span><strong>Is it ready for storm season?</strong><p>June through November, someone local should be able to secure shutters, clear gutters, and look for damage afterward.</p></li>
-          <li><span class="n">04 · Bills</span><strong>Are the utilities, taxes, and HOA dues covered?</strong><p>Keep power and water on so the house stays dry and cool, and make sure nothing lapses while the family decides.</p></li>
+        <span class="g-kick">How I can help</span>
+        <h2 class="g-h">Practical help now, options when you&rsquo;re&nbsp;ready.</h2>
+        <ul class="g-ticks">
+          <li><b>Property checks:</b> dated photos of the outside, and the inside when you can arrange access.</li>
+          <li><b>Local vendors:</b> locksmith, lawn care, cleanout, estate sale, handyman. I can meet them on site.</li>
+          <li><b>Value and options:</b> what the home is worth, and what keeping, renting, or selling it looks like, as-is or after some work.</li>
         </ul>
       </div>
-    </section>
-
-    <section class="rail" id="help">
-      <p class="label">How I can help</p>
-      <div>
-        <h2>Practical help now, and options when you're ready</h2>
-        <div class="offers">
-          <div class="card"><h3>Property checks</h3><p>Dated photos of the outside, and the inside when you can arrange access, so you know how the house is actually doing.</p></div>
-          <div class="card"><h3>Trusted local vendors</h3><p>Locksmith, lawn care, cleanout, estate sale, handyman. People I'd send to my own family's house, and I can meet them on site.</p></div>
-          <div class="card"><h3>Value and options</h3><p>An honest read on what the home is worth and what each path looks like: keeping it, renting it, or selling it, as-is or after some work.</p></div>
-        </div>
-        <div class="photo-offer">
-          <h3>A free photo check, with nothing asked in return</h3>
-          <p>I'll drive by the house and send you dated photos of the roof line, yard, doors, and windows, and flag anything that looks off. It's the easiest way to see whether I'm someone you'd want to work with.</p>
-        </div>
+    </div>
+    <div class="shell">
+      <p class="g-aside"><b>A free photo check, with nothing asked in return.</b> I&rsquo;ll drive by and send you dated photos of the roof line, yard, doors, and windows, and flag anything that looks off.</p>
+      <div class="oos-who" id="about">
+        <img src="assets/mike-crawford.jpg" alt="Michael &quot;Mike&quot; Crawford" width="896" height="1088" loading="lazy" decoding="async">
+        <p><b>Michael &ldquo;Mike&rdquo; Crawford, RENE, CPRES.</b> A licensed Central Florida broker for more than 20 years, with years spent coordinating new-home construction. That&rsquo;s process knowledge, not an inspection: anything structural goes to a licensed inspector or engineer, and anything legal belongs with your attorney.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="rail about-brief" id="about">
-      <p class="label">Who I am</p>
+  <section class="g-sec g-dark" id="reach-out">
+    <div class="shell g-write">
       <div>
-        <h2>Michael "Mike" Crawford, RENE, CPRES</h2>
-        <p>I've been a licensed real estate broker in Central Florida for more than 20 years. I hold the Certified Probate Real Estate Specialist (CPRES) and Real Estate Negotiation Expert (RENE) designations, and I spent years coordinating new-home construction, so I know what a house needs and roughly what that tends to cost.</p>
-        <p>That's process knowledge, not an inspection. Anything structural goes to a licensed inspector or engineer. And anything legal belongs with your attorney; I'm always glad to work alongside them.</p>
+        <span class="g-kick">Reach out</span>
+        <h2 class="g-h">Tell me about the house, or ask a&nbsp;question.</h2>
+        <p>Share as much or as little as you like. For the free photo check, include the property address and the best way to send the photos.</p>
+        <p>Prefer to talk? Call, text, or email <a href="mailto:mdc@crawfordliving.com" style="color:inherit">mdc@crawfordliving.com</a>, whichever is easiest.</p>
+        <p style="margin-top:1.6rem"><a class="g-btn ghost" style="color:#F6F1EA;border-color:rgba(246,241,234,.6)" href="tel:+13214885542">Call or text 321-488-5542</a></p>
       </div>
-    </section>
-
-    <section class="rail" id="reach-out">
-      <p class="label">Reach out</p>
-      <div class="form-panel">
-        <h2>Tell me about the house, or just ask a question</h2>
-        <p>Share as much or as little as you like. If you'd like the free photo check, include the property address and the best way to send the photos.</p>
-
+      <div class="formbox">
         <!-- GHL form: "Website — Out-of-State Owners Page". Workflow "OOS PR - Form Response" tags oos-pr + oos-responded, moves to Responded, emails Mike. -->
         <iframe
             src="https://api.leadconnectorhq.com/widget/form/hxkIfPdhZTpT6b3dkKYn"
@@ -170,28 +166,6 @@
         >
         </iframe>
         <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-      </div>
-    </section>
-
-  </div>
-
-  <section class="reach" id="contact">
-    <div class="shell">
-      <figure class="reach-figure">
-        <img src="assets/probate-table.jpg" alt="Two cups of coffee and a vase of wildflowers on a wooden table in a sunlit kitchen nook">
-      </figure>
-      <div>
-        <p class="label">Prefer to talk?</p>
-        <h2>A short call is usually enough to start.</h2>
-        <p>Tell me where things stand and I'll tell you what to expect. No charge for that conversation, and nothing attached to it. If the timing isn't right yet, that's a perfectly good answer.</p>
-      </div>
-      <div class="reach-card">
-        <p class="label">Direct line</p>
-        <p class="lines">
-          <a href="tel:+13214885542">321-488-5542</a><br>
-          <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a>
-        </p>
-        <p class="reach-note">Call, text, or email, whichever is easiest.</p>
       </div>
     </div>
   </section>

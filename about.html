@@ -34,6 +34,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/crawford.css">
+<link rel="stylesheet" href="assets/g.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -85,6 +86,16 @@
   ]
 }
 </script>
+<style>
+.ab-note{padding-top:clamp(3rem,6vw,5rem)}
+.ab-note h1.g-h{font-size:clamp(2rem,3.6vw,3rem)}
+.ab-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:clamp(3rem,6vw,4.5rem) 0 0}
+.ab-facts div{background:var(--surface);border-radius:6px;padding:1.3rem 1.2rem;border:1px solid rgba(26,32,44,.1)}
+.ab-facts dt{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:#6b5a45;margin:0 0 .5rem}
+.ab-facts dd{margin:0;font-size:1.02rem;line-height:1.5;color:var(--ink)}
+@media (max-width:900px){.ab-facts{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.ab-facts{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 
@@ -123,152 +134,75 @@
 
 <main id="main">
 
-  <div class="hero with-portrait on-dark">
+  <section class="g-note ab-note" id="meet-mike">
     <div class="shell">
-      <div>
-        <p class="kicker">About</p>
-        <h1 class="display">Twenty-two years, and I still don't rush anyone into a decision.</h1>
-        <p class="standfirst">I've been a licensed Florida broker since 2004, working Central Florida. RENE and CPRES-certified.</p>
-      </div>
-      <figure class="portrait">
-        <img src="assets/mike-crawford.jpg" alt="Michael Crawford" width="896" height="1088">
-        <figcaption>Michael "Mike" Crawford<br>Florida Broker</figcaption>
-      </figure>
-    </div>
-  </div>
-
-  <div class="shell">
-
-    <div class="spread">
-      <div>
-        <p>I've spent over twenty years doing this, and the parts of the job that matter haven't changed: reading a contract carefully, not letting anyone get rushed into a decision, and staying reachable when something needs an answer. I hold the RENE and CPRES certifications, which both come down to the same thing — helping people who don't fully agree with each other get to a decision they can live with.</p>
-        <p>One more thing I bring: I came into real estate already knee-deep in residential construction — coordinating trades, holding subcontractors to dates — which is still useful on a house that needs work. I'm not the one doing that work myself, though: for anything technical, you want a licensed inspector or engineer, and I'll tell you exactly who to call.</p>
-      </div>
-      <div>
-        <dl class="facts">
-          <dt>Licensed</dt>
-          <dd>Florida broker since 2004</dd>
-          <dt>Certifications</dt>
-          <dd>RENE, CPRES</dd>
-          <dt>Construction background</dt>
-          <dd>Coordinating residential construction</dd>
-          <dt>Brokerage</dt>
-          <dd>Crawford Living Realty, LLC</dd>
-        </dl>
-      </div>
-    </div>
-
-    <section class="rail">
-      <p class="label">Considered</p>
-      <div>
-        <div class="pull">
-          <p>Real Estate . . . <em>Considered</em> is meant literally. Most of the decisions in this business are better for being slept on, and very little of what we do benefits from being rushed.</p>
+      <div class="g-note-grid">
+        <figure class="g-note-ph"><img src="assets/mike-crawford.jpg" alt="Michael &quot;Mike&quot; Crawford, broker and owner of Crawford Living Realty" width="896" height="1088" fetchpriority="high" decoding="async"></figure>
+        <div class="g-note-copy">
+          <span class="g-kick">About</span>
+          <h1 class="g-h">Twenty-two years, and I still don&rsquo;t rush anyone into a&nbsp;decision.</h1>
+          <p class="lede">I&rsquo;m Michael &ldquo;Mike&rdquo; Crawford. I&rsquo;ve been a licensed Florida broker since 2004, working Central Florida.</p>
+          <p>The parts of the job that matter haven&rsquo;t changed: reading a contract carefully, not letting anyone get rushed, and staying reachable when something needs an answer.</p>
+          <p>I hold the RENE and CPRES certifications. Both come down to the same thing: helping people who don&rsquo;t fully agree get to a decision they can live with.</p>
+          <div class="g-note-sign"><img src="assets/email/signature-michael.png" alt="Michael" width="368" height="173" loading="lazy"><span>Broker &amp; owner,<br>Crawford Living Realty</span></div>
+          <div class="row">
+            <a class="g-btn" href="tel:+13214885542">Call or text 321-488-5542</a>
+            <a class="g-btn ghost" href="book.html">Book a 15-minute call <span aria-hidden="true">&rarr;</span></a>
+          </div>
         </div>
       </div>
-    </section>
+      <dl class="ab-facts">
+        <div><dt>Licensed</dt><dd>Florida broker since 2004</dd></div>
+        <div><dt>Certifications</dt><dd>RENE, CPRES</dd></div>
+        <div><dt>Construction background</dt><dd>Coordinating residential construction</dd></div>
+        <div><dt>Brokerage</dt><dd>Crawford Living Realty, LLC</dd></div>
+      </dl>
+    </div>
+  </section>
 
-    <figure class="hero-figure photo" style="margin:0 0 clamp(3rem,6vw,4.5rem)">
-      <img src="assets/about-exterior.jpg" alt="A well-kept single-story Central Florida home in warm afternoon light, with a paver walkway and tidy landscaping" width="1264" height="848">
-    </figure>
-
-    <section class="rail">
-      <p class="label">Where I work</p>
+  <section class="g-sec" id="construction">
+    <div class="shell g-split">
+      <figure class="g-split-ph"><img src="assets/about-exterior.jpg" alt="A well-kept single-story Central Florida home in warm afternoon light, with a paver walkway and tidy landscaping" width="1264" height="848" loading="lazy" decoding="async"></figure>
       <div>
-        <p>Central Florida — Orlando and the communities around it. That's a deliberate boundary. Local knowledge stops being worth much when it's stretched too thin.</p>
-        <p>All five sit inside Stellar MLS, so the whole footprint is one market to work rather than five separate ones.</p>
-        <figure class="plate">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 480" role="img" aria-labelledby="map-t map-d">
-            <title id="map-t">The five Central Florida counties served</title>
-            <desc id="map-d">A simplified map, traced from actual county boundaries, showing Lake to the west, Volusia to the northeast on the Atlantic coast, Seminole above Orange in the centre, and Osceola to the south. Orlando is marked in Orange County.</desc>
-
-            <defs>
-              <clipPath id="county-clip">
-                <path d="M96.2 269.9 L66.0 266.8 L40.0 270.3 L40.8 169.0 L40.6 139.4 L61.4 139.5 L61.6 139.2 L95.9 139.4 L99.6 117.5 L99.3 102.9 L99.1 72.0 L104.6 87.7 L119.8 93.3 L125.2 110.1 L152.8 134.3 L150.5 156.6 L150.5 156.8 L150.5 157.2 L150.6 157.6 L150.5 157.9 L150.2 158.0 L150.0 158.5 L149.5 158.8 L149.3 158.6 L148.8 159.5 L149.0 160.0 L141.6 176.7 L108.2 176.5 L102.3 176.5 L96.0 198.5 L96.2 226.1 Z"/>
-                <path d="M179.8 173.0 L182.6 175.1 L184.9 174.0 L185.7 177.4 L199.3 167.4 L221.5 213.3 L158.0 213.9 L157.8 213.7 L157.7 207.7 L157.2 207.7 L152.2 207.7 L150.8 207.5 L133.5 207.5 L133.2 207.5 L133.1 206.6 L141.6 176.7 L149.0 160.0 L148.8 159.5 L149.3 158.6 L149.5 158.8 L150.0 158.5 L150.2 158.0 L150.5 157.9 L150.6 157.6 L150.5 157.2 L150.5 156.8 L150.5 156.6 L172.4 166.5 L176.1 166.6 L176.9 166.6 L177.4 167.8 L177.1 168.8 L178.7 170.4 L178.7 171.7 Z"/>
-                <path d="M96.2 226.1 L96.0 198.5 L102.3 176.5 L108.2 176.5 L141.6 176.7 L133.1 206.6 L133.2 207.5 L133.5 207.5 L150.8 207.5 L152.2 207.7 L157.2 207.7 L157.7 207.7 L157.8 213.7 L158.0 213.9 L221.5 213.3 L241.4 236.6 L244.8 269.9 L161.2 269.7 L123.0 269.9 L119.6 269.9 L96.2 269.9 Z"/>
-                <path d="M244.8 269.9 L243.7 381.6 L242.9 420.0 L192.5 419.8 L194.5 418.5 L180.2 381.9 L162.7 373.2 L161.4 360.5 L148.3 341.3 L148.9 325.7 L134.0 325.7 L133.9 313.4 L121.1 313.4 L121.1 301.0 L116.0 290.8 L96.2 288.6 L96.2 269.9 L119.6 269.9 L123.0 269.9 L161.2 269.7 Z"/>
-                <path d="M185.7 177.4 L184.9 174.0 L182.6 175.1 L179.8 173.0 L178.7 171.7 L178.7 170.4 L177.1 168.8 L177.4 167.8 L176.9 166.6 L176.1 166.6 L172.4 166.5 L150.5 156.6 L152.8 134.3 L125.2 110.1 L119.8 93.3 L104.6 87.7 L99.1 72.0 L97.8 69.1 L96.5 67.1 L94.2 66.7 L92.8 64.8 L91.8 61.9 L114.2 56.0 L118.0 55.0 L121.5 53.8 L122.2 53.9 L124.1 53.3 L134.8 50.3 L137.9 46.1 L141.1 75.3 L191.1 74.3 L190.0 43.4 L200.1 40.0 L210.4 65.4 L220.0 87.1 L225.5 99.4 L229.5 107.3 L236.5 117.2 L239.0 123.2 L241.9 128.7 L259.0 157.5 L269.2 175.4 L225.1 175.6 L225.8 213.3 L221.5 213.3 L199.3 167.4 Z"/>
-              </clipPath>
-            </defs>
-
-            <g font-family="'Archivo',sans-serif">
-
-              <!-- Atlantic -->
-              <g stroke="#5E6470" stroke-width="1.2" fill="none" opacity=".45" stroke-linecap="round">
-                <path d="M320 62 q10 -7 20 0 t20 0"/>
-                <path d="M312 92 q10 -7 20 0 t20 0"/>
-                <path d="M300 122 q10 -7 20 0 t20 0"/>
-                <path d="M292 152 q10 -7 20 0 t20 0"/>
-              </g>
-              <text x="370" y="196" text-anchor="end" font-size="11" letter-spacing="2.4" fill="#5E6470" opacity=".65">ATLANTIC</text>
-
-              <!-- terrain illustration, masked to the real county outlines -->
-              <image href="assets/county-map-texture.jpg" x="18" y="28" width="256" height="404" preserveAspectRatio="xMidYMid slice" clip-path="url(#county-clip)"/>
-
-              <g fill="none" stroke="#1A202C" stroke-width="1.8" stroke-linejoin="round">
-                <path d="M96.2 269.9 L66.0 266.8 L40.0 270.3 L40.8 169.0 L40.6 139.4 L61.4 139.5 L61.6 139.2 L95.9 139.4 L99.6 117.5 L99.3 102.9 L99.1 72.0 L104.6 87.7 L119.8 93.3 L125.2 110.1 L152.8 134.3 L150.5 156.6 L150.5 156.8 L150.5 157.2 L150.6 157.6 L150.5 157.9 L150.2 158.0 L150.0 158.5 L149.5 158.8 L149.3 158.6 L148.8 159.5 L149.0 160.0 L141.6 176.7 L108.2 176.5 L102.3 176.5 L96.0 198.5 L96.2 226.1 Z"/>
-                <path d="M179.8 173.0 L182.6 175.1 L184.9 174.0 L185.7 177.4 L199.3 167.4 L221.5 213.3 L158.0 213.9 L157.8 213.7 L157.7 207.7 L157.2 207.7 L152.2 207.7 L150.8 207.5 L133.5 207.5 L133.2 207.5 L133.1 206.6 L141.6 176.7 L149.0 160.0 L148.8 159.5 L149.3 158.6 L149.5 158.8 L150.0 158.5 L150.2 158.0 L150.5 157.9 L150.6 157.6 L150.5 157.2 L150.5 156.8 L150.5 156.6 L172.4 166.5 L176.1 166.6 L176.9 166.6 L177.4 167.8 L177.1 168.8 L178.7 170.4 L178.7 171.7 Z"/>
-                <path d="M96.2 226.1 L96.0 198.5 L102.3 176.5 L108.2 176.5 L141.6 176.7 L133.1 206.6 L133.2 207.5 L133.5 207.5 L150.8 207.5 L152.2 207.7 L157.2 207.7 L157.7 207.7 L157.8 213.7 L158.0 213.9 L221.5 213.3 L241.4 236.6 L244.8 269.9 L161.2 269.7 L123.0 269.9 L119.6 269.9 L96.2 269.9 Z"/>
-                <path d="M244.8 269.9 L243.7 381.6 L242.9 420.0 L192.5 419.8 L194.5 418.5 L180.2 381.9 L162.7 373.2 L161.4 360.5 L148.3 341.3 L148.9 325.7 L134.0 325.7 L133.9 313.4 L121.1 313.4 L121.1 301.0 L116.0 290.8 L96.2 288.6 L96.2 269.9 L119.6 269.9 L123.0 269.9 L161.2 269.7 Z"/>
-                <path d="M185.7 177.4 L184.9 174.0 L182.6 175.1 L179.8 173.0 L178.7 171.7 L178.7 170.4 L177.1 168.8 L177.4 167.8 L176.9 166.6 L176.1 166.6 L172.4 166.5 L150.5 156.6 L152.8 134.3 L125.2 110.1 L119.8 93.3 L104.6 87.7 L99.1 72.0 L97.8 69.1 L96.5 67.1 L94.2 66.7 L92.8 64.8 L91.8 61.9 L114.2 56.0 L118.0 55.0 L121.5 53.8 L122.2 53.9 L124.1 53.3 L134.8 50.3 L137.9 46.1 L141.1 75.3 L191.1 74.3 L190.0 43.4 L200.1 40.0 L210.4 65.4 L220.0 87.1 L225.5 99.4 L229.5 107.3 L236.5 117.2 L239.0 123.2 L241.9 128.7 L259.0 157.5 L269.2 175.4 L225.1 175.6 L225.8 213.3 L221.5 213.3 L199.3 167.4 Z"/>
-              </g>
-
-              <g font-size="15" font-weight="700" letter-spacing="2.6" fill="#1A202C" text-anchor="middle" stroke="#FAF9F6" stroke-width="4" stroke-linejoin="round" paint-order="stroke fill">
-                <text x="86" y="186">LAKE</text>
-                <text x="185" y="123">VOLUSIA</text>
-                <text x="174" y="195">SEMINOLE</text>
-                <text x="200" y="255">ORANGE</text>
-                <text x="192" y="335">OSCEOLA</text>
-              </g>
-
-              <!-- Orlando -->
-              <g>
-                <circle cx="148.3" cy="229.2" r="12" fill="none" stroke="#A8813C" stroke-width="1.6" opacity=".9"/>
-                <circle cx="148.3" cy="229.2" r="4.6" fill="#A8813C" stroke="#FAF9F6" stroke-width="1.2"/>
-                <text x="168.3" y="234.2" font-size="13.5" fill="#1A202C" font-style="italic" font-family="Archivo,sans-serif" stroke="#FAF9F6" stroke-width="4" stroke-linejoin="round" paint-order="stroke fill">Orlando</text>
-              </g>
-
-              <!-- compass -->
-              <g transform="translate(500,410)" stroke="#5E6470" fill="#5E6470">
-                <path d="M0 -26 L6 0 L0 -6 L-6 0 Z" stroke-width="1"/>
-                <text x="0" y="18" font-size="11" letter-spacing="1.6" text-anchor="middle" stroke="none">N</text>
-              </g>
-            </g>
-          </svg>
-          <figcaption>The five counties served, traced from actual county boundaries. Not a survey map — labels are positioned for clarity.</figcaption>
-        </figure>
+        <span class="g-kick">The construction side</span>
+        <h2 class="g-h">Useful on a house that needs&nbsp;work.</h2>
+        <p>I came into real estate already knee-deep in residential construction: coordinating trades and holding subcontractors to dates. That still helps on a house that needs work.</p>
+        <p>I&rsquo;m not the one doing that work, though. That&rsquo;s process knowledge, not structural expertise. For anything technical, you want a licensed inspector or engineer, and I&rsquo;ll tell you who to call.</p>
+        <p style="margin-top:1.6rem"><a class="g-btn ghost" href="new-construction.html">Buying new construction <span aria-hidden="true">&rarr;</span></a></p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="rail">
-      <p class="label">The name</p>
+  <section class="g-sec g-band" id="considered">
+    <div class="shell">
+      <div class="ph"><img src="assets/about-reach.jpg" alt="A leather portfolio, a pen and a cup of coffee on a wooden table in warm afternoon light" width="1264" height="848" loading="lazy" decoding="async"></div>
       <div>
-        <p>Crawford Living covers all of it under one name: probate and estate work, ordinary resale, and new construction. It isn't a niche brand pretending the rest doesn't exist.</p>
-        <p>Whichever one someone comes in through, the same broker and the same standard are on the other end.</p>
+        <span class="g-kick">Real Estate&nbsp;.&nbsp;.&nbsp;. <em>Considered</em></span>
+        <h2 class="g-h">Meant&nbsp;literally.</h2>
+        <ol class="g-steps">
+          <li><b>01</b><span>Most decisions in this business are better for being slept on. Very little benefits from being rushed.</span></li>
+          <li><b>02</b><span>Central Florida by choice: Orange, Seminole, Osceola, Lake and Volusia. All five sit inside Stellar MLS, so it&rsquo;s one market to work.</span></li>
+          <li><b>03</b><span>One name for all of it: probate and estate work, ordinary resale, and new construction. Whichever you come in through, the same standard applies.</span></li>
+        </ol>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="rail">
-      <p class="label">Elsewhere online</p>
+  <section class="g-sec tight" id="elsewhere">
+    <div class="shell">
+      <p class="g-more" style="margin-top:0">Also online, same name and license numbers: <a href="https://g.page/r/CcBeFQxRnUTIEBM" rel="noopener">Google reviews</a> <a href="https://www.youtube.com/@CrawfordLivingRealty" rel="noopener">YouTube</a> <a href="https://www.linkedin.com/in/flarealestate" rel="noopener">LinkedIn</a> <a href="https://www.realtor.com/realestateagents/62fbd5b912fbccb976e5a8d4" rel="noopener">Realtor.com</a> <a href="https://www.zillow.com/profile/mcrawford6060" rel="noopener">Zillow</a> <a href="https://www.facebook.com/CrawfordLivingRealty" rel="noopener">Facebook</a> <a href="https://www.instagram.com/flarealtormike/" rel="noopener">Instagram</a></p>
+    </div>
+  </section>
+
+  <section class="g-sec g-dark" id="get-in-touch">
+    <div class="shell g-write">
       <div>
-        <p>Crawford Living Realty, LLC and Michael "Mike" Crawford also appear in these places, all with the same name and license numbers as this site:</p>
-        <ul>
-          <li><a href="https://g.page/r/CcBeFQxRnUTIEBM" rel="noopener">Google Business Profile and reviews</a></li>
-          <li><a href="https://www.youtube.com/@CrawfordLivingRealty" rel="noopener">YouTube: neighborhood guides and buying and selling explainers</a></li>
-          <li><a href="https://www.linkedin.com/in/flarealestate" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://www.realtor.com/realestateagents/62fbd5b912fbccb976e5a8d4" rel="noopener">Realtor.com</a></li>
-          <li><a href="https://www.zillow.com/profile/mcrawford6060" rel="noopener">Zillow</a></li>
-          <li><a href="https://www.facebook.com/CrawfordLivingRealty" rel="noopener">Facebook</a> and <a href="https://www.instagram.com/flarealtormike/" rel="noopener">Instagram</a></li>
-        </ul>
+        <span class="g-kick">Get in touch</span>
+        <h2 class="g-h">One message, and we&rsquo;ll take it from&nbsp;there.</h2>
+        <p>Buying, selling, an estate, new construction, or something you&rsquo;re not sure how to categorize yet. Tell me what&rsquo;s going on and I&rsquo;ll follow up personally.</p>
+        <p style="margin-top:1.6rem"><a class="g-btn ghost" style="color:#F6F1EA;border-color:rgba(246,241,234,.6)" href="tel:+13214885542">Call or text 321-488-5542</a></p>
       </div>
-    </section>
-
-    <section class="rail" id="get-in-touch">
-      <p class="label">Get in touch</p>
-      <div class="form-panel">
-        <h2>One message, and we'll take it from there.</h2>
-        <p>Buying, selling, an estate, new construction, or something you're not sure how to categorize yet &mdash; tell me what's going on and I'll follow up personally.</p>
-
+      <div class="formbox">
         <iframe
             src="https://api.leadconnectorhq.com/widget/form/wcqmu13z7Z5rjuayJKA9"
             style="width:100%;height:100%;border:none;border-radius:8px"
@@ -290,28 +224,6 @@
         >
         </iframe>
         <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-      </div>
-    </section>
-
-  </div>
-
-  <section class="reach">
-    <div class="shell">
-      <figure class="reach-figure">
-        <img src="assets/about-reach.jpg" alt="A leather portfolio, a pen and a cup of coffee on a wooden table in warm afternoon light" width="1264" height="848">
-      </figure>
-      <div>
-        <p class="label">Getting in touch</p>
-        <h2>You'll hear from me.</h2>
-        <p>Send the form above, or call or email &mdash; either way, I'll follow up personally.</p>
-      </div>
-      <div class="reach-card">
-        <p class="label">Direct line</p>
-        <p class="lines">
-          <a href="tel:+13214885542">321-488-5542</a><br>
-          <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a>
-        </p>
-        <p class="reach-note">Both get a personal response.</p>
       </div>
     </div>
   </section>
