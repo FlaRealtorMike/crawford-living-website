@@ -167,3 +167,16 @@
 .tl.vert .tl-track li::before{top:.1rem;left:0}
 @media (prefers-reduced-motion:no-preference){.anim .tl.vert .tl-track::before{transform:scaleY(0);transform-origin:center top}.anim .tl.vert.in .tl-track::before{transform:none}}
 @media (max-width:760px){.cl-next-grid{grid-template-columns:1fr}}
+/* community heroes (photo-led) */
+.cf-cap{position:absolute;right:1rem;bottom:.8rem;margin:0;font-size:.72rem;letter-spacing:.04em;color:rgba(255,255,255,.92);text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.cf-kick{display:block;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#6b5a45;margin:0 0 .8rem}
+.cf-kick a{color:inherit;text-decoration:none}
+@media (max-width:860px){.cf-cap{display:none}}
+.hs.three{grid-template-columns:repeat(3,1fr)}
+@media (max-width:980px){.hs.three{grid-template-columns:1fr 1fr 1fr}}
+@media (max-width:760px){.hs.three{grid-template-columns:1fr}}
+.tl.five .tl-track{grid-template-columns:repeat(5,1fr)}
+@media (max-width:860px){.tl.five .tl-track{grid-template-columns:1fr}}
+.hs.four{grid-template-columns:repeat(4,1fr)}
+@media (max-width:980px){.hs.four{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.hs.four{grid-template-columns:1fr}}
