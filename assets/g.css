@@ -23,7 +23,7 @@ body{background:var(--linen)}
 .cf .alt,.cf-mob .alt{display:block;margin-top:1rem;font-size:.94rem;color:#3a4150}
 .cf .alt a,.cf-mob .alt a{color:var(--ink);text-underline-offset:3px}
 .cf-mob{display:none}
-.cf-rate{display:inline-flex;align-items:center;gap:.5rem;margin:0 0 1.4rem;font-size:.92rem;font-weight:600;color:var(--ink);text-decoration:none;letter-spacing:.02em}
+.cf-rate{display:inline-flex;align-items:center;gap:.5rem;margin:-.3rem 0 1.2rem;font-size:.92rem;font-weight:600;color:var(--ink);text-decoration:none;letter-spacing:.02em}
 .cf-rate b{color:#8E6C2E;letter-spacing:.1em;font-size:.95rem}
 .cf-rate:hover span{text-decoration:underline;text-underline-offset:3px}
 .cf-mob .cf-rate{margin:0 0 1rem}
