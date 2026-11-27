@@ -153,3 +153,17 @@
   .head,.foot,.mbar,.rm-side,.pv-intro .pv-ph,.rm-acts,.rm-back,.skip{display:none!important}
   body{background:#fff}.rm-card{box-shadow:none;border:0;padding:0}
 }
+/* ── older-style pages (county guides, articles): next-step cards + vertical timeline ── */
+:root{--sand:#EFE6DA;--linen:#F6F1EA;--wall:#E9DDCB}
+.cl-next-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;list-style:none;margin:0;padding:0}
+.cl-next-grid a{display:flex;flex-direction:column;height:100%;text-decoration:none;color:var(--ink);background:var(--sand);border-radius:6px;padding:1.3rem 1.2rem 1.2rem;border:1.5px solid transparent;transition:border-color .2s,transform .2s}
+.cl-next-grid a:hover{border-color:var(--ink);transform:translateY(-2px);color:var(--ink)}
+.cl-next-grid b{font-size:1.08rem;line-height:1.25;margin-bottom:.4rem}
+.cl-next-grid span{font-size:.94rem;line-height:1.5;color:#2b3240;flex:1}
+.cl-next-grid em{font-style:normal;font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin-top:.9rem}
+.tl.vert .tl-track{grid-template-columns:1fr}
+.tl.vert .tl-track::before{left:.5rem;right:auto;top:0;bottom:0;width:2px;height:auto}
+.tl.vert .tl-track li{padding:0 0 1.5rem 2.4rem}
+.tl.vert .tl-track li::before{top:.1rem;left:0}
+@media (prefers-reduced-motion:no-preference){.anim .tl.vert .tl-track::before{transform:scaleY(0);transform-origin:center top}.anim .tl.vert.in .tl-track::before{transform:none}}
+@media (max-width:760px){.cl-next-grid{grid-template-columns:1fr}}
