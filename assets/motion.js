@@ -1,4 +1,4 @@
-/* Preview only: reveal the timeline and step cards once, when they scroll into view. */
+/* reveal the timeline and step cards once, when they scroll into view. */
 (function(){
   if(!('IntersectionObserver' in window))return;
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
