@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Your Probate Roadmap (preview) | Crawford Living</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/crawford.css">
+<link rel="stylesheet" href="assets/g.css">
+<link rel="stylesheet" href="assets/preview-tools.css">
+<style></style>
+</head>
+<body>
+<div class="pv-banner">Preview only &middot; not on the live site</div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="head" id="head">
+  <div class="shell">
+    <a class="brand" href="./">
+      <span class="wordmark">Crawford Living</span>
+      <span class="brandline">Real Estate . . . <em>Considered</em></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <a href="buy.html">Buy</a>
+      <a href="sell.html">Sell</a>
+      <a href="new-construction.html">New Construction</a>
+      <a href="probate.html">Probate &amp; Estates</a>
+      <a href="communities.html">Communities</a>
+      <a href="search.html">Search Homes</a>
+      <a class="nav-cta" href="home-value.html">What&rsquo;s My Home Worth?</a>
+    </nav>
+  </div>
+</header>
+<script>
+(function(){
+  var head=document.getElementById('head'),btn=head&&head.querySelector('.nav-toggle');
+  if(!btn)return;
+  function set(open){head.classList.toggle('nav-open',open);btn.setAttribute('aria-expanded',open);btn.setAttribute('aria-label',open?'Close menu':'Open menu')}
+  btn.addEventListener('click',function(){set(!head.classList.contains('nav-open'))});
+  head.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){set(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+})();
+</script>
+
+<main id="main">
+<main id="main">
+
+<section class="pv-intro">
+  <div class="shell">
+    <p class="g-crumb"><a href="probate.html">Probate &amp; estates</a> &nbsp;/&nbsp; Your roadmap</p>
+    <h1>Your next steps with an inherited home</h1>
+    <p class="g-lede">Five quick questions. You&rsquo;ll get a short, plain list of what usually comes next for a home like yours. Nothing is sent anywhere unless you ask.</p>
+  </div>
+</section>
+<section class="g-sec tight">
+  <div class="shell rm">
+    <div class="rm-card" id="rm" aria-live="polite"></div>
+    <aside class="rm-side">
+      <h2>Good to know</h2>
+      <p>&ldquo;Not sure&rdquo; is a fine answer to any question. The list adjusts.</p>
+      <p>This is general information, not legal advice. Your probate attorney confirms how it applies to your family.</p>
+      <p>Rather talk it through? <a href="book.html">Book a 15-minute call</a> or call <a href="tel:+13214885542">321-488-5542</a>.</p>
+    </aside>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="shell">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="wordmark">Crawford Living</span>
+        <span class="foot-cred">Crawford Living Realty, LLC · Florida Licensed Real Estate Broker #CQ1075533</span>
+        <span class="foot-cred">3678 Sweet Buttercup Dr, Orlando, FL 32822</span>
+      </div>
+      <ul class="foot-nav">
+        <li><a href="./">Home</a></li>
+        <li><a href="resources/">Resources</a></li>
+        <li><a href="videos.html">Video Guides</a></li>
+        <li><a href="sell.html">Sell</a></li>
+        <li><a href="probate.html">Probate &amp; Estates</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="search.html">Search Homes</a></li>
+        <li><a href="tel:+13214885542">321-488-5542</a></li>
+      </ul>
+    </div>
+    <div class="foot-legal">
+      <p>Michael "Mike" Crawford, RENE, CPRES — Central Florida Real Estate Broker: Buying, Selling &amp; Probate · License&nbsp;#BK3074190</p>
+      <p>321-488-5542 · <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a></p>
+      <p>Member, Orlando Regional REALTOR&reg; Association &middot; Stellar MLS</p>
+      <p class="legal">&copy; 2026 Michael Crawford. All rights reserved. &middot; <a href="privacy-policy.html">Privacy Policy</a> &middot; <a href="terms-of-service.html">Terms of Service</a></p>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+var Q=[
+ {k:'county',q:'Which county is the home in?',help:'Each county runs its own probate court and clerk.',o:[['Orange'],['Seminole'],['Osceola'],['Lake'],['Volusia'],['Somewhere else','in Florida']]},
+ {k:'will',q:'Did they leave a will, or a trust?',help:'If the home was in a living trust, probate may not be needed for it.',o:[['Yes, a will'],['No will'],['The home is in a trust'],['Not sure']]},
+ {k:'letters',q:'Has the court named a personal representative yet?',help:'The court does this with a document called Letters of Administration.',o:[['Yes','we have the Letters'],['Not yet'],['Not sure','what that means']]},
+ {k:'occ',q:'Is anyone living in the house right now?',help:'',o:[['No, it’s empty'],['Yes, a family member'],['Yes, a tenant']]},
+ {k:'oos',q:'Do you live outside Florida?',help:'Many families handle this from another state.',o:[['Yes'],['No, I’m in Florida']]}
+];
+var A={},i=0,el=document.getElementById('rm');
+function esc(s){return s.replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+function active(){return Q.filter(function(q){return !(q.k==='letters'&&A.will==='The home is in a trust')})}
+function ask(){
+ var qs=active(),q=qs[i],pct=Math.round(i/qs.length*100);
+ var h='<div class="rm-prog"><span>Question '+(i+1)+' of '+qs.length+'</span><div class="rm-bar"><i style="width:'+pct+'%"></i></div></div>';
+ h+='<p class="rm-q">'+q.q+'</p>'+(q.help?'<p class="rm-help">'+q.help+'</p>':'<p class="rm-help"></p>');
+ h+='<div class="rm-opts">'+q.o.map(function(o){return '<button type="button" data-v="'+esc(o[0])+'"'+(A[q.k]===o[0]?' class="on"':'')+'>'+o[0]+(o[1]?'<small>'+o[1]+'</small>':'')+'</button>'}).join('')+'</div>';
+ if(i>0)h+='<button type="button" class="rm-back">&larr; Back</button>';
+ el.innerHTML=h;
+ el.querySelectorAll('.rm-opts button').forEach(function(b){b.onclick=function(){A[q.k]=b.dataset.v;i++;i<active().length?ask():result()}});
+ var bk=el.querySelector('.rm-back');if(bk)bk.onclick=function(){i--;ask()};
+}
+function result(){
+ var c=A.county==='Somewhere else'?'the county where the home is':A.county+' County',s=[];
+ var trust=A.will==='The home is in a trust', haveL=A.letters==='Yes';
+ if(trust){
+  s.push(['The successor trustee can usually act now','A home held in a living trust often passes without probate. The title company will ask for the trust paperwork and a death certificate before a sale.']);
+ }else if(!haveL){
+  if(A.will==='Yes, a will')s.push(['Get the original will to the clerk','Florida law asks whoever holds the original will to deposit it with the '+c+' Clerk of Court within 10 days of learning of the death.']);
+  if(A.will==='No will')s.push(['Florida law decides who inherits','Without a will, the court appoints a personal representative and state law sets who receives the home. An attorney can tell you who has priority.']);
+  if(A.will==='Not sure')s.push(['Look for a will or trust first','Check papers at home, a safe deposit box, and with the family’s attorney. Whether one exists changes everything after it.']);
+  s.push(['Talk with a probate attorney about opening the estate','The attorney files with the '+c+' court and asks it to name a personal representative. Until then, no one can sign to sell or lease the home.']);
+ }else{
+  s.push(['You have authority to act for the home','Ask your attorney whether a sale needs the court’s approval, and keep a certified copy of the Letters handy. Title will need it.']);
+  s.push(['The creditor period is running','Creditors usually have three months from the first published notice. A home can often be listed during it, but proceeds may be held until debts are settled.']);
+ }
+ if(A.occ==='No, it’s empty')s.push(['Protect the empty house','Tell the insurance company it’s vacant; many policies limit coverage once a home sits empty. Keep the power on, lock up, and have someone check it weekly.']);
+ if(A.occ==='Yes, a family member')s.push(['Put the living arrangement in writing','Agree who is staying, for how long, and who pays the insurance, utilities and upkeep. It prevents the hardest family conversations later.']);
+ if(A.occ==='Yes, a tenant')s.push(['The lease usually stays in place','Rent and the security deposit now belong to the estate. A tenant can affect showings and timing, so plan around the lease.']);
+ if(A.oos==='Yes')s.push(['Most of this can be done from home','Lockbox access, video walk-throughs, and mobile or mail-away closings mean you rarely need to fly in. <a href="out-of-state-owners.html">How it works from out of state &rarr;</a>']);
+ s.push(['Get a current picture of the home’s value','Before anyone decides to keep, rent or sell, it helps to know what the home is worth today and what it needs. <a href="home-value.html">See what it’s worth &rarr;</a>']);
+ var tags=[A.county==='Somewhere else'?'Other FL county':A.county+' County',A.will,trust?null:(haveL?'Letters issued':'No Letters yet'),A.occ,A.oos==='Yes'?'Out of state':'In Florida'].filter(Boolean);
+ el.innerHTML='<div class="rm-prog"><span>Your roadmap</span><div class="rm-bar"><i style="width:100%"></i></div></div>'+
+ '<p class="rm-res-h">Here&rsquo;s what usually comes next</p><div class="rm-sum">'+tags.map(function(t){return '<span>'+t+'</span>'}).join('')+'</div>'+
+ '<ol class="rm-steps">'+s.map(function(x){return '<li><div><strong>'+x[0]+'</strong><p>'+x[1]+'</p></div></li>'}).join('')+'</ol>'+
+ '<div class="rm-mail"><b>Want a copy?</b><p>I&rsquo;ll email you this list so you can share it with family. No follow-up calls unless you ask.</p><form onsubmit="return false"><input type="email" placeholder="Your email" aria-label="Your email"><button class="g-btn" type="submit">Email me this list</button></form></div>'+
+ '<p class="rm-fine">General information, not legal advice. Every estate is different; your attorney confirms what applies.</p>'+
+ '<button type="button" class="rm-back">&larr; Start over</button>';
+ el.querySelector('.rm-back').onclick=function(){A={};i=0;ask()};
+}
+ask();
+})();
+</script>
+<script>
+(function(){var head=document.getElementById('head');if(!head)return;var s=function(){head.classList.toggle('is-stuck',window.scrollY>8)};s();window.addEventListener('scroll',s,{passive:true});})();
+</script>
+<div class="mbar"><a href="tel:+13214885542">Call 321-488-5542</a><a class="mbar-book" href="book.html">Book a call</a></div>
+</body>
+</html>

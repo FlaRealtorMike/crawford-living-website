@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>What You Will Walk Away With (preview) | Crawford Living</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/crawford.css">
+<link rel="stylesheet" href="assets/g.css">
+<link rel="stylesheet" href="assets/preview-tools.css">
+<style></style>
+</head>
+<body>
+<div class="pv-banner">Preview only &middot; not on the live site</div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="head" id="head">
+  <div class="shell">
+    <a class="brand" href="./">
+      <span class="wordmark">Crawford Living</span>
+      <span class="brandline">Real Estate . . . <em>Considered</em></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <a href="buy.html">Buy</a>
+      <a href="sell.html">Sell</a>
+      <a href="new-construction.html">New Construction</a>
+      <a href="probate.html">Probate &amp; Estates</a>
+      <a href="communities.html">Communities</a>
+      <a href="search.html">Search Homes</a>
+      <a class="nav-cta" href="home-value.html">What&rsquo;s My Home Worth?</a>
+    </nav>
+  </div>
+</header>
+<script>
+(function(){
+  var head=document.getElementById('head'),btn=head&&head.querySelector('.nav-toggle');
+  if(!btn)return;
+  function set(open){head.classList.toggle('nav-open',open);btn.setAttribute('aria-expanded',open);btn.setAttribute('aria-label',open?'Close menu':'Open menu')}
+  btn.addEventListener('click',function(){set(!head.classList.contains('nav-open'))});
+  head.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){set(false)})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+})();
+</script>
+
+<main id="main">
+<main id="main">
+
+<section class="pv-intro">
+  <div class="shell">
+    <p class="g-crumb"><a href="sell.html">Selling</a> &nbsp;/&nbsp; What you&rsquo;ll walk away with</p>
+    <h1>What you&rsquo;ll walk away with</h1>
+    <p class="g-lede">The sale price is the headline. This shows the number that reaches your bank account, using Florida&rsquo;s actual closing costs. Change any figure; it updates as you type.</p>
+  </div>
+</section>
+<section class="g-sec tight">
+  <div class="shell">
+    <div class="np">
+      <div class="np-in">
+        <label class="np-toggle"><input type="checkbox" id="estate" checked><span>This is an inherited home<small>Adds the costs of holding the house until closing, and splits the result among heirs.</small></span></label>
+        <p class="np-sub">The sale</p>
+        <div class="np-row"><label for="price">Expected sale price<small>From recent nearby sales, not an online estimate</small></label><div class="np-f"><span class="u">$</span><input id="price" inputmode="decimal" value="400,000"></div></div><div class="np-row"><label for="loan">Mortgage or loans to pay off<small>Zero if the home is paid off</small></label><div class="np-f"><span class="u">$</span><input id="loan" inputmode="decimal" value="150,000"></div></div><div class="np-row"><label for="fee">Brokerage fees<small>Whatever you agree to; every fee is negotiable</small></label><div class="np-f pct"><span class="u">%</span><input id="fee" inputmode="decimal" value="5"></div></div><div class="np-row"><label for="repairs">Repairs or credits to the buyer<small>After the inspection</small></label><div class="np-f"><span class="u">$</span><input id="repairs" inputmode="decimal" value="1,500"></div></div><div class="np-row"><label for="tax">Last year&rsquo;s property tax bill<small>Credited to the buyer; assumes a mid-year closing</small></label><div class="np-f"><span class="u">$</span><input id="tax" inputmode="decimal" value="5,600"></div></div><div class="np-row"><label for="hoa">HOA or condo charges<small>Estoppel letter, dues owed</small></label><div class="np-f"><span class="u">$</span><input id="hoa" inputmode="decimal" value="0"></div></div>
+        <div class="np-estate on" id="estate-rows">
+          <p class="np-sub">Holding the house</p>
+          <div class="np-row"><label for="months">Months until closing<small>Typical estates: 3 to 6 months</small></label><div class="np-f"><span class="u">#</span><input id="months" inputmode="decimal" value="4"></div></div><div class="np-row"><label for="hold">Monthly costs while you hold it<small>Insurance, utilities, lawn, upkeep</small></label><div class="np-f"><span class="u">$</span><input id="hold" inputmode="decimal" value="650"></div></div><div class="np-row"><label for="clean">Clean-out and repairs before listing<small>Belongings, haul-away, paint, small fixes</small></label><div class="np-f"><span class="u">$</span><input id="clean" inputmode="decimal" value="3,000"></div></div><div class="np-row"><label for="heirs">Number of heirs sharing<small>Only if the estate is split equally</small></label><div class="np-f"><span class="u">#</span><input id="heirs" inputmode="decimal" value="3"></div></div>
+        </div>
+      </div>
+      <div class="np-out" aria-live="polite">
+        <span class="g-kick">Estimated cash at closing</span>
+        <p class="np-big" id="net">$0</p>
+        <p class="np-each" id="each"></p>
+        <ul class="np-lines" id="lines"></ul>
+        <a class="g-btn" href="#">Get a written net sheet for my home <span aria-hidden="true">&rarr;</span></a>
+        <p class="fine">An estimate, not a guarantee. Doc stamps at $0.70 per $100; owner&rsquo;s title policy at Florida&rsquo;s set rates, assuming the seller pays it, as is customary in Orange, Seminole and Osceola. Title company fees estimated at $900. Estate attorney and personal representative fees are paid by the estate and aren&rsquo;t shown; ask your attorney.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="shell">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="wordmark">Crawford Living</span>
+        <span class="foot-cred">Crawford Living Realty, LLC · Florida Licensed Real Estate Broker #CQ1075533</span>
+        <span class="foot-cred">3678 Sweet Buttercup Dr, Orlando, FL 32822</span>
+      </div>
+      <ul class="foot-nav">
+        <li><a href="./">Home</a></li>
+        <li><a href="resources/">Resources</a></li>
+        <li><a href="videos.html">Video Guides</a></li>
+        <li><a href="sell.html">Sell</a></li>
+        <li><a href="probate.html">Probate &amp; Estates</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="search.html">Search Homes</a></li>
+        <li><a href="tel:+13214885542">321-488-5542</a></li>
+      </ul>
+    </div>
+    <div class="foot-legal">
+      <p>Michael "Mike" Crawford, RENE, CPRES — Central Florida Real Estate Broker: Buying, Selling &amp; Probate · License&nbsp;#BK3074190</p>
+      <p>321-488-5542 · <a href="mailto:mdc@crawfordliving.com">mdc@crawfordliving.com</a></p>
+      <p>Member, Orlando Regional REALTOR&reg; Association &middot; Stellar MLS</p>
+      <p class="legal">&copy; 2026 Michael Crawford. All rights reserved. &middot; <a href="privacy-policy.html">Privacy Policy</a> &middot; <a href="terms-of-service.html">Terms of Service</a></p>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+function v(id){var e=document.getElementById(id);return parseFloat((e.value||'0').replace(/[^0-9.]/g,''))||0}
+function m(n){return (n<0?'−$':'$')+Math.round(Math.abs(n)).toLocaleString('en-US')}
+function title(p){var t=Math.min(p,1e5)*5.75/1000;if(p>1e5)t+=(Math.min(p,1e6)-1e5)*5/1000;if(p>1e6)t+=(Math.min(p,5e6)-1e6)*2.5/1000;return t}
+var est=document.getElementById('estate'),rows=document.getElementById('estate-rows');
+function calc(){
+ var p=v('price'),on=est.checked;rows.classList.toggle('on',on);
+ var L=[['Sale price',p],['Loan payoff',-v('loan')],['Brokerage fees',-p*v('fee')/100],['Doc stamps',-p*.007],['Owner’s title policy',-title(p)],['Title company fees',-900],['Property taxes (mid-year closing)',-v('tax')*.5],['HOA and repairs',-(v('hoa')+v('repairs'))]];
+ if(on){L.push(['Holding costs ('+v('months')+' mo)',-v('months')*v('hold')]);L.push(['Clean-out and repairs',-v('clean')])}
+ var net=L.reduce(function(a,b){return a+b[1]},0);
+ document.getElementById('net').textContent=m(net);
+ var h=v('heirs');document.getElementById('each').textContent=on&&h>1?'About '+m(net/h)+' each, split '+h+' ways':'';
+ document.getElementById('lines').innerHTML=L.map(function(x){return '<li><span>'+x[0]+'</span><b>'+m(x[1])+'</b></li>'}).join('');
+}
+document.querySelectorAll('.np input').forEach(function(e){e.addEventListener('input',calc)});
+calc();
+})();
+</script>
+<script>
+(function(){var head=document.getElementById('head');if(!head)return;var s=function(){head.classList.toggle('is-stuck',window.scrollY>8)};s();window.addEventListener('scroll',s,{passive:true});})();
+</script>
+<div class="mbar"><a href="tel:+13214885542">Call 321-488-5542</a><a class="mbar-book" href="book.html">Book a call</a></div>
+</body>
+</html>
