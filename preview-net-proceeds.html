@@ -118,13 +118,19 @@
 function v(id){var e=document.getElementById(id);return parseFloat((e.value||'0').replace(/[^0-9.]/g,''))||0}
 function m(n){return (n<0?'−$':'$')+Math.round(Math.abs(n)).toLocaleString('en-US')}
 function title(p){var t=Math.min(p,1e5)*5.75/1000;if(p>1e5)t+=(Math.min(p,1e6)-1e5)*5/1000;if(p>1e6)t+=(Math.min(p,5e6)-1e6)*2.5/1000;return t}
+var shown=null,raf=0,calm=window.matchMedia('(prefers-reduced-motion: reduce)').matches,netEl=document.getElementById('net');
+function roll(to){
+ if(shown===null||calm){shown=to;netEl.textContent=m(to);return}
+ var from=shown,t0=null;cancelAnimationFrame(raf);
+ (function step(ts){if(!t0)t0=ts;var k=Math.min((ts-t0)/450,1),e=1-Math.pow(1-k,3);shown=from+(to-from)*e;netEl.textContent=m(shown);if(k<1)raf=requestAnimationFrame(step)})(performance.now());
+}
 var est=document.getElementById('estate'),rows=document.getElementById('estate-rows');
 function calc(){
  var p=v('price'),on=est.checked;rows.classList.toggle('on',on);
  var L=[['Sale price',p],['Loan payoff',-v('loan')],['Brokerage fees',-p*v('fee')/100],['Doc stamps',-p*.007],['Owner’s title policy',-title(p)],['Title company fees',-900],['Property taxes (mid-year closing)',-v('tax')*.5],['HOA and repairs',-(v('hoa')+v('repairs'))]];
  if(on){L.push(['Holding costs ('+v('months')+' mo)',-v('months')*v('hold')]);L.push(['Clean-out and repairs',-v('clean')])}
  var net=L.reduce(function(a,b){return a+b[1]},0);
- document.getElementById('net').textContent=m(net);
+ roll(net);
  var h=v('heirs');document.getElementById('each').textContent=on&&h>1?'About '+m(net/h)+' each, split '+h+' ways':'';
  document.getElementById('lines').innerHTML=L.map(function(x){return '<li><span>'+x[0]+'</span><b>'+m(x[1])+'</b></li>'}).join('');
 }
